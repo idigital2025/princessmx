@@ -1,9 +1,9 @@
-import SearchBar from "./SearchBar";
+import AdvancedSearchBar from "./AdvancedSearchBar";
 import heroImage from "@/assets/hero-cruise.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-200px)] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -27,13 +27,13 @@ const HeroSection = () => {
             Navega Hacia Tus Sueños
           </h1>
           <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-md mb-8">
-            Descubre destinos increíbles con los mejores cruceros del mundo
+            Descubre destinos increíbles con Princess Cruises
           </p>
         </div>
         
         {/* Search Bar */}
         <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          <SearchBar />
+          <AdvancedSearchBar />
         </div>
       </div>
     </section>

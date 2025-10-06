@@ -39,7 +39,7 @@ const FeaturedCruises = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-primary mb-4">
-            Destinos Destacados
+            Salidas seleccionadas para ti
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Explora nuestros cruceros más populares y descubre el viaje perfecto para ti
