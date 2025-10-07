@@ -9,8 +9,8 @@ const PromoDealsSection = () => {
           Encuentra la oferta de crucero perfecta para ti
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="asymmetric-card overflow-hidden shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="asymmetric-card overflow-hidden shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 h-[400px]">
             <img
               src={promo1}
               alt="Promoción especial de cruceros"
@@ -18,7 +18,7 @@ const PromoDealsSection = () => {
             />
           </div>
           
-          <div className="asymmetric-card overflow-hidden shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
+          <div className="asymmetric-card overflow-hidden shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 h-[400px]">
             <img
               src={promo2}
               alt="Ofertas de cruceros"

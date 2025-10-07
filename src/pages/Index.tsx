@@ -6,6 +6,7 @@ import FavoriteDestinations from "@/components/FavoriteDestinations";
 import BadgesSection from "@/components/BadgesSection";
 import SubscriptionSection from "@/components/SubscriptionSection";
 import DiscoverPrincessSection from "@/components/DiscoverPrincessSection";
+import WaveTransition from "@/components/WaveTransition";
 import IncludedBenefitsSection from "@/components/IncludedBenefitsSection";
 import NewsSection from "@/components/NewsSection";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ const Index = () => {
         <FavoriteDestinations />
         <SubscriptionSection />
         <BadgesSection />
+        <WaveTransition />
         <DiscoverPrincessSection />
         <IncludedBenefitsSection />
         <NewsSection />
