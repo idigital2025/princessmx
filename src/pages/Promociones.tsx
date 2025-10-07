@@ -12,31 +12,64 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Promociones = () => {
+  const scrollToPromociones = () => {
+    const element = document.getElementById('promocion-principal');
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <div className="min-h-screen">
       <StickyHeader />
       
       <main>
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-primary via-primary to-accent py-20 px-4">
-          <div className="container mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-full">
-                <Tag className="w-12 h-12 text-white" />
+        {/* Hero Section - Princess Brand Guidelines */}
+        <section className="relative bg-white py-8 md:py-12 px-4">
+          <div className="container mx-auto max-w-7xl">
+            <div className="grid md:grid-cols-2 gap-0 rounded-[62.5px] overflow-hidden shadow-elegant">
+              {/* Left Side - Image */}
+              <div className="relative h-64 md:h-auto min-h-[400px]">
+                <img 
+                  src="https://images.unsplash.com/photo-1520443240718-fce21cc85ebc?q=80&w=2000"
+                  alt="Pareja disfrutando en la playa durante un crucero"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Right Side - Content */}
+              <div className="bg-primary p-8 md:p-12 flex flex-col justify-center relative">
+                {/* Princess Logo */}
+                <div className="absolute top-8 right-8">
+                  <Ship className="w-16 h-16 md:w-20 md:h-20 text-white" strokeWidth={1.5} />
+                </div>
+                
+                {/* Headline */}
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
+                  Ofertas
+                  <br />
+                  Exclusivas.
+                </h1>
+                
+                {/* Description */}
+                <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-md">
+                  Descubre nuestras promociones especiales y aprovecha descuentos increíbles en cruceros de lujo.
+                </p>
+                
+                {/* CTA Button */}
+                <div>
+                  <button
+                    onClick={scrollToPromociones}
+                    className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-10 py-4 rounded-full transition-all hover:scale-105 hover:shadow-lg"
+                  >
+                    VER PROMOCIONES
+                  </button>
+                </div>
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">
-              Promociones Exclusivas
-            </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Aprovecha nuestras ofertas especiales y descuentos increíbles en los mejores cruceros. 
-              Tu aventura soñada está más cerca de lo que imaginas.
-            </p>
           </div>
         </section>
 
         {/* Promoción Princess Cruises */}
-        <section className="py-16 px-4 bg-secondary">
+        <section id="promocion-principal" className="py-16 px-4 bg-secondary">
           <div className="container mx-auto max-w-6xl">
             <div className="bg-white rounded-3xl shadow-elegant overflow-hidden">
               {/* Header de la promoción */}
