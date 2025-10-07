@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
         display: ['Playfair Display', 'serif'],
-        serif: ['Playfair Display', 'serif'],
+        serif: ['Cormorant', 'Playfair Display', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
