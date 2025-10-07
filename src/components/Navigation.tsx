@@ -22,16 +22,16 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white border-b border-border relative">
+    <nav className="bg-white border-b border-border relative overflow-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 relative">
-        <div className="flex items-center relative h-full">
-          <div className="bg-primary px-8 py-6 rounded-br-[3rem] absolute left-0 -ml-[100vw] pl-[100vw] top-0 bottom-0 flex items-center">
+        <div className="flex items-center relative py-6">
+          <div className="bg-primary px-8 rounded-br-[3rem] absolute left-0 -ml-[100vw] pl-[100vw] -top-px -bottom-px flex items-center">
             <div className="flex items-center gap-3">
               <Ship className="w-8 h-8 text-white" />
               <h1 className="text-xl md:text-2xl font-display font-bold text-white">PRINCESS</h1>
             </div>
           </div>
-          <div className="flex items-center gap-3 relative z-10 py-6">
+          <div className="flex items-center gap-3 relative z-10">
             <Ship className="w-8 h-8 text-white opacity-0" />
             <h1 className="text-xl md:text-2xl font-display font-bold text-white opacity-0">PRINCESS</h1>
           </div>
