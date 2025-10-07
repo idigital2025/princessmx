@@ -1,5 +1,6 @@
 import { Ship, Search, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -38,7 +39,7 @@ const Navigation = () => {
         </div>
         
         <div className="flex items-center gap-6 text-lg md:text-xl text-primary py-3 px-4 md:px-8 font-serif h-full">
-          <a href="#" className="hover:text-accent transition-colors">Home</a>
+          <Link to="/" className="hover:text-accent transition-colors">Home</Link>
           
           <DropdownMenu open={isDestinosOpen} onOpenChange={setIsDestinosOpen}>
             <DropdownMenuTrigger className="flex items-center gap-1 hover:text-accent transition-colors outline-none">
@@ -53,7 +54,7 @@ const Navigation = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <a href="#promociones" className="hover:text-accent transition-colors">Promociones</a>
+          <Link to="/promociones" className="hover:text-accent transition-colors">Promociones</Link>
           <a href="#novedades" className="hover:text-accent transition-colors">Novedades</a>
           
           <button className="cta-button-outline flex items-center gap-2 !text-primary !border-accent hover:!bg-accent hover:!text-white">
