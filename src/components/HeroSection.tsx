@@ -17,18 +17,18 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-12 md:py-16 flex flex-col justify-between h-full">
         {/* Promo Banner */}
-        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+        <div className="text-center mb-7 md:mb-10 animate-fade-in">
           {/* H1 Title */}
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-8 drop-shadow-lg">
+          <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-5 drop-shadow-lg">
             Viajes inolvidables. Ahorros inolvidables.
           </h1>
           
           {/* Offer Columns */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-5">
             {/* Left Column - Discount */}
             <div className="text-center">
-              <p className="text-white/80 text-sm uppercase tracking-wider mb-2">Hasta</p>
-              <p className="text-7xl md:text-8xl font-display font-bold text-white leading-none mb-2">40%</p>
+              <p className="text-white/80 text-sm uppercase tracking-wider mb-1">Hasta</p>
+              <p className="text-7xl md:text-8xl font-display font-bold text-white leading-none mb-1">40%</p>
               <p className="text-white text-lg font-semibold uppercase">OFF</p>
             </div>
             
@@ -37,14 +37,14 @@ const HeroSection = () => {
             
             {/* Right Column - Cash Credit */}
             <div className="text-center">
-              <p className="text-white/80 text-sm uppercase tracking-wider mb-2">Hasta</p>
-              <p className="text-7xl md:text-8xl font-display font-bold text-white leading-none mb-2">$200</p>
+              <p className="text-white/80 text-sm uppercase tracking-wider mb-1">Hasta</p>
+              <p className="text-7xl md:text-8xl font-display font-bold text-white leading-none mb-1">$200</p>
               <p className="text-white text-lg font-semibold uppercase">En Dctos Instantáneos</p>
             </div>
           </div>
           
           {/* Additional Benefits Box */}
-          <div className="inline-block bg-primary/90 backdrop-blur-sm px-8 py-4 rounded-lg mb-4">
+          <div className="inline-block bg-primary/90 backdrop-blur-sm px-8 py-3 rounded-lg mb-2">
             <p className="text-white font-bold text-lg md:text-xl mb-1">
               Beneficios extras para 3er y 4to pasajero:
             </p>
@@ -54,7 +54,7 @@ const HeroSection = () => {
           </div>
           
           {/* Disclaimer */}
-          <p className="text-white/80 text-sm mb-8 max-w-2xl mx-auto">
+          <p className="text-white/80 text-sm mb-5 max-w-2xl mx-auto">
             En salidas seleccionadas 2026 y 2027. Aplica para todas las categorías.
           </p>
           
