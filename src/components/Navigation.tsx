@@ -24,20 +24,15 @@ const Navigation = () => {
   return (
     <nav className="bg-white relative">
       <div className="container mx-auto flex flex-col md:flex-row items-stretch justify-between py-0 relative">
-        <div className="flex items-center relative h-full">
-          <div className="bg-primary px-8 rounded-br-[3rem] absolute left-0 top-0 -bottom-px -ml-[100vw] pl-[100vw] flex items-center">
-            <div className="flex items-center gap-3">
-              <Ship className="w-8 h-8 text-white" />
-              <h1 className="text-xl md:text-2xl font-display font-bold text-white">PRINCESS</h1>
-            </div>
-          </div>
+        <div className="absolute left-0 -top-px -bottom-[2px] -ml-[100vw] pl-[100vw] bg-primary px-8 rounded-br-[3rem] pointer-events-none" />
+        <div className="flex items-center relative h-full z-10">
           <div className="flex items-center gap-3 relative z-10 py-3">
-            <Ship className="w-8 h-8 text-white opacity-0" />
-            <h1 className="text-xl md:text-2xl font-display font-bold text-white opacity-0">PRINCESS</h1>
+            <Ship className="w-8 h-8 text-white" />
+            <h1 className="text-xl md:text-2xl font-display font-bold text-white">PRINCESS</h1>
           </div>
         </div>
         
-        <div className="flex items-center gap-6 text-lg md:text-xl text-primary py-3 px-4 md:px-8 font-serif h-full">
+        <div className="flex items-center gap-6 text-lg md:text-xl text-primary py-3 px-4 md:px-8 font-serif h-full z-10">
           <a href="#" className="hover:text-accent transition-colors">Home</a>
           
           <DropdownMenu open={isDestinosOpen} onOpenChange={setIsDestinosOpen}>
