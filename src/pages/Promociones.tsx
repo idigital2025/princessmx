@@ -1,8 +1,10 @@
-import { ShoppingBag, Calendar, Gift, Ship, Tag, Clock } from "lucide-react";
+import { ShoppingBag, Calendar, Gift, Ship, Tag, Clock, UserPlus, DollarSign } from "lucide-react";
 import StickyHeader from "@/components/StickyHeader";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import PromoCard from "@/components/PromoCard";
 import { Button } from "@/components/ui/button";
+import heroPromoImage from "@/assets/hero-promociones.jpg";
 import {
   Accordion,
   AccordionContent,
@@ -29,8 +31,8 @@ const Promociones = () => {
               {/* Left Side - Image with rounded top-left corner only */}
               <div className="relative h-64 md:h-auto md:min-h-[250px] rounded-tl-[62.5px] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1520443240718-fce21cc85ebc?q=80&w=2000"
-                  alt="Pareja disfrutando en la playa durante un crucero"
+                  src={heroPromoImage}
+                  alt="Crucero de lujo navegando en aguas turquesas al atardecer"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
@@ -70,25 +72,48 @@ const Promociones = () => {
 
         {/* Promoción Princess Cruises */}
         <section id="promocion-principal" className="py-16 px-4 bg-secondary">
-          <div className="container mx-auto max-w-6xl">
-            <div className="bg-white rounded-3xl shadow-elegant overflow-hidden">
-              {/* Header de la promoción */}
-              <div className="bg-gradient-to-r from-primary to-accent p-8 text-white">
-                <div className="flex items-center gap-3 mb-4">
-                  <Ship className="w-10 h-10" />
-                  <h2 className="text-3xl md:text-4xl font-display font-bold">
-                    Promoción Princess Cruises
-                  </h2>
-                </div>
-                <div className="flex items-center gap-2 text-white/90">
-                  <Calendar className="w-5 h-5" />
-                  <p className="text-lg">
-                    Vigencia: del 2 de septiembre al 11 de noviembre de 2025
-                  </p>
-                </div>
+          <div className="container mx-auto max-w-7xl">
+            {/* Header de la sección */}
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Ship className="w-10 h-10 text-primary" />
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-primary">
+                  Promoción Princess Cruises
+                </h2>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-foreground/70">
+                <Calendar className="w-5 h-5" />
+                <p className="text-lg">
+                  Vigencia: del 2 de septiembre al 11 de noviembre de 2025
+                </p>
+              </div>
+            </div>
+
+            <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-start">
+              {/* Promo Card */}
+              <div className="lg:sticky lg:top-24">
+                <PromoCard
+                  mainPercentage="40%"
+                  topText="hasta"
+                  bottomText="off booking"
+                  highlights={[
+                    {
+                      icon: <UserPlus className="w-8 h-8" />,
+                      text: "Free 3rd & 4th guests",
+                    },
+                    {
+                      icon: <DollarSign className="w-8 h-8" />,
+                      text: "$99 deposit",
+                    },
+                  ]}
+                  ctaText="Ver Salidas"
+                  ctaLink="https://reservas.princesscruises.mx/search?sortBy=Recommended&#038;priceByCabin=false&#038;taxAndFeesIncluded=false"
+                  exceptionNote="Aplica sobre la tarifa base publicada. No aplica a paquetes Princess Plus o Princess Premier. Los CTAs pueden ser ajustados según necesidad."
+                />
               </div>
 
-              <div className="p-8 md:p-12">
+              {/* Detalles de la promoción */}
+              <div className="bg-white rounded-3xl shadow-card p-8 md:p-12">
                 <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
                   Viajar con Princess nunca fue tan fácil ni tan conveniente. Ahora puedes aprovechar 
                   grandes descuentos y beneficios exclusivos en tus próximas vacaciones en alta mar.
@@ -187,26 +212,6 @@ const Promociones = () => {
                   </p>
                 </div>
 
-                {/* CTA Principal */}
-                <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 mb-12 text-center">
-                  <p className="text-lg mb-6 text-foreground/80">
-                    ¡No dejes pasar esta oportunidad única de ahorrar en tus vacaciones soñadas!
-                  </p>
-                  <Button 
-                    asChild
-                    className="cta-button-accent text-lg px-12 py-6 h-auto"
-                  >
-                    <a 
-                      href="https://reservas.princesscruises.mx/search?sortBy=Recommended&#038;priceByCabin=false&#038;taxAndFeesIncluded=false"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3"
-                    >
-                      <ShoppingBag className="w-5 h-5" />
-                      Ver Salidas Disponibles
-                    </a>
-                  </Button>
-                </div>
 
                 {/* Condiciones - Accordion */}
                 <div>
@@ -302,22 +307,45 @@ const Promociones = () => {
 
         {/* Cruise Deals - Último Minuto */}
         <section className="py-16 px-4">
-          <div className="container mx-auto max-w-6xl">
-            <div className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-3xl shadow-elegant overflow-hidden">
-              {/* Header */}
-              <div className="bg-gradient-to-r from-accent to-primary p-8 text-white">
-                <div className="flex items-center gap-3 mb-4">
-                  <Clock className="w-10 h-10" />
-                  <h2 className="text-3xl md:text-4xl font-display font-bold">
-                    Último Minuto: Cruise Deals
-                  </h2>
-                </div>
-                <p className="text-lg text-white/90">
-                  La promoción ideal para viajeros que buscan flexibilidad y beneficios únicos
-                </p>
+          <div className="container mx-auto max-w-7xl">
+            {/* Header de la sección */}
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Clock className="w-10 h-10 text-accent" />
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-primary">
+                  Último Minuto: Cruise Deals
+                </h2>
+              </div>
+              <p className="text-lg text-foreground/70">
+                La promoción ideal para viajeros que buscan flexibilidad y beneficios únicos
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-start">
+              {/* Promo Card */}
+              <div className="lg:sticky lg:top-24">
+                <PromoCard
+                  mainPercentage="$400"
+                  topText="ahorros hasta"
+                  bottomText="por persona"
+                  highlights={[
+                    {
+                      icon: <Tag className="w-8 h-8" />,
+                      text: "Tarifas reducidas",
+                    },
+                    {
+                      icon: <Clock className="w-8 h-8" />,
+                      text: "Actualización quincenal",
+                    },
+                  ]}
+                  ctaText="Ver Ofertas"
+                  ctaLink="https://reservas.princesscruises.mx/search?sortBy=Recommended&#038;priceByCabin=false&#038;taxAndFeesIncluded=false"
+                  exceptionNote="Tarifas con mayor disponibilidad. La lista de salidas se actualiza cada quincena con nuevas opciones."
+                />
               </div>
 
-              <div className="p-8 md:p-12">
+              {/* Detalles de la promoción */}
+              <div className="bg-white rounded-3xl shadow-card p-8 md:p-12">
                 <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
                   Con tarifas reducidas y ahorros instantáneos, esta oferta es perfecta para planificar 
                   tu próximo crucero con beneficios exclusivos.
@@ -387,7 +415,7 @@ const Promociones = () => {
                 </div>
 
                 {/* CTA Final */}
-                <div className="bg-white rounded-2xl p-8 text-center shadow-card">
+                <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 text-center">
                   <h3 className="text-2xl font-display font-bold text-primary mb-4">
                     ¡No pierdas esta oportunidad!
                   </h3>
