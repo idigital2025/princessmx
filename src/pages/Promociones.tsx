@@ -23,11 +23,11 @@ const Promociones = () => {
       
       <main>
         {/* Hero Section - Princess Brand Guidelines */}
-        <section className="relative bg-white py-8 md:py-12 px-4">
+        <section className="relative bg-white py-4 md:py-8 px-4">
           <div className="container mx-auto max-w-7xl">
-            <div className="grid md:grid-cols-2 gap-0 rounded-[62.5px] overflow-hidden shadow-elegant">
-              {/* Left Side - Image */}
-              <div className="relative h-64 md:h-auto min-h-[400px]">
+            <div className="grid md:grid-cols-[40%_60%] gap-0 overflow-hidden">
+              {/* Left Side - Image with rounded top-left corner only */}
+              <div className="relative h-64 md:h-auto md:min-h-[250px] rounded-tl-[62.5px] overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1520443240718-fce21cc85ebc?q=80&w=2000"
                   alt="Pareja disfrutando en la playa durante un crucero"
@@ -35,22 +35,22 @@ const Promociones = () => {
                 />
               </div>
               
-              {/* Right Side - Content */}
-              <div className="bg-primary p-8 md:p-12 flex flex-col justify-center relative">
-                {/* Princess Logo */}
-                <div className="absolute top-8 right-8">
-                  <Ship className="w-16 h-16 md:w-20 md:h-20 text-white" strokeWidth={1.5} />
+              {/* Right Side - Content with straight edges */}
+              <div className="bg-primary px-8 md:px-12 py-8 md:py-10 flex flex-col justify-start items-start relative">
+                {/* Princess Logo - aligned with CTA cap height */}
+                <div className="absolute top-10 right-8 md:right-12">
+                  <Ship className="w-12 h-12 md:w-16 md:h-16 text-white" strokeWidth={1.5} />
                 </div>
                 
-                {/* Headline */}
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
+                {/* Headline - aligned with top of image */}
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 md:mb-6 leading-tight mt-2">
                   Ofertas
                   <br />
                   Exclusivas.
                 </h1>
                 
                 {/* Description */}
-                <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-md">
+                <p className="text-base md:text-lg text-white/90 mb-6 md:mb-8 leading-relaxed max-w-md">
                   Descubre nuestras promociones especiales y aprovecha descuentos increíbles en cruceros de lujo.
                 </p>
                 
@@ -58,7 +58,7 @@ const Promociones = () => {
                 <div>
                   <button
                     onClick={scrollToPromociones}
-                    className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-10 py-4 rounded-full transition-all hover:scale-105 hover:shadow-lg"
+                    className="bg-accent hover:bg-accent/90 text-white font-bold text-base md:text-lg px-8 md:px-10 py-3 md:py-4 rounded-full transition-all hover:scale-105 hover:shadow-lg"
                   >
                     VER PROMOCIONES
                   </button>
