@@ -25,7 +25,7 @@ const Navigation = () => {
     <nav className="bg-white relative">
       <div className="container mx-auto flex flex-col md:flex-row items-stretch justify-between py-0 relative">
         <div className="absolute left-0 -top-px -bottom-[2px] -ml-[100vw] pl-[100vw] bg-primary px-8 rounded-br-[3rem] pointer-events-none" />
-        <div className="flex items-center relative h-full z-10">
+        <div className="flex items-center relative h-full z-10 px-8">
           <div className="flex items-center gap-3 relative z-10 py-3">
             <Ship className="w-8 h-8 text-white" />
             <h1 className="text-xl md:text-2xl font-display font-bold text-white">PRINCESS</h1>
