@@ -25,7 +25,7 @@ const Navigation = () => {
     <nav className="bg-white border-b border-border">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center">
-          <div className="bg-primary px-8 py-4 rounded-r-[3rem]">
+          <div className="bg-primary px-8 py-4 rounded-br-[3rem]">
             <div className="flex items-center gap-3">
               <Ship className="w-8 h-8 text-white" />
               <h1 className="text-xl md:text-2xl font-display font-bold text-white">PRINCESS</h1>
@@ -33,7 +33,7 @@ const Navigation = () => {
           </div>
         </div>
         
-        <div className="flex items-center gap-6 text-sm md:text-base text-primary py-2 px-4 md:px-8">
+        <div className="flex items-center gap-6 text-sm md:text-base text-primary py-2 px-4 md:px-8 font-serif">
           <a href="#" className="hover:text-accent transition-colors">Home</a>
           
           <DropdownMenu open={isDestinosOpen} onOpenChange={setIsDestinosOpen}>
