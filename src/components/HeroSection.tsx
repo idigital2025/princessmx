@@ -56,10 +56,6 @@ const HeroSection = () => {
             </p>
           </div>
           
-          {/* CTA Button */}
-          <button className="cta-button-accent text-lg px-12 py-4">
-            Reserva ahora
-          </button>
         </div>
         
         {/* Search Bar */}

@@ -33,13 +33,13 @@ const IncludedBenefitsSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-secondary">
+    <section className="py-16 px-4 bg-primary">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
             ¿Qué incluye mi viaje con Princess?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
             Subtítulo que complementa la sección con acotación. Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed
           </p>
         </div>
@@ -49,7 +49,7 @@ const IncludedBenefitsSection = () => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
             onClick={() => scroll('left')}
           >
             <ChevronLeft className="w-6 h-6 text-primary" />
@@ -58,7 +58,7 @@ const IncludedBenefitsSection = () => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
             onClick={() => scroll('right')}
           >
             <ChevronRight className="w-6 h-6 text-primary" />
