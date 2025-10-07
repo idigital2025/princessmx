@@ -72,6 +72,65 @@ const Promociones = () => {
           </div>
         </section>
 
+        {/* Promociones Vigentes Section */}
+        <section className="py-16 px-4 bg-white">
+          <div className="container mx-auto max-w-7xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
+                Promociones Vigentes
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Princess Cruises Promo */}
+              <div className="group cursor-pointer" onClick={() => {
+                const element = document.getElementById('promocion-principal');
+                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}>
+                <div className="relative w-full aspect-square max-w-[350px] mx-auto rounded-tl-[62.5px] overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                  <img 
+                    src={promoPrincessImage}
+                    alt="Promoción Princess Cruises - Hasta 50% OFF"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
+                    <div className="flex items-center gap-2 text-white font-bold text-lg">
+                      <span>Ver Promoción</span>
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-display font-bold text-primary text-center mt-4">
+                  Promoción Princess Cruises
+                </h3>
+              </div>
+
+              {/* Cruise Deals Promo */}
+              <div className="group cursor-pointer" onClick={() => {
+                const element = document.getElementById('cruise-deals');
+                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}>
+                <div className="relative w-full aspect-square max-w-[350px] mx-auto rounded-tl-[62.5px] overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                  <img 
+                    src={promoCruiseDealsImage}
+                    alt="Último Minuto: Cruise Deals - Ahorros hasta $400"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
+                    <div className="flex items-center gap-2 text-white font-bold text-lg">
+                      <span>Ver Promoción</span>
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-display font-bold text-primary text-center mt-4">
+                  Último Minuto: Cruise Deals
+                </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Promoción Princess Cruises */}
         <section id="promocion-principal" className="py-16 px-4 bg-secondary">
           <div className="container mx-auto max-w-7xl">
@@ -468,64 +527,6 @@ const Promociones = () => {
                     para explorar destinos increíbles.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Promociones Vigentes Section */}
-        <section className="py-16 px-4 bg-secondary">
-          <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
-                Promociones Vigentes
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Princess Cruises Promo */}
-              <div className="group cursor-pointer" onClick={() => {
-                const element = document.getElementById('promocion-principal');
-                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }}>
-                <div className="relative w-full aspect-square max-w-[350px] mx-auto rounded-tl-[62.5px] overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
-                  <img 
-                    src={promoPrincessImage}
-                    alt="Promoción Princess Cruises - Hasta 50% OFF"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
-                    <div className="flex items-center gap-2 text-white font-bold text-lg">
-                      <span>Ver Promoción</span>
-                      <ArrowRight className="w-6 h-6" />
-                    </div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-display font-bold text-primary text-center mt-4">
-                  Promoción Princess Cruises
-                </h3>
-              </div>
-
-              {/* Cruise Deals Promo */}
-              <div className="group cursor-pointer" onClick={() => {
-                const element = document.getElementById('cruise-deals');
-                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }}>
-                <div className="relative w-full aspect-square max-w-[350px] mx-auto rounded-tl-[62.5px] overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
-                  <img 
-                    src={promoCruiseDealsImage}
-                    alt="Último Minuto: Cruise Deals - Ahorros hasta $400"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
-                    <div className="flex items-center gap-2 text-white font-bold text-lg">
-                      <span>Ver Promoción</span>
-                      <ArrowRight className="w-6 h-6" />
-                    </div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-display font-bold text-primary text-center mt-4">
-                  Último Minuto: Cruise Deals
-                </h3>
               </div>
             </div>
           </div>
