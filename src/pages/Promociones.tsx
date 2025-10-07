@@ -1,10 +1,12 @@
-import { ShoppingBag, Calendar, Gift, Ship, Tag, Clock, UserPlus, DollarSign } from "lucide-react";
+import { ShoppingBag, Calendar, Gift, Ship, Tag, Clock, UserPlus, DollarSign, ArrowRight, CheckCircle, AlertCircle, Info } from "lucide-react";
 import StickyHeader from "@/components/StickyHeader";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import PromoCard from "@/components/PromoCard";
 import { Button } from "@/components/ui/button";
 import heroPromoImage from "@/assets/hero-promociones.jpg";
+import promoPrincessImage from "@/assets/promo-princess.png";
+import promoCruiseDealsImage from "@/assets/promo-cruise-deals.webp";
 import {
   Accordion,
   AccordionContent,
@@ -93,17 +95,17 @@ const Promociones = () => {
               {/* Promo Card */}
               <div className="lg:sticky lg:top-24">
                 <PromoCard
-                  mainPercentage="40%"
+                  mainPercentage="50%"
                   topText="hasta"
-                  bottomText="off booking"
+                  bottomText="OFF"
                   highlights={[
                     {
                       icon: <UserPlus className="w-8 h-8" />,
-                      text: "Free 3rd & 4th guests",
+                      text: "3er y 4to pasajero",
                     },
                     {
                       icon: <DollarSign className="w-8 h-8" />,
-                      text: "$99 deposit",
+                      text: "$0 Depósito en salidas seleccionadas 2026/2027",
                     },
                   ]}
                   ctaText="Ver Salidas"
@@ -215,36 +217,48 @@ const Promociones = () => {
 
                 {/* Condiciones - Accordion */}
                 <div>
-                  <h3 className="text-2xl font-display font-bold text-primary mb-6">
-                    📌 Condiciones importantes
-                  </h3>
+                  <div className="flex items-center gap-3 mb-6">
+                    <AlertCircle className="w-6 h-6 text-primary" />
+                    <h3 className="text-2xl font-display font-bold text-primary">
+                      Condiciones importantes
+                    </h3>
+                  </div>
                   
                   <Accordion type="single" collapsible className="space-y-4">
                     <AccordionItem value="descuento-40" className="border-2 border-primary/10 rounded-xl px-4">
-                      <AccordionTrigger className="text-left font-semibold hover:text-accent">
-                        🔹 Hasta 40% OFF
+                      <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="w-5 h-5 text-accent" />
+                          <span>Hasta 50% OFF</span>
+                        </div>
                       </AccordionTrigger>
-                      <AccordionContent className="text-foreground/80 pt-2">
+                      <AccordionContent className="text-primary/80 pt-2">
                         Aplica sobre la tarifa base publicada (Launch Fare), no sobre cargos obligatorios 
                         ni impuestos gubernamentales. No aplica a paquetes Princess Plus o Princess Premier.
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="descuento-50" className="border-2 border-primary/10 rounded-xl px-4">
-                      <AccordionTrigger className="text-left font-semibold hover:text-accent">
-                        🔹 Hasta 50% OFF (3º y 4º pasajero)
+                      <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="w-5 h-5 text-accent" />
+                          <span>Hasta 50% OFF (3º y 4º pasajero)</span>
+                        </div>
                       </AccordionTrigger>
-                      <AccordionContent className="text-foreground/80 pt-2">
+                      <AccordionContent className="text-primary/80 pt-2">
                         Disponible solo en salidas seleccionadas de verano 2026 y 2027. El descuento 
                         varía según destino y categoría de cabina.
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="deposito" className="border-2 border-primary/10 rounded-xl px-4">
-                      <AccordionTrigger className="text-left font-semibold hover:text-accent">
-                        🔹 Depósito $0
+                      <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="w-5 h-5 text-accent" />
+                          <span>Depósito $0</span>
+                        </div>
                       </AccordionTrigger>
-                      <AccordionContent className="text-foreground/80 pt-2">
+                      <AccordionContent className="text-primary/80 pt-2">
                         Exclusivo para 3º y 4º pasajero en determinadas salidas de 2026 y 2027. Los primeros 
                         dos pasajeros deben abonar el depósito estándar. No disponible en cruceros mundiales, 
                         viajes de 45+ días ni en reservas ya con pago final.
@@ -252,20 +266,26 @@ const Promociones = () => {
                     </AccordionItem>
 
                     <AccordionItem value="ahorro-instantaneo" className="border-2 border-primary/10 rounded-xl px-4">
-                      <AccordionTrigger className="text-left font-semibold hover:text-accent">
-                        🔹 Ahorro instantáneo
+                      <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="w-5 h-5 text-accent" />
+                          <span>Ahorro instantáneo</span>
+                        </div>
                       </AccordionTrigger>
-                      <AccordionContent className="text-foreground/80 pt-2">
+                      <AccordionContent className="text-primary/80 pt-2">
                         Se aplica por persona según la duración y tipo de cabina (ver tabla). Para cabinas 
                         en ocupación individual, aplica la mitad del monto correspondiente.
                       </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="cobertura" className="border-2 border-primary/10 rounded-xl px-4">
-                      <AccordionTrigger className="text-left font-semibold hover:text-accent">
-                        🔹 Cobertura y periodo de viaje
+                      <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="w-5 h-5 text-accent" />
+                          <span>Cobertura y periodo de viaje</span>
+                        </div>
                       </AccordionTrigger>
-                      <AccordionContent className="text-foreground/80 pt-2">
+                      <AccordionContent className="text-primary/80 pt-2">
                         Promoción válida en todas las categorías de cabinas, incluyendo Sanctuary. 
                         Aplica para cruceros publicados que salgan entre diciembre de 2025 y noviembre de 2027, 
                         siempre que no hayan llegado a fecha de pago final.
@@ -276,20 +296,39 @@ const Promociones = () => {
 
                 {/* Notas adicionales */}
                 <div className="mt-8 p-6 bg-muted/50 rounded-xl">
-                  <h4 className="font-semibold text-primary mb-3">⚓ Notas adicionales</h4>
-                  <ul className="space-y-2 text-sm text-foreground/70">
-                    <li>🔹 Tarifas en base a ocupación doble.</li>
-                    <li>🔹 No aplican para pasajeros individuales.</li>
-                    <li>🔹 Los precios incluyen impuestos y tasas gubernamentales, pero están sujetos a cambios.</li>
-                    <li>🔹 Princess Cruises se reserva el derecho de ajustar los cargos obligatorios en caso de incrementos posteriores.</li>
-                    <li>🔹 Códigos promocionales: Base LTO: NQS | NQP | NNQ | Sanctuary: NFQ | Extra Savings: 2CA</li>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Info className="w-5 h-5 text-primary" />
+                    <h4 className="font-semibold text-primary">Notas adicionales</h4>
+                  </div>
+                  <ul className="space-y-2 text-sm text-primary/70">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span>Tarifas en base a ocupación doble.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span>No aplican para pasajeros individuales.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span>Los precios incluyen impuestos y tasas gubernamentales, pero están sujetos a cambios.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span>Princess Cruises se reserva el derecho de ajustar los cargos obligatorios en caso de incrementos posteriores.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span>Códigos promocionales: Base LTO: NQS | NQP | NNQ | Sanctuary: NFQ | Extra Savings: 2CA</span>
+                    </li>
                   </ul>
                 </div>
 
                 {/* CTA Footer */}
                 <div className="mt-8 text-center">
-                  <p className="text-foreground/80 mb-4">
-                    🔹 Reserva tu crucero con Discover Cruises en{" "}
+                  <p className="text-primary/80 mb-4 flex items-center justify-center gap-2">
+                    <Ship className="w-5 h-5 text-accent" />
+                    <span>Reserva tu crucero con Discover Cruises en{" "}
                     <a 
                       href="https://www.discovercruises.net" 
                       target="_blank" 
@@ -298,6 +337,7 @@ const Promociones = () => {
                     >
                       www.discovercruises.net
                     </a>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -306,7 +346,7 @@ const Promociones = () => {
         </section>
 
         {/* Cruise Deals - Último Minuto */}
-        <section className="py-16 px-4">
+        <section id="cruise-deals" className="py-16 px-4">
           <div className="container mx-auto max-w-7xl">
             {/* Header de la sección */}
             <div className="text-center mb-12">
@@ -428,6 +468,64 @@ const Promociones = () => {
                     para explorar destinos increíbles.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Promociones Vigentes Section */}
+        <section className="py-16 px-4 bg-secondary">
+          <div className="container mx-auto max-w-7xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
+                Promociones Vigentes
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Princess Cruises Promo */}
+              <div className="group cursor-pointer" onClick={() => {
+                const element = document.getElementById('promocion-principal');
+                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}>
+                <div className="relative w-full aspect-square max-w-[350px] mx-auto rounded-tl-[62.5px] overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                  <img 
+                    src={promoPrincessImage}
+                    alt="Promoción Princess Cruises - Hasta 50% OFF"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
+                    <div className="flex items-center gap-2 text-white font-bold text-lg">
+                      <span>Ver Promoción</span>
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-display font-bold text-primary text-center mt-4">
+                  Promoción Princess Cruises
+                </h3>
+              </div>
+
+              {/* Cruise Deals Promo */}
+              <div className="group cursor-pointer" onClick={() => {
+                const element = document.getElementById('cruise-deals');
+                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}>
+                <div className="relative w-full aspect-square max-w-[350px] mx-auto rounded-tl-[62.5px] overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                  <img 
+                    src={promoCruiseDealsImage}
+                    alt="Último Minuto: Cruise Deals - Ahorros hasta $400"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
+                    <div className="flex items-center gap-2 text-white font-bold text-lg">
+                      <span>Ver Promoción</span>
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-display font-bold text-primary text-center mt-4">
+                  Último Minuto: Cruise Deals
+                </h3>
               </div>
             </div>
           </div>
