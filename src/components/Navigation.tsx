@@ -48,7 +48,7 @@ const Navigation = () => {
           <a href="#promociones" className="hover:text-accent transition-colors">Promociones</a>
           <a href="#novedades" className="hover:text-accent transition-colors">Novedades</a>
           
-          <button className="cta-button-outline flex items-center gap-2 !text-primary !border-primary hover:!bg-primary hover:!text-white">
+          <button className="cta-button-outline flex items-center gap-2 !text-primary !border-accent hover:!bg-accent hover:!text-white">
             <Search className="w-4 h-4" />
             Buscar crucero
           </button>

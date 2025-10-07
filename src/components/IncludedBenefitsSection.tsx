@@ -74,7 +74,8 @@ const IncludedBenefitsSection = () => {
               return (
                 <div
                   key={index}
-                  className="flex-none w-64 snap-start bg-card rounded-2xl p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2"
+                  className="flex-none w-64 snap-start bg-card p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2"
+                  style={{ borderRadius: '0 2rem 0 0' }}
                 >
                   <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-accent" />
