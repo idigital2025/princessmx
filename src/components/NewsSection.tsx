@@ -6,22 +6,22 @@ import blog3 from "@/assets/blog-3.jpg";
 const NewsSection = () => {
   const articles = [
     {
-      title: "Nuevas rutas para 2025",
+      title: "Rail & Sail: Princess + Brightline",
       image: blog1,
-      date: "15 Enero 2025",
-      excerpt: "Descubre los emocionantes destinos que hemos agregado a nuestra flota para la próxima temporada."
+      date: "Abril 10, 2024",
+      excerpt: "Ofreciendo transporte asequible y conveniente y servicio de equipaje exprés para huéspedes que naveguen desde puertos de Florida"
     },
     {
-      title: "Experiencia Culinaria Premium",
+      title: "Sun Princess mejora la experiencia de compras a bordo",
       image: blog2,
-      date: "10 Enero 2025",
-      excerpt: "Nuestros nuevos menús gourmet diseñados por chefs reconocidos internacionalmente."
+      date: "Febrero 28, 2024",
+      excerpt: "Las tiendas de Princess ofrecen una experiencia minorista premium en el mar con Chanel, TAG Heuer, Breitling, Shaun Leane y más"
     },
     {
-      title: "Entretenimiento de Primer Nivel",
+      title: "Más experiencias a bordo del nuevo Sun Princess",
       image: blog3,
-      date: "5 Enero 2025",
-      excerpt: "Shows exclusivos y actividades que harán de tu viaje una experiencia inolvidable."
+      date: "Febrero 28, 2024",
+      excerpt: "Nuevas experiencias agregadas a una colección sin precedentes de colaboradores famosos a bordo del Sun Princess"
     }
   ];
 

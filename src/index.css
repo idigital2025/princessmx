@@ -98,7 +98,7 @@ All colors MUST be HSL.
 
 @layer components {
   .cruise-card-shape {
-    border-radius: 0 2rem 0 2rem;
+    border-radius: 0 2rem 0 0;
   }
   
   .cta-button {
@@ -132,6 +132,6 @@ All colors MUST be HSL.
   }
   
   .asymmetric-card {
-    border-radius: 0 3rem 0 3rem;
+    border-radius: 0 3rem 0 0;
   }
 }

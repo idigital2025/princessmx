@@ -22,14 +22,14 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white border-b border-border py-4 px-4 md:px-8">
+    <nav className="bg-white border-b border-border py-2 px-4 md:px-8">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <Ship className="w-8 h-8 text-primary" />
-          <h1 className="text-2xl md:text-3xl font-display font-bold text-primary">Princess Cruises</h1>
+          <h1 className="text-xl md:text-2xl font-display font-bold text-primary">Princess Cruises</h1>
         </div>
         
-        <div className="flex items-center gap-6 text-sm md:text-base font-display">
+        <div className="flex items-center gap-6 text-sm md:text-base font-display text-primary">
           <a href="#" className="hover:text-accent transition-colors">Home</a>
           
           <DropdownMenu open={isDestinosOpen} onOpenChange={setIsDestinosOpen}>

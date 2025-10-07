@@ -26,7 +26,7 @@ const CruiseCard = ({ title, destination, duration, price, image, rating, passen
       
       <div className="p-6 space-y-4">
         <div>
-          <h3 className="text-2xl font-display font-bold text-foreground mb-2">{title}</h3>
+          <h3 className="text-2xl font-display font-bold text-primary mb-2">{title}</h3>
           <div className="flex items-center gap-2 text-muted-foreground">
             <MapPin className="w-4 h-4 text-primary" />
             <span className="text-sm">{destination}</span>

@@ -9,11 +9,16 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Ship className="w-8 h-8" />
-              <h3 className="text-2xl font-display font-bold">Océano Azul</h3>
+              <h3 className="text-2xl font-display font-bold">Princess Cruises</h3>
             </div>
             <p className="text-primary-foreground/80 mb-4">
-              Tu agencia de confianza para las mejores experiencias en cruceros alrededor del mundo.
+              Discover Cruises, somos representante oficial de Princess Cruises en México.
             </p>
+            <div className="text-primary-foreground/80 text-sm">
+              <p className="font-semibold mb-1">Horario de atención</p>
+              <p>Lunes a Viernes 08:00 – 20:00 hrs.</p>
+              <p>Domingos y Feriados 08:00 – 16:00 hrs.</p>
+            </div>
           </div>
           
           {/* Quick Links */}
@@ -33,11 +38,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-primary-foreground/80">
                 <Phone className="w-4 h-4 text-accent" />
-                <span>+1 (555) 123-4567</span>
+                <span>+52 55 8526 3163</span>
               </li>
               <li className="flex items-center gap-2 text-primary-foreground/80">
                 <Mail className="w-4 h-4 text-accent" />
-                <span>info@oceanoazul.com</span>
+                <span>contacto@princesscruises.mx</span>
               </li>
               <li className="flex items-start gap-2 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 text-accent mt-1" />
@@ -64,7 +69,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/70">
-          <p>&copy; 2025 Océano Azul Cruceros. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Princess Cruises México. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

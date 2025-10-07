@@ -53,7 +53,7 @@ const FeaturedCruises = () => {
         </div>
         
         <div className="text-center mt-12">
-          <button className="cta-button-primary">
+          <button className="cta-button-outline px-12 py-4 text-lg">
             Ver Todos los Cruceros
           </button>
         </div>

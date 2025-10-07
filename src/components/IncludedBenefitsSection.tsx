@@ -44,7 +44,7 @@ const IncludedBenefitsSection = () => {
                 <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   <Icon className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">{benefit.title}</h3>
                 <p className="text-muted-foreground">{benefit.description}</p>
               </div>
             );
