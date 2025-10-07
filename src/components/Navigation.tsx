@@ -22,22 +22,22 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white border-b border-border relative">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 relative">
+    <nav className="bg-white border-b border-border relative overflow-hidden">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 py-0 relative">
         <div className="flex items-center relative">
-          <div className="bg-primary px-8 py-4 rounded-br-[3rem] absolute left-0 -ml-[100vw] pl-[100vw]">
+          <div className="bg-primary px-8 py-3 rounded-br-[3rem] absolute left-0 top-0 bottom-0 -ml-[100vw] pl-[100vw] flex items-center">
             <div className="flex items-center gap-3">
               <Ship className="w-8 h-8 text-white" />
               <h1 className="text-xl md:text-2xl font-display font-bold text-white">PRINCESS</h1>
             </div>
           </div>
-          <div className="flex items-center gap-3 relative z-10">
+          <div className="flex items-center gap-3 relative z-10 py-3">
             <Ship className="w-8 h-8 text-white opacity-0" />
             <h1 className="text-xl md:text-2xl font-display font-bold text-white opacity-0">PRINCESS</h1>
           </div>
         </div>
         
-        <div className="flex items-center gap-6 text-sm md:text-base text-primary py-2 px-4 md:px-8 font-serif">
+        <div className="flex items-center gap-6 text-lg md:text-xl text-primary py-3 px-4 md:px-8 font-serif">
           <a href="#" className="hover:text-accent transition-colors">Home</a>
           
           <DropdownMenu open={isDestinosOpen} onOpenChange={setIsDestinosOpen}>
