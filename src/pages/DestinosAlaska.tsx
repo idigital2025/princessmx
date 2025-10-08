@@ -130,13 +130,13 @@ const DestinosAlaska = () => {
 
       {/* Results Section */}
       <section className="container mx-auto px-4 py-12">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl font-bold text-foreground">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+          <h2 className="text-3xl font-display font-bold text-primary">
             {filteredResults.length} resultados encontrados
           </h2>
-          <div className="flex gap-2 items-center text-sm text-muted-foreground">
-            <span>Ordenar por:</span>
-            <select className="bg-card border border-border rounded-lg px-4 py-2 text-foreground">
+          <div className="flex gap-2 items-center text-sm">
+            <span className="font-semibold text-primary">Ordenar por:</span>
+            <select className="bg-white border-2 border-primary/20 rounded-xl px-4 py-2 text-foreground font-medium focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
               <option>Recomendado</option>
               <option>Precio: Menor a Mayor</option>
               <option>Precio: Mayor a Menor</option>
@@ -153,33 +153,33 @@ const DestinosAlaska = () => {
 
         {/* Pagination */}
         <div className="flex justify-center items-center gap-2 mt-12">
-          <button className="px-3 py-2 rounded-lg border border-border hover:bg-accent transition-colors">
+          <button className="px-3 py-2 rounded-xl border-2 border-primary/20 hover:bg-primary hover:text-white transition-all font-bold">
             ««
           </button>
-          <button className="px-3 py-2 rounded-lg border border-border hover:bg-accent transition-colors">
+          <button className="px-3 py-2 rounded-xl border-2 border-primary/20 hover:bg-primary hover:text-white transition-all font-bold">
             «
           </button>
-          <button className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-bold">
+          <button className="px-5 py-2 rounded-xl bg-accent text-white font-bold shadow-md">
             1
           </button>
-          <button className="px-4 py-2 rounded-lg border border-border hover:bg-accent transition-colors">
+          <button className="px-5 py-2 rounded-xl border-2 border-primary/20 hover:bg-primary hover:text-white transition-all font-bold">
             2
           </button>
-          <button className="px-4 py-2 rounded-lg border border-border hover:bg-accent transition-colors">
+          <button className="px-5 py-2 rounded-xl border-2 border-primary/20 hover:bg-primary hover:text-white transition-all font-bold">
             3
           </button>
-          <button className="px-4 py-2 rounded-lg border border-border hover:bg-accent transition-colors">
+          <button className="px-5 py-2 rounded-xl border-2 border-primary/20 hover:bg-primary hover:text-white transition-all font-bold">
             4
           </button>
-          <button className="px-3 py-2 rounded-lg border border-border hover:bg-accent transition-colors">
+          <button className="px-3 py-2 rounded-xl border-2 border-primary/20 hover:bg-primary hover:text-white transition-all font-bold">
             »
           </button>
-          <button className="px-3 py-2 rounded-lg border border-border hover:bg-accent transition-colors">
+          <button className="px-3 py-2 rounded-xl border-2 border-primary/20 hover:bg-primary hover:text-white transition-all font-bold">
             »»
           </button>
         </div>
 
-        <p className="text-center text-muted-foreground text-sm mt-4">
+        <p className="text-center text-muted-foreground text-sm mt-6 font-medium">
           Mostrando de 1 a 5
         </p>
       </section>
