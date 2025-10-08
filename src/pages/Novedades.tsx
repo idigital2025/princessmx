@@ -96,10 +96,10 @@ const Novedades = () => {
                     className="group bg-white hover:bg-primary text-primary hover:text-white p-6 rounded-xl shadow-card transition-all duration-300 hover:scale-105"
                   >
                     <div className="flex items-center justify-between gap-4">
-                      <IconComponent className="w-10 h-10 flex-shrink-0" strokeWidth={1.5} />
+                      <IconComponent className="w-10 h-10 flex-shrink-0 group-hover:text-white" strokeWidth={1.5} />
                       <div className="text-left flex-1">
-                        <p className="text-sm font-semibold opacity-70 mb-1">{category.hashtag}</p>
-                        <p className="font-bold text-lg">{category.name}</p>
+                        <p className="text-sm font-semibold text-accent group-hover:text-white mb-1">{category.hashtag}</p>
+                        <p className="font-bold text-lg group-hover:text-white">{category.name}</p>
                       </div>
                       <ArrowRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
                     </div>
