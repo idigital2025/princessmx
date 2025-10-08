@@ -1,5 +1,5 @@
-import { Ship } from "lucide-react";
 import { ReactNode } from "react";
+import isotipoPrincessWhite from "@/assets/isotipo-princess-white.svg";
 
 interface PromoHighlight {
   icon: ReactNode;
@@ -61,7 +61,7 @@ const PromoCard = ({
 
         {/* Logo and CTA Section */}
         <div className="p-6 flex items-center justify-between gap-4">
-          <Ship className="w-16 h-16 flex-shrink-0" strokeWidth={1.5} />
+          <img src={isotipoPrincessWhite} alt="Princess Cruises" className="w-16 h-16 flex-shrink-0" />
           <a
             href={ctaLink}
             target="_blank"

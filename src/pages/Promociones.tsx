@@ -9,6 +9,7 @@ import heroPromoImage from "@/assets/hero-promociones.jpg";
 import promoPrincessImage from "@/assets/promo-princess.png";
 import promoCruiseDealsImage from "@/assets/promo-cruise-deals.webp";
 import isotipoPrincess from "@/assets/isotipo-princess.png";
+import isotipoPrincessWhite from "@/assets/isotipo-princess-white.svg";
 import {
   Accordion,
   AccordionContent,
@@ -45,7 +46,7 @@ const Promociones = () => {
               <div className="bg-primary px-8 md:px-12 py-8 md:py-10 flex flex-col justify-start items-start relative">
                 {/* Princess Logo - aligned with CTA cap height */}
                 <div className="absolute top-10 right-8 md:right-12">
-                  <img src={isotipoPrincess} alt="Princess Cruises" className="w-12 h-12 md:w-16 md:h-16" />
+                  <img src={isotipoPrincessWhite} alt="Princess Cruises" className="w-12 h-12 md:w-16 md:h-16" />
                 </div>
                 
                 {/* Headline - aligned with top of image */}

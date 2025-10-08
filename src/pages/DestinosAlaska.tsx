@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import AlaskaSearchFilters from "@/components/AlaskaSearchFilters";
 import CruiseResultCard from "@/components/CruiseResultCard";
-import { Ship } from "lucide-react";
+import { MapPin } from "lucide-react";
 import alaskaHero from "@/assets/destination-alaska.jpg";
 
 // Sample cruise data
@@ -113,7 +113,7 @@ const DestinosAlaska = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/80" />
         
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
-          <Ship className="w-16 h-16 mb-4" strokeWidth={1.5} />
+          <MapPin className="w-16 h-16 mb-4" strokeWidth={1.5} />
           <h1 className="font-display text-5xl md:text-6xl font-bold mb-4 text-center">
             Destinos Alaska
           </h1>
