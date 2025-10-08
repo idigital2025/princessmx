@@ -1,10 +1,13 @@
-import { Calendar, ArrowRight, Facebook, Instagram } from "lucide-react";
+import { ArrowRight, Facebook, Instagram, Compass, Ship, ChefHat, BookOpen, Globe, Gamepad2 } from "lucide-react";
 import StickyHeader from "@/components/StickyHeader";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import FloatingSearchButton from "@/components/FloatingSearchButton";
 import heroPromoImage from "@/assets/hero-promociones.jpg";
-import isotipoPrincess from "@/assets/isotipo-princess.png";
+import isotipoPrincess from "@/assets/isotipo-princess.svg";
+import blog1 from "@/assets/blog-1.jpg";
+import blog2 from "@/assets/blog-2.jpg";
+import blog3 from "@/assets/blog-3.jpg";
 
 const Novedades = () => {
   const scrollToCategory = (categoryId: string) => {
@@ -13,13 +16,15 @@ const Novedades = () => {
   };
 
   const categories = [
-    { id: 'suena-un-viaje', name: 'Soñando un Próximo Viaje', hashtag: '#sueñaunviaje' },
-    { id: 'curiosidades-abordo', name: 'Curiosidades a Bordo', hashtag: '#curiosidadesabordo' },
-    { id: 'princess-gourmet', name: 'Princess Gourmet', hashtag: '#princessgourmet' },
-    { id: 'historias-crucero', name: 'Historias de Crucero', hashtag: '#historiasdecrucero' },
-    { id: 'viajes-virtuales', name: 'Viajes Virtuales', hashtag: '#viajesvirtuales' },
-    { id: 'trivias-entretenimiento', name: 'Aprendemos Jugando', hashtag: '#triviasyentretenimiento' },
+    { id: 'suena-un-viaje', name: 'Soñando un Próximo Viaje', hashtag: '#sueñaunviaje', icon: Compass },
+    { id: 'curiosidades-abordo', name: 'Curiosidades a Bordo', hashtag: '#curiosidadesabordo', icon: Ship },
+    { id: 'princess-gourmet', name: 'Princess Gourmet', hashtag: '#princessgourmet', icon: ChefHat },
+    { id: 'historias-crucero', name: 'Historias de Crucero', hashtag: '#historiasdecrucero', icon: BookOpen },
+    { id: 'viajes-virtuales', name: 'Viajes Virtuales', hashtag: '#viajesvirtuales', icon: Globe },
+    { id: 'trivias-entretenimiento', name: 'Aprendemos Jugando', hashtag: '#triviasyentretenimiento', icon: Gamepad2 },
   ];
+
+  const articleImages = [blog1, blog2, blog3];
 
   return (
     <div className="min-h-screen">
@@ -82,21 +87,25 @@ const Novedades = () => {
               Categorías
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => scrollToCategory(category.id)}
-                  className="group bg-white hover:bg-primary text-primary hover:text-white p-6 rounded-xl shadow-card transition-all duration-300 hover:scale-105"
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="text-left">
-                      <p className="text-sm font-semibold opacity-70 mb-1">{category.hashtag}</p>
-                      <p className="font-bold text-lg">{category.name}</p>
+              {categories.map((category) => {
+                const IconComponent = category.icon;
+                return (
+                  <button
+                    key={category.id}
+                    onClick={() => scrollToCategory(category.id)}
+                    className="group bg-white hover:bg-primary text-primary hover:text-white p-6 rounded-xl shadow-card transition-all duration-300 hover:scale-105"
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <IconComponent className="w-10 h-10 flex-shrink-0" strokeWidth={1.5} />
+                      <div className="text-left flex-1">
+                        <p className="text-sm font-semibold opacity-70 mb-1">{category.hashtag}</p>
+                        <p className="font-bold text-lg">{category.name}</p>
+                      </div>
+                      <ArrowRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
                     </div>
-                    <ArrowRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                </button>
-              ))}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -136,7 +145,13 @@ const Novedades = () => {
                 { title: 'Un día en Halifax, Canadá', category: 'Guías de Viaje' },
               ].map((article, index) => (
                 <article key={index} className="group cursor-pointer">
-                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 bg-secondary h-56"></div>
+                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 h-56">
+                    <img 
+                      src={articleImages[index % articleImages.length]} 
+                      alt={article.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
@@ -170,7 +185,13 @@ const Novedades = () => {
                 { title: 'Nuevos platos con frutos de mar en Alaska', category: 'A bordo' },
               ].map((article, index) => (
                 <article key={index} className="group cursor-pointer">
-                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 bg-white h-56"></div>
+                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 h-56">
+                    <img 
+                      src={articleImages[index % articleImages.length]} 
+                      alt={article.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
@@ -204,7 +225,13 @@ const Novedades = () => {
                 { title: 'Casa de jengibre navideña', category: 'Princess Gourmet' },
               ].map((article, index) => (
                 <article key={index} className="group cursor-pointer">
-                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 bg-secondary h-56"></div>
+                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 h-56">
+                    <img 
+                      src={articleImages[index % articleImages.length]} 
+                      alt={article.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
@@ -238,7 +265,13 @@ const Novedades = () => {
                 { title: 'Casa del Árbol en Alaska', category: 'Historias de crucero' },
               ].map((article, index) => (
                 <article key={index} className="group cursor-pointer">
-                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 bg-white h-56"></div>
+                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 h-56">
+                    <img 
+                      src={articleImages[index % articleImages.length]} 
+                      alt={article.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
@@ -281,7 +314,13 @@ const Novedades = () => {
                 { title: 'El Metro de Moscú, el Palacio del pueblo', category: 'Viajes virtuales' },
               ].map((article, index) => (
                 <article key={index} className="group cursor-pointer">
-                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 bg-secondary h-56"></div>
+                  <div className="asymmetric-card overflow-hidden shadow-card group-hover:shadow-elegant transition-all mb-4 h-56">
+                    <img 
+                      src={articleImages[index % articleImages.length]} 
+                      alt={article.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
