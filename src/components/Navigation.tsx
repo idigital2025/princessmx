@@ -62,7 +62,7 @@ const Navigation = () => {
           </DropdownMenu>
           
           <Link to="/promociones" className="hover:text-accent transition-colors font-semibold">Promociones</Link>
-          <a href="#novedades" className="hover:text-accent transition-colors font-semibold">Novedades</a>
+          <Link to="/novedades" className="hover:text-accent transition-colors font-semibold">Novedades</Link>
           
           <button className="cta-button-outline flex items-center gap-2 !text-primary !border-accent hover:!bg-accent hover:!text-white">
             <Search className="w-4 h-4" />
@@ -115,13 +115,13 @@ const Navigation = () => {
                   Promociones
                 </Link>
                 
-                <a 
-                  href="#novedades" 
+                <Link 
+                  to="/novedades" 
                   className="hover:text-accent transition-colors font-semibold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Novedades
-                </a>
+                </Link>
               </div>
             </SheetContent>
           </Sheet>
