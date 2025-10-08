@@ -1,4 +1,4 @@
-import { Mail, UserCircle2, Phone, CircleHelp } from "lucide-react";
+import { MailIcon, UserRound, PhoneCall, CircleHelp } from "lucide-react";
 
 const TopBanner = () => {
   return (
@@ -10,19 +10,19 @@ const TopBanner = () => {
         
         <div className="flex items-center gap-4 flex-wrap justify-center md:justify-end">
           <a href="mailto:contacto@princesscruises.mx" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <Mail className="w-4 h-4" fill="currentColor" />
+            <MailIcon className="w-4 h-4" strokeWidth={2.5} />
             <span className="hidden md:inline">contacto@princesscruises.mx</span>
           </a>
           <a href="#" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <UserCircle2 className="w-4 h-4" fill="currentColor" />
+            <UserRound className="w-4 h-4" strokeWidth={2.5} />
             <span className="hidden md:inline">Sesión Agencia</span>
           </a>
           <a href="#" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <CircleHelp className="w-4 h-4" fill="currentColor" />
+            <CircleHelp className="w-4 h-4" strokeWidth={2.5} />
             <span className="hidden md:inline">Ayuda</span>
           </a>
           <a href="tel:+525585263163" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <Phone className="w-4 h-4" fill="currentColor" />
+            <PhoneCall className="w-4 h-4" strokeWidth={2.5} />
             <span className="hidden md:inline">+52 55 8526-3163</span>
           </a>
         </div>
