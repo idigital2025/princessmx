@@ -1,4 +1,5 @@
-import { Ship, Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import logoPrincess from "@/assets/logo-princess.svg";
 
 const Footer = () => {
   return (
@@ -7,9 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <Ship className="w-8 h-8" />
-              <h3 className="text-2xl font-display font-bold">Princess Cruises</h3>
+            <div className="mb-4">
+              <img src={logoPrincess} alt="Princess Cruises" className="h-12 w-auto" />
             </div>
             <p className="text-primary-foreground/80 mb-4">
               Discover Cruises, somos representante oficial de Princess Cruises en México.

@@ -1,4 +1,4 @@
-import { ShoppingBag, Calendar, Gift, Ship, Tag, Clock, UserPlus, DollarSign, ArrowRight, CheckCircle, AlertCircle, Info } from "lucide-react";
+import { ShoppingBag, Calendar, Gift, Tag, Clock, UserPlus, DollarSign, ArrowRight, CheckCircle, AlertCircle, Info } from "lucide-react";
 import StickyHeader from "@/components/StickyHeader";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import heroPromoImage from "@/assets/hero-promociones.jpg";
 import promoPrincessImage from "@/assets/promo-princess.png";
 import promoCruiseDealsImage from "@/assets/promo-cruise-deals.webp";
+import isotipoPrincess from "@/assets/isotipo-princess.png";
 import {
   Accordion,
   AccordionContent,
@@ -44,7 +45,7 @@ const Promociones = () => {
               <div className="bg-primary px-8 md:px-12 py-8 md:py-10 flex flex-col justify-start items-start relative">
                 {/* Princess Logo - aligned with CTA cap height */}
                 <div className="absolute top-10 right-8 md:right-12">
-                  <Ship className="w-12 h-12 md:w-16 md:h-16 text-white" strokeWidth={1.5} />
+                  <img src={isotipoPrincess} alt="Princess Cruises" className="w-12 h-12 md:w-16 md:h-16" />
                 </div>
                 
                 {/* Headline - aligned with top of image */}
@@ -138,7 +139,7 @@ const Promociones = () => {
             {/* Header de la sección */}
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <Ship className="w-10 h-10 text-primary" />
+                <img src={isotipoPrincess} alt="Princess Cruises" className="w-10 h-10" />
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-primary">
                   Promoción Princess Cruises
                 </h2>
@@ -387,7 +388,7 @@ const Promociones = () => {
                 {/* CTA Footer */}
                 <div className="mt-8 text-center">
                   <p className="text-primary/80 mb-4 flex items-center justify-center gap-2">
-                    <Ship className="w-5 h-5 text-accent" />
+                    <img src={isotipoPrincess} alt="" className="w-5 h-5" />
                     <span>Reserva tu crucero con Discover Cruises en{" "}
                     <a 
                       href="https://www.discovercruises.net" 

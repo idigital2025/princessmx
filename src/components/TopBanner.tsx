@@ -1,4 +1,4 @@
-import { Mail, UserCircle, PhoneCall, HelpCircle } from "lucide-react";
+import { Mail, UserCircle2, Phone, CircleHelp } from "lucide-react";
 
 const TopBanner = () => {
   return (
@@ -10,19 +10,19 @@ const TopBanner = () => {
         
         <div className="flex items-center gap-4 flex-wrap justify-center md:justify-end">
           <a href="mailto:contacto@princesscruises.mx" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <Mail className="w-3 h-3" fill="white" />
+            <Mail className="w-4 h-4" fill="currentColor" />
             <span className="hidden md:inline">contacto@princesscruises.mx</span>
           </a>
           <a href="#" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <UserCircle className="w-3 h-3" fill="white" />
+            <UserCircle2 className="w-4 h-4" fill="currentColor" />
             <span className="hidden md:inline">Sesión Agencia</span>
           </a>
           <a href="#" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <HelpCircle className="w-3 h-3" fill="white" />
+            <CircleHelp className="w-4 h-4" fill="currentColor" />
             <span className="hidden md:inline">Ayuda</span>
           </a>
           <a href="tel:+525585263163" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <PhoneCall className="w-3 h-3" />
+            <Phone className="w-4 h-4" fill="currentColor" />
             <span className="hidden md:inline">+52 55 8526-3163</span>
           </a>
         </div>

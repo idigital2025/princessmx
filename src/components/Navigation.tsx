@@ -1,6 +1,7 @@
-import { Ship, Search, ChevronDown, Menu } from "lucide-react";
+import { Search, ChevronDown, Menu } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logoPrincess from "@/assets/logo-princess.svg";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -36,14 +37,10 @@ const Navigation = () => {
       <div className="container mx-auto flex items-stretch justify-between py-0 relative">
         <div className="flex items-center relative h-full">
           <div className="bg-primary px-8 rounded-br-[3rem] absolute left-0 top-0 bottom-0 -ml-[100vw] pl-[100vw] flex items-center">
-            <div className="flex items-center gap-3">
-              <Ship className="w-8 h-8 text-white" />
-              <h1 className="text-xl md:text-2xl font-display font-bold text-white">PRINCESS</h1>
-            </div>
+            <img src={logoPrincess} alt="Princess Cruises" className="h-8 md:h-10 w-auto" />
           </div>
           <div className="flex items-center gap-3 relative z-10 py-3">
-            <Ship className="w-8 h-8 text-white opacity-0" />
-            <h1 className="text-xl md:text-2xl font-display font-bold text-white opacity-0">PRINCESS</h1>
+            <img src={logoPrincess} alt="Princess Cruises" className="h-8 md:h-10 w-auto opacity-0" />
           </div>
         </div>
         
