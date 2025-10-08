@@ -11,19 +11,19 @@ const TopBanner = () => {
         <div className="flex items-center gap-4 flex-wrap justify-center md:justify-end">
           <a href="mailto:contacto@princesscruises.mx" className="flex items-center gap-1 hover:text-accent transition-colors">
             <Mail className="w-3 h-3" fill="white" />
-            <span>contacto@princesscruises.mx</span>
+            <span className="hidden md:inline">contacto@princesscruises.mx</span>
           </a>
           <a href="#" className="flex items-center gap-1 hover:text-accent transition-colors">
             <UserCircle className="w-3 h-3" fill="white" />
-            <span>Sesión Agencia</span>
+            <span className="hidden md:inline">Sesión Agencia</span>
           </a>
           <a href="#" className="flex items-center gap-1 hover:text-accent transition-colors">
             <HelpCircle className="w-3 h-3" fill="white" />
-            <span>Ayuda</span>
+            <span className="hidden md:inline">Ayuda</span>
           </a>
           <a href="tel:+525585263163" className="flex items-center gap-1 hover:text-accent transition-colors">
             <PhoneCall className="w-3 h-3" />
-            <span>+52 55 8526-3163</span>
+            <span className="hidden md:inline">+52 55 8526-3163</span>
           </a>
         </div>
       </div>

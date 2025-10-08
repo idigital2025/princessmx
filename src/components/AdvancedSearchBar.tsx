@@ -19,7 +19,7 @@ const AdvancedSearchBar = () => {
   };
 
   return (
-    <div className="search-card w-full max-w-6xl mx-auto">
+    <div id="search-bar" className="search-card w-full max-w-6xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
         <div>
           <label className="flex items-center gap-2 text-sm font-semibold text-primary mb-2">

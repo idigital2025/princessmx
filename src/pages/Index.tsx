@@ -11,6 +11,7 @@ import IncludedBenefitsSection from "@/components/IncludedBenefitsSection";
 import NewsSection from "@/components/NewsSection";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import FloatingSearchButton from "@/components/FloatingSearchButton";
 
 const Index = () => {
   return (
@@ -30,6 +31,7 @@ const Index = () => {
       </main>
       <Footer />
       <FloatingButtons />
+      <FloatingSearchButton />
     </div>
   );
 };

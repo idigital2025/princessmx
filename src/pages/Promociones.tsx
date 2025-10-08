@@ -2,6 +2,7 @@ import { ShoppingBag, Calendar, Gift, Ship, Tag, Clock, UserPlus, DollarSign, Ar
 import StickyHeader from "@/components/StickyHeader";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import FloatingSearchButton from "@/components/FloatingSearchButton";
 import PromoCard from "@/components/PromoCard";
 import { Button } from "@/components/ui/button";
 import heroPromoImage from "@/assets/hero-promociones.jpg";
@@ -535,6 +536,7 @@ const Promociones = () => {
 
       <Footer />
       <FloatingButtons />
+      <FloatingSearchButton />
     </div>
   );
 };
