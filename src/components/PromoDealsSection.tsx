@@ -29,7 +29,7 @@ const PromoDealsSection = () => {
   ];
 
   return (
-    <section ref={ref} className={`py-16 px-4 bg-secondary transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <section ref={ref} className={`py-16 px-4 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-12 text-center">
           Encuentra la oferta de crucero perfecta para ti

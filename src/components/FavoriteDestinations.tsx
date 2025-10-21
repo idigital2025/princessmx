@@ -36,8 +36,8 @@ const FavoriteDestinations = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-md shadow-lg">
-                    <h3 className="text-xl md:text-2xl font-display font-bold text-primary">
+                  <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg">
+                    <h3 className="text-sm md:text-base font-display font-bold text-primary">
                       {destination.name}
                     </h3>
                   </div>
