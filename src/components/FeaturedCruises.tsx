@@ -48,7 +48,7 @@ const FeaturedCruises = () => {
     <section ref={ref} id="destinos" className={`py-16 px-4 bg-secondary transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-4 leading-tight">
             Salidas seleccionadas para ti
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">

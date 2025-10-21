@@ -10,11 +10,11 @@ const TopBanner = () => {
   return (
     <div className="bg-primary text-primary-foreground py-2 px-4 text-xs">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-        <p className="text-left">
+        <p className="text-[10px] md:text-xs text-center md:text-left whitespace-nowrap">
           Operated by Discover Cruises. Princess Cruises trusted partner since 2004.
         </p>
         
-        <div className="flex items-center gap-4 flex-wrap justify-center md:justify-end">
+        <div className="hidden md:flex items-center gap-4 flex-wrap justify-center md:justify-end">
           <a href="mailto:contacto@princesscruises.mx" className="flex items-center gap-1 hover:text-accent transition-colors">
             <MailIcon className="w-4 h-4" strokeWidth={2.5} />
             <span className="hidden md:inline">contacto@princesscruises.mx</span>

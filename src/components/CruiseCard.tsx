@@ -13,7 +13,7 @@ interface CruiseCardProps {
 
 const CruiseCard = ({ title, destination, duration, price, image, rating, ship }: CruiseCardProps) => {
   return (
-    <div className="cruise-card-shape overflow-hidden bg-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
+    <div className="cruise-card-shape overflow-hidden bg-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 flex flex-col">
       <div className="relative h-64 overflow-hidden">
         <img
           src={image}
@@ -25,27 +25,27 @@ const CruiseCard = ({ title, destination, duration, price, image, rating, ship }
         </div>
       </div>
       
-      <div className="p-6 space-y-4">
+      <div className="p-4 md:p-6 space-y-3 flex flex-col flex-1">
         <div>
-          <h3 className="text-2xl font-display font-bold text-primary mb-2">{title}</h3>
+          <h3 className="text-lg md:text-2xl font-display font-bold text-primary mb-2 leading-tight">{title}</h3>
           <div className="flex items-center gap-2 text-muted-foreground">
-            <MapPin className="w-4 h-4 text-primary" />
-            <span className="text-sm">{destination}</span>
+            <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+            <span className="text-sm line-clamp-1">{destination}</span>
           </div>
         </div>
         
-        <div className="flex items-center justify-between text-sm">
+        <div className="space-y-2 text-sm">
           <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4 text-primary" />
+            <Calendar className="w-4 h-4 text-primary flex-shrink-0" />
             <span>{duration}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Ship className="w-4 h-4 text-primary" />
-            <span className="text-xs md:text-sm">{ship}</span>
+            <Ship className="w-4 h-4 text-primary flex-shrink-0" />
+            <span className="text-xs md:text-sm line-clamp-1">{ship}</span>
           </div>
         </div>
         
-        <div className="flex items-center justify-between pt-4 border-t border-border">
+        <div className="pt-3 space-y-3 mt-auto">
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star
@@ -56,7 +56,7 @@ const CruiseCard = ({ title, destination, duration, price, image, rating, ship }
             <span className="ml-2 text-sm text-muted-foreground">({rating}.0)</span>
           </div>
           
-          <button className="cta-button-accent text-sm px-6 py-2">
+          <button className="cta-button-accent text-sm px-6 py-2 w-full">
             Ver Detalles
           </button>
         </div>

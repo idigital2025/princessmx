@@ -23,7 +23,8 @@ const FavoriteDestinations = () => {
           Destinos
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {/* Desktop: Grid | Mobile: Horizontal Scroll */}
+        <div className="hidden md:grid grid-cols-3 lg:grid-cols-5 gap-6">
           {destinations.map((destination) => (
             <div
               key={destination.name}
@@ -45,6 +46,33 @@ const FavoriteDestinations = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mobile: Horizontal Carousel */}
+        <div className="md:hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+          <div className="flex gap-4 pb-4">
+            {destinations.map((destination) => (
+              <div
+                key={destination.name}
+                className="asymmetric-card overflow-hidden shadow-card flex-shrink-0 w-64 snap-center"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={destination.image}
+                    alt={destination.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-4 left-4">
+                    <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg">
+                      <h3 className="text-sm font-display font-bold text-primary">
+                        {destination.name}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

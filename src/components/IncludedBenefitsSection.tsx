@@ -38,20 +38,20 @@ const IncludedBenefitsSection = () => {
     <section ref={ref} className={`py-16 px-4 bg-primary transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
             ¿Qué incluye mi viaje con Princess?
           </h2>
-          <p className="text-lg text-white/80 max-w-3xl mx-auto">
+          <p className="text-sm md:text-lg text-white/80 max-w-3xl mx-auto">
             Subtítulo que complementa la sección con acotación. Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed
           </p>
         </div>
         
         <div className="relative">
-          {/* Navigation Buttons */}
+          {/* Navigation Buttons - Hidden on mobile */}
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
+            className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
             onClick={() => scroll('left')}
           >
             <ChevronLeft className="w-6 h-6 text-primary" />
@@ -60,7 +60,7 @@ const IncludedBenefitsSection = () => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
+            className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
             onClick={() => scroll('right')}
           >
             <ChevronRight className="w-6 h-6 text-primary" />
@@ -68,7 +68,7 @@ const IncludedBenefitsSection = () => {
 
           <div 
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide px-12"
+            className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide px-2 md:px-12"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {benefits.map((benefit, index) => {

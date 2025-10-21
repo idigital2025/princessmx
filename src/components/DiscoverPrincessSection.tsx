@@ -13,10 +13,10 @@ const DiscoverPrincessSection = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-3xl font-display font-bold">
+            <h3 className="text-2xl md:text-3xl font-display font-bold">
               ¿Qué tiene Princess que sea especial?
             </h3>
-            <div className="space-y-4 text-lg">
+            <div className="space-y-4 text-sm md:text-lg">
               <p>
                 Desde actividades relajantes y enriquecedoras hasta entretenimiento de primer nivel y cocina gourmet, cuando usted sube a bordo, está marcando rumbo a un mundo de maravillosos nuevos descubrimientos.
               </p>
