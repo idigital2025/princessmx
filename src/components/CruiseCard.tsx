@@ -1,4 +1,4 @@
-import { MapPin, Calendar, Users, Star } from "lucide-react";
+import { MapPin, Calendar, Ship, Star } from "lucide-react";
 
 interface CruiseCardProps {
   title: string;
@@ -7,10 +7,10 @@ interface CruiseCardProps {
   price: string;
   image: string;
   rating: number;
-  passengers: string;
+  ship: string;
 }
 
-const CruiseCard = ({ title, destination, duration, price, image, rating, passengers }: CruiseCardProps) => {
+const CruiseCard = ({ title, destination, duration, price, image, rating, ship }: CruiseCardProps) => {
   return (
     <div className="cruise-card-shape overflow-hidden bg-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
       <div className="relative h-64 overflow-hidden">
@@ -39,8 +39,8 @@ const CruiseCard = ({ title, destination, duration, price, image, rating, passen
             <span>{duration}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Users className="w-4 h-4 text-primary" />
-            <span>{passengers}</span>
+            <Ship className="w-4 h-4 text-primary" />
+            <span className="text-xs md:text-sm">{ship}</span>
           </div>
         </div>
         

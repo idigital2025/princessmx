@@ -1,4 +1,4 @@
-import { Search, ChevronDown, Menu } from "lucide-react";
+import { UserRound, Menu, PhoneCall, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logoPrincess from "@/assets/logo-princess.svg";
@@ -63,11 +63,33 @@ const Navigation = () => {
           
           <Link to="/promociones" className="hover:text-accent transition-colors font-semibold">Promociones</Link>
           <Link to="/novedades" className="hover:text-accent transition-colors font-semibold">Novedades</Link>
-          
-          <button className="cta-button-outline flex items-center gap-2 !text-primary !border-accent hover:!bg-accent hover:!text-white">
-            <Search className="w-4 h-4" />
-            Buscar crucero
+        </div>
+        
+        <div className="hidden md:flex items-center gap-3">
+          <button className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-primary hover:text-accent transition-colors border border-primary hover:border-accent rounded-lg">
+            <UserRound className="w-4 h-4" />
+            Login Agencias
           </button>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="cta-button-accent px-4 py-2 text-sm font-semibold flex items-center gap-2">
+              <PhoneCall className="w-4 h-4" />
+              Ventas
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>
+                <a href="tel:+525585263163" className="flex flex-col">
+                  <span className="font-semibold">México</span>
+                  <span className="text-xs">+52 55 8526-3163</span>
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="tel:+5511999999999" className="flex flex-col">
+                  <span className="font-semibold">Brasil</span>
+                  <span className="text-xs">+55 11 9999-9999</span>
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Mobile Navigation */}

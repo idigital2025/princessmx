@@ -22,10 +22,6 @@ const AdvancedSearchBar = () => {
     <div id="search-bar" className="search-card w-full max-w-6xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
         <div>
-          <label className="flex items-center gap-2 text-sm font-semibold text-primary mb-2">
-            <MapPin className="w-4 h-4" />
-            Destino
-          </label>
           <Select value={destination} onValueChange={setDestination}>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Selecciona destino" />
@@ -40,10 +36,6 @@ const AdvancedSearchBar = () => {
         </div>
         
         <div>
-          <label className="flex items-center gap-2 text-sm font-semibold text-primary mb-2">
-            <Calendar className="w-4 h-4" />
-            Mes/Año
-          </label>
           <Select value={monthYear} onValueChange={setMonthYear}>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Selecciona fecha" />
@@ -80,10 +72,6 @@ const AdvancedSearchBar = () => {
         </div>
         
         <div>
-          <label className="flex items-center gap-2 text-sm font-semibold text-primary mb-2">
-            <Anchor className="w-4 h-4" />
-            Puerto de salida
-          </label>
           <Select value={port} onValueChange={setPort}>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Selecciona puerto" />
@@ -111,10 +99,6 @@ const AdvancedSearchBar = () => {
         </div>
         
         <div>
-          <label className="flex items-center gap-2 text-sm font-semibold text-primary mb-2">
-            <Clock className="w-4 h-4" />
-            Duración
-          </label>
           <Select value={duration} onValueChange={setDuration}>
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Selecciona duración" />
@@ -130,10 +114,11 @@ const AdvancedSearchBar = () => {
         <div className="flex items-end">
           <button
             onClick={handleSearch}
-            className="cta-button-accent w-full flex items-center justify-center gap-2"
+            className="cta-button-accent w-full flex items-center justify-center gap-2 text-sm md:text-base"
           >
-            <Search className="w-5 h-5" />
-            Buscar
+            <Search className="w-4 h-4 md:w-5 md:h-5" />
+            <span className="hidden sm:inline">Buscar</span>
+            <span className="sm:hidden">OK</span>
           </button>
         </div>
       </div>

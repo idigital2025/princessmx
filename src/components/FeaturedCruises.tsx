@@ -2,6 +2,13 @@ import CruiseCard from "./CruiseCard";
 import caribbeanImage from "@/assets/cruise-caribbean.jpg";
 import mediterraneanImage from "@/assets/cruise-mediterranean.jpg";
 import alaskaImage from "@/assets/cruise-alaska.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const FeaturedCruises = () => {
   const cruises = [
@@ -12,7 +19,7 @@ const FeaturedCruises = () => {
       price: "desde $899",
       image: caribbeanImage,
       rating: 5,
-      passengers: "Hasta 4,000"
+      ship: "Regal Princess"
     },
     {
       title: "Mediterráneo Clásico",
@@ -21,7 +28,7 @@ const FeaturedCruises = () => {
       price: "desde $1,299",
       image: mediterraneanImage,
       rating: 5,
-      passengers: "Hasta 3,500"
+      ship: "Sky Princess"
     },
     {
       title: "Aventura en Alaska",
@@ -30,7 +37,7 @@ const FeaturedCruises = () => {
       price: "desde $1,099",
       image: alaskaImage,
       rating: 5,
-      passengers: "Hasta 2,500"
+      ship: "Discovery Princess"
     }
   ];
 
@@ -38,22 +45,28 @@ const FeaturedCruises = () => {
     <section id="destinos" className="py-16 px-4 bg-secondary">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-4">
             Salidas seleccionadas para ti
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             Explora nuestros cruceros más populares y descubre el viaje perfecto para ti
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cruises.map((cruise, index) => (
-            <CruiseCard key={index} {...cruise} />
-          ))}
-        </div>
+        <Carousel className="w-full max-w-6xl mx-auto">
+          <CarouselContent>
+            {cruises.map((cruise, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CruiseCard {...cruise} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
         
         <div className="text-center mt-12">
-          <button className="cta-button-outline px-12 py-4 text-lg">
+          <button className="cta-button-outline px-8 md:px-12 py-3 md:py-4 text-base md:text-lg">
             Ver Todos los Cruceros
           </button>
         </div>

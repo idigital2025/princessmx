@@ -1,4 +1,10 @@
-import { MailIcon, UserRound, PhoneCall, CircleHelp } from "lucide-react";
+import { MailIcon, UserRound, PhoneCall, CircleHelp, Globe } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const TopBanner = () => {
   return (
@@ -14,17 +20,19 @@ const TopBanner = () => {
             <span className="hidden md:inline">contacto@princesscruises.mx</span>
           </a>
           <a href="#" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <UserRound className="w-4 h-4" strokeWidth={2.5} />
-            <span className="hidden md:inline">Sesión Agencia</span>
-          </a>
-          <a href="#" className="flex items-center gap-1 hover:text-accent transition-colors">
             <CircleHelp className="w-4 h-4" strokeWidth={2.5} />
             <span className="hidden md:inline">Ayuda</span>
           </a>
-          <a href="tel:+525585263163" className="flex items-center gap-1 hover:text-accent transition-colors">
-            <PhoneCall className="w-4 h-4" strokeWidth={2.5} />
-            <span className="hidden md:inline">+52 55 8526-3163</span>
-          </a>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 hover:text-accent transition-colors focus:outline-none">
+              <Globe className="w-4 h-4" strokeWidth={2.5} />
+              <span className="hidden md:inline">ES</span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>Español (ES)</DropdownMenuItem>
+              <DropdownMenuItem>Português (PT-BR)</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </div>
