@@ -46,10 +46,10 @@ const Navigation = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6 text-lg md:text-xl text-primary py-3 px-4 md:px-8 font-serif h-full">
-          <Link to="/" className="hover:text-accent transition-colors font-semibold">Home</Link>
+          <Link to="/" className="hover:text-primary transition-colors font-semibold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Home</Link>
           
           <DropdownMenu open={isDestinosOpen} onOpenChange={setIsDestinosOpen}>
-            <DropdownMenuTrigger className="flex items-center gap-1 hover:text-accent transition-colors outline-none font-semibold">
+            <DropdownMenuTrigger className="flex items-center gap-1 hover:text-primary transition-colors outline-none font-semibold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               Destinos <ChevronDown className="w-4 h-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-white z-50">
@@ -61,23 +61,25 @@ const Navigation = () => {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <Link to="/promociones" className="hover:text-accent transition-colors font-semibold">Promociones</Link>
-          <Link to="/novedades" className="hover:text-accent transition-colors font-semibold">Novedades</Link>
+          <Link to="/promociones" className="hover:text-primary transition-colors font-semibold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Promociones</Link>
+          <Link to="/novedades" className="hover:text-primary transition-colors font-semibold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Novedades</Link>
         </div>
         
         <div className="hidden md:flex items-center gap-3">
-          <button className="flex items-center justify-center gap-2 w-10 h-10 text-sm font-semibold text-primary hover:text-accent transition-colors border border-primary hover:border-accent rounded-full">
+          <button className="flex items-center justify-center gap-2 px-4 h-10 text-sm font-semibold text-primary hover:text-accent transition-colors border-2 border-accent hover:border-primary rounded-full">
             <UserRound className="w-4 h-4" />
+            <span>Sesión Agencias</span>
           </button>
           <DropdownMenu>
             <DropdownMenuTrigger className="cta-button-accent px-4 py-2 text-sm font-semibold flex items-center gap-2">
               <PhoneCall className="w-4 h-4" />
               Ventas
+              <ChevronDown className="w-4 h-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-64 bg-white shadow-lg">
+            <DropdownMenuContent className="w-64 bg-white shadow-lg z-50">
               <DropdownMenuItem>
-                <a href="tel:+525585263163" className="flex items-center gap-3 w-full py-1">
-                  <span className="text-2xl">🇲🇽</span>
+                <a href="tel:+525585263163" className="flex items-center gap-3 w-full py-2">
+                  <span className="text-xl">🇲🇽</span>
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">México</span>
                     <span className="text-xs text-muted-foreground">+52 55 8526 3163</span>
@@ -85,8 +87,8 @@ const Navigation = () => {
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="tel:+5411527416000" className="flex items-center gap-3 w-full py-1">
-                  <span className="text-2xl">🇦🇷</span>
+                <a href="tel:+5411527416000" className="flex items-center gap-3 w-full py-2">
+                  <span className="text-xl">🇦🇷</span>
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Argentina</span>
                     <span className="text-xs text-muted-foreground">+ 54 11 5274 1600</span>
@@ -94,8 +96,8 @@ const Navigation = () => {
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="tel:+56225830338" className="flex items-center gap-3 w-full py-1">
-                  <span className="text-2xl">🇨🇱</span>
+                <a href="tel:+56225830338" className="flex items-center gap-3 w-full py-2">
+                  <span className="text-xl">🇨🇱</span>
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Chile</span>
                     <span className="text-xs text-muted-foreground">+ 56 2 2583 0338</span>
@@ -103,8 +105,8 @@ const Navigation = () => {
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="tel:+5760191846000" className="flex items-center gap-3 w-full py-1">
-                  <span className="text-2xl">🇨🇴</span>
+                <a href="tel:+5760191846000" className="flex items-center gap-3 w-full py-2">
+                  <span className="text-xl">🇨🇴</span>
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Colombia</span>
                     <span className="text-xs text-muted-foreground">+57 601 9184 600</span>
@@ -112,8 +114,8 @@ const Navigation = () => {
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="tel:+1140630881" className="flex items-center gap-3 w-full py-1">
-                  <span className="text-2xl">🇧🇷</span>
+                <a href="tel:+1140630881" className="flex items-center gap-3 w-full py-2">
+                  <span className="text-xl">🇧🇷</span>
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Brasil</span>
                     <span className="text-xs text-muted-foreground">+11 4063 0881</span>
@@ -121,8 +123,8 @@ const Navigation = () => {
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="tel:+59894401928" className="flex items-center gap-3 w-full py-1">
-                  <span className="text-2xl">🇺🇾</span>
+                <a href="tel:+59894401928" className="flex items-center gap-3 w-full py-2">
+                  <span className="text-xl">🇺🇾</span>
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Uruguay</span>
                     <span className="text-xs text-muted-foreground">+598 9440 1928</span>
@@ -130,8 +132,10 @@ const Navigation = () => {
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem className="border-t mt-1 pt-2">
-                <a href="https://wa.me/" className="flex items-center gap-3 w-full py-1">
-                  <span className="text-2xl">💬</span>
+                <a href="https://wa.me/" className="flex items-center gap-3 w-full py-2">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                    <PhoneCall className="w-3 h-3 text-white" />
+                  </div>
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Whatsapp</span>
                     <span className="text-xs text-muted-foreground">Contáctanos</span>
