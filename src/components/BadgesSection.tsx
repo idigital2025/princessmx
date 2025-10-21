@@ -11,7 +11,10 @@ const BadgesSection = () => {
       <div className="container mx-auto">
         {/* Desktop & Mobile: Animated Carousel - One per screen, 2s per slide */}
         <div className="relative overflow-hidden">
-          <div className="flex animate-[scroll_8s_linear_infinite]">
+          <div 
+            className="flex flex-nowrap animate-badge-scroll"
+            style={{ willChange: 'transform' }}
+          >
             <div className="flex-shrink-0 w-full flex justify-center px-4">
               <img src={badge1} alt="Travel Weekly Award" className="h-24 md:h-32 object-contain" />
             </div>
@@ -22,8 +25,8 @@ const BadgesSection = () => {
               <img src={badge3} alt="Recommend Magazine Award" className="h-24 md:h-32 object-contain" />
             </div>
             {/* Duplicate for seamless loop */}
-            <div className="flex-shrink-0 w-full flex justify-center px-4">
-              <img src={badge1} alt="Travel Weekly Award" className="h-24 md:h-32 object-contain" />
+            <div className="flex-shrink-0 w-full flex justify-center px-4" aria-hidden="true">
+              <img src={badge1} alt="" className="h-24 md:h-32 object-contain" />
             </div>
           </div>
         </div>
