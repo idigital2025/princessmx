@@ -1,4 +1,5 @@
 import { MapPin, Calendar, Ship, Star } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface CruiseCardProps {
   title: string;
@@ -19,7 +20,7 @@ const CruiseCard = ({ title, destination, duration, price, image, rating, ship }
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
         />
-        <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold">
+        <div className="absolute top-4 right-4 bg-white text-primary px-4 py-2 rounded-full font-bold">
           {price}
         </div>
       </div>
@@ -49,7 +50,7 @@ const CruiseCard = ({ title, destination, duration, price, image, rating, ship }
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-4 h-4 ${i < rating ? "fill-accent text-accent" : "text-muted"}`}
+                className={`w-4 h-4 ${i < rating ? "fill-yellow-400 text-yellow-400" : "text-muted"}`}
               />
             ))}
             <span className="ml-2 text-sm text-muted-foreground">({rating}.0)</span>

@@ -1,10 +1,13 @@
 import badge1 from "@/assets/badge-1.png";
 import badge2 from "@/assets/badge-2.png";
 import badge3 from "@/assets/badge-3.png";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const BadgesSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section className="py-12 px-4 bg-white">
+    <section ref={ref} className={`py-12 px-4 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto">
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
           <img src={badge1} alt="Travel Weekly Award" className="h-24 md:h-32 object-contain" />

@@ -1,5 +1,5 @@
 import AdvancedSearchBar from "./AdvancedSearchBar";
-import heroImage from "@/assets/hero-cruise.jpg";
+import heroImage from "@/assets/hero-cruise-sunset.jpg";
 
 const HeroSection = () => {
   return (
@@ -11,7 +11,7 @@ const HeroSection = () => {
           alt="Crucero de lujo navegando en aguas cristalinas"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/10" />
       </div>
       
       {/* Content */}

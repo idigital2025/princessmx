@@ -9,8 +9,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const NewsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   const articles = [
     {
       title: "Rail & Sail: Princess + Brightline",
@@ -33,7 +36,7 @@ const NewsSection = () => {
   ];
 
   return (
-    <section id="novedades" className="py-16 px-4 bg-background">
+    <section ref={ref} id="novedades" className={`py-16 px-4 bg-background transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-12 text-center">
           Novedades Princess
@@ -54,7 +57,7 @@ const NewsSection = () => {
                   
                   <div className="p-4 md:p-6 space-y-2 md:space-y-3">
                     <div className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground">
-                      <Calendar className="w-3 h-3 md:w-4 md:h-4 text-accent" />
+                      <Calendar className="w-3 h-3 md:w-4 md:h-4 text-primary" />
                       <span>{article.date}</span>
                     </div>
                     <h3 className="text-lg md:text-xl lg:text-2xl font-display font-bold text-foreground">

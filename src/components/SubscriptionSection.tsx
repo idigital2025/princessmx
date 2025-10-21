@@ -1,16 +1,18 @@
 import { Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const SubscriptionSection = () => {
   const [email, setEmail] = useState("");
+  const { ref, isVisible } = useScrollAnimation();
 
   const handleSubscribe = () => {
     console.log("Suscripción:", email);
   };
 
   return (
-    <section className="py-16 px-4 bg-gradient-ocean text-white">
+    <section ref={ref} className={`py-16 px-4 bg-gradient-ocean text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto max-w-4xl text-center">
         <Mail className="w-16 h-16 mx-auto mb-6" />
         <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">

@@ -24,7 +24,10 @@ const AdvancedSearchBar = () => {
         <div>
           <Select value={destination} onValueChange={setDestination}>
             <SelectTrigger className="w-full">
-              <SelectValue placeholder="Selecciona destino" />
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-muted-foreground" />
+                <SelectValue placeholder="Selecciona destino" />
+              </div>
             </SelectTrigger>
           <SelectContent>
             <SelectItem value="caribe">Caribe</SelectItem>
@@ -38,7 +41,10 @@ const AdvancedSearchBar = () => {
         <div>
           <Select value={monthYear} onValueChange={setMonthYear}>
             <SelectTrigger className="w-full">
-              <SelectValue placeholder="Selecciona fecha" />
+              <div className="flex items-center gap-2">
+                <Calendar className="w-4 h-4 text-muted-foreground" />
+                <SelectValue placeholder="Selecciona mes/año" />
+              </div>
             </SelectTrigger>
           <SelectContent>
             <SelectItem value="10/2025">10/2025</SelectItem>
@@ -74,7 +80,10 @@ const AdvancedSearchBar = () => {
         <div>
           <Select value={port} onValueChange={setPort}>
             <SelectTrigger className="w-full">
-              <SelectValue placeholder="Selecciona puerto" />
+              <div className="flex items-center gap-2">
+                <Anchor className="w-4 h-4 text-muted-foreground" />
+                <SelectValue placeholder="Selecciona puerto de salida" />
+              </div>
             </SelectTrigger>
           <SelectContent>
             <SelectItem value="sudafrica">Sudáfrica</SelectItem>
@@ -101,7 +110,10 @@ const AdvancedSearchBar = () => {
         <div>
           <Select value={duration} onValueChange={setDuration}>
             <SelectTrigger className="w-full">
-              <SelectValue placeholder="Selecciona duración" />
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-muted-foreground" />
+                <SelectValue placeholder="Selecciona duración" />
+              </div>
             </SelectTrigger>
           <SelectContent>
             <SelectItem value="3-5">3 - 5 noches</SelectItem>

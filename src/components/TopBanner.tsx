@@ -1,4 +1,4 @@
-import { MailIcon, UserRound, PhoneCall, CircleHelp, Globe } from "lucide-react";
+import { MailIcon, UserRound, PhoneCall, CircleHelp, Globe, ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,8 +27,9 @@ const TopBanner = () => {
             <DropdownMenuTrigger className="flex items-center gap-1 hover:text-accent transition-colors focus:outline-none">
               <Globe className="w-4 h-4" strokeWidth={2.5} />
               <span className="hidden md:inline">ES</span>
+              <ChevronDown className="w-3 h-3" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="bg-white">
               <DropdownMenuItem>Español (ES)</DropdownMenuItem>
               <DropdownMenuItem>Português (PT-BR)</DropdownMenuItem>
             </DropdownMenuContent>

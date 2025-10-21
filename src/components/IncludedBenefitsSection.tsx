@@ -1,9 +1,11 @@
 import { Ship, Utensils, Wifi, Sparkles, Music, Dumbbell, Wine, Users, MapPin, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const IncludedBenefitsSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { ref, isVisible } = useScrollAnimation();
 
   const benefits = [
     { icon: Ship, title: "Alojamiento", description: "Cabinas cómodas y elegantes con vistas al mar" },
@@ -33,7 +35,7 @@ const IncludedBenefitsSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-primary">
+    <section ref={ref} className={`py-16 px-4 bg-primary transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
@@ -77,8 +79,8 @@ const IncludedBenefitsSection = () => {
                   className="flex-none w-64 snap-start bg-card p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2"
                   style={{ borderRadius: '0 2rem 0 0' }}
                 >
-                  <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                    <Icon className="w-8 h-8 text-accent" />
+                  <div className="bg-sky-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <Icon className="w-8 h-8 text-sky-600" />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-2">{benefit.title}</h3>
                   <p className="text-muted-foreground">{benefit.description}</p>

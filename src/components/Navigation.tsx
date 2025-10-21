@@ -66,26 +66,76 @@ const Navigation = () => {
         </div>
         
         <div className="hidden md:flex items-center gap-3">
-          <button className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-primary hover:text-accent transition-colors border border-primary hover:border-accent rounded-lg">
+          <button className="flex items-center justify-center gap-2 w-10 h-10 text-sm font-semibold text-primary hover:text-accent transition-colors border border-primary hover:border-accent rounded-full">
             <UserRound className="w-4 h-4" />
-            Login Agencias
           </button>
           <DropdownMenu>
             <DropdownMenuTrigger className="cta-button-accent px-4 py-2 text-sm font-semibold flex items-center gap-2">
               <PhoneCall className="w-4 h-4" />
               Ventas
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="w-64 bg-white shadow-lg">
               <DropdownMenuItem>
-                <a href="tel:+525585263163" className="flex flex-col">
-                  <span className="font-semibold">México</span>
-                  <span className="text-xs">+52 55 8526-3163</span>
+                <a href="tel:+525585263163" className="flex items-center gap-3 w-full py-1">
+                  <span className="text-2xl">🇲🇽</span>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-primary">México</span>
+                    <span className="text-xs text-muted-foreground">+52 55 8526 3163</span>
+                  </div>
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="tel:+5511999999999" className="flex flex-col">
-                  <span className="font-semibold">Brasil</span>
-                  <span className="text-xs">+55 11 9999-9999</span>
+                <a href="tel:+5411527416000" className="flex items-center gap-3 w-full py-1">
+                  <span className="text-2xl">🇦🇷</span>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-primary">Argentina</span>
+                    <span className="text-xs text-muted-foreground">+ 54 11 5274 1600</span>
+                  </div>
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="tel:+56225830338" className="flex items-center gap-3 w-full py-1">
+                  <span className="text-2xl">🇨🇱</span>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-primary">Chile</span>
+                    <span className="text-xs text-muted-foreground">+ 56 2 2583 0338</span>
+                  </div>
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="tel:+5760191846000" className="flex items-center gap-3 w-full py-1">
+                  <span className="text-2xl">🇨🇴</span>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-primary">Colombia</span>
+                    <span className="text-xs text-muted-foreground">+57 601 9184 600</span>
+                  </div>
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="tel:+1140630881" className="flex items-center gap-3 w-full py-1">
+                  <span className="text-2xl">🇧🇷</span>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-primary">Brasil</span>
+                    <span className="text-xs text-muted-foreground">+11 4063 0881</span>
+                  </div>
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <a href="tel:+59894401928" className="flex items-center gap-3 w-full py-1">
+                  <span className="text-2xl">🇺🇾</span>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-primary">Uruguay</span>
+                    <span className="text-xs text-muted-foreground">+598 9440 1928</span>
+                  </div>
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="border-t mt-1 pt-2">
+                <a href="https://wa.me/" className="flex items-center gap-3 w-full py-1">
+                  <span className="text-2xl">💬</span>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-primary">Whatsapp</span>
+                    <span className="text-xs text-muted-foreground">Contáctanos</span>
+                  </div>
                 </a>
               </DropdownMenuItem>
             </DropdownMenuContent>

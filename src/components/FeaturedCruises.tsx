@@ -9,8 +9,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const FeaturedCruises = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   const cruises = [
     {
       title: "Paraíso Caribeño",
@@ -42,7 +45,7 @@ const FeaturedCruises = () => {
   ];
 
   return (
-    <section id="destinos" className="py-16 px-4 bg-secondary">
+    <section ref={ref} id="destinos" className={`py-16 px-4 bg-secondary transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-4">
