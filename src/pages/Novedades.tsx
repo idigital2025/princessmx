@@ -98,7 +98,7 @@ const Novedades = () => {
                     <div className="flex items-center justify-between gap-4">
                       <IconComponent className="w-10 h-10 flex-shrink-0 group-hover:text-white" strokeWidth={1.5} />
                       <div className="text-left flex-1">
-                        <p className="text-sm font-semibold text-accent group-hover:text-white mb-1">{category.hashtag}</p>
+                        <p className="text-sm font-semibold text-primary group-hover:text-white mb-1">{category.hashtag}</p>
                         <p className="font-bold text-lg group-hover:text-white">{category.name}</p>
                       </div>
                       <ArrowRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
@@ -114,7 +114,7 @@ const Novedades = () => {
         <section id="suena-un-viaje" className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <p className="text-accent font-semibold text-lg mb-2">#sueñaunviaje</p>
+              <p className="text-primary font-semibold text-lg mb-2">#sueñaunviaje</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
                 Soñando un Próximo Viaje
               </h2>
@@ -152,7 +152,7 @@ const Novedades = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
+                  <p className="text-sm font-semibold text-primary mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
                   </h3>
@@ -166,7 +166,7 @@ const Novedades = () => {
         <section id="curiosidades-abordo" className="py-16 px-4 bg-secondary">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <p className="text-accent font-semibold text-lg mb-2">#curiosidadesabordo</p>
+              <p className="text-primary font-semibold text-lg mb-2">#curiosidadesabordo</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
                 Curiosidades a Bordo
               </h2>
@@ -192,7 +192,7 @@ const Novedades = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
+                  <p className="text-sm font-semibold text-primary mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
                   </h3>
@@ -206,12 +206,12 @@ const Novedades = () => {
         <section id="princess-gourmet" className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <p className="text-accent font-semibold text-lg mb-2">#princessgourmet</p>
+              <p className="text-primary font-semibold text-lg mb-2">#princessgourmet</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
                 Princess Gourmet
               </h2>
               <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-                Te acercamos las receta de nuestros premiados chefs, las mismas que se sirven a bordo de los barcos de Princess Cruises. Sigue el paso a paso, aprende, practica y comparte tus inquietudes, fotos y recetas en nuestras redes sociales con el hashtag <span className="font-semibold text-accent">#princessmasterchef</span>
+                Te acercamos las receta de nuestros premiados chefs, las mismas que se sirven a bordo de los barcos de Princess Cruises. Sigue el paso a paso, aprende, practica y comparte tus inquietudes, fotos y recetas en nuestras redes sociales con el hashtag <span className="font-semibold text-primary">#princessmasterchef</span>
               </p>
             </div>
 
@@ -232,7 +232,7 @@ const Novedades = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
+                  <p className="text-sm font-semibold text-primary mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
                   </h3>
@@ -246,7 +246,7 @@ const Novedades = () => {
         <section id="historias-crucero" className="py-16 px-4 bg-secondary">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <p className="text-accent font-semibold text-lg mb-2">#historiasdecrucero</p>
+              <p className="text-primary font-semibold text-lg mb-2">#historiasdecrucero</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
                 Historias de Crucero
               </h2>
@@ -272,7 +272,7 @@ const Novedades = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
+                  <p className="text-sm font-semibold text-primary mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
                   </h3>
@@ -286,7 +286,7 @@ const Novedades = () => {
         <section id="viajes-virtuales" className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <p className="text-accent font-semibold text-lg mb-2">#viajesvirtuales</p>
+              <p className="text-primary font-semibold text-lg mb-2">#viajesvirtuales</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
                 Viajes Virtuales
               </h2>
@@ -321,7 +321,7 @@ const Novedades = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-sm font-semibold text-accent mb-2">{article.category}</p>
+                  <p className="text-sm font-semibold text-primary mb-2">{article.category}</p>
                   <h3 className="text-xl font-display font-bold text-primary group-hover:text-accent transition-colors">
                     {article.title}
                   </h3>
@@ -335,7 +335,7 @@ const Novedades = () => {
         <section id="trivias-entretenimiento" className="py-16 px-4 bg-secondary">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <p className="text-accent font-semibold text-lg mb-2">#triviasyentretenimiento</p>
+              <p className="text-primary font-semibold text-lg mb-2">#triviasyentretenimiento</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
                 Aprendemos Jugando
               </h2>

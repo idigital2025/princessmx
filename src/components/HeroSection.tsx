@@ -11,7 +11,7 @@ const HeroSection = () => {
           alt="Crucero de lujo navegando en aguas cristalinas"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/50" />
       </div>
       
       {/* Content */}

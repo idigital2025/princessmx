@@ -96,7 +96,7 @@ const Promociones = () => {
                     alt="Promoción Princess Cruises - Hasta 50% OFF"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
                     <div className="flex items-center gap-2 text-white font-bold text-lg">
                       <span>Ver Promoción</span>
                       <ArrowRight className="w-6 h-6" />
@@ -119,7 +119,7 @@ const Promociones = () => {
                     alt="Último Minuto: Cruise Deals - Ahorros hasta $400"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8">
                     <div className="flex items-center gap-2 text-white font-bold text-lg">
                       <span>Ver Promoción</span>
                       <ArrowRight className="w-6 h-6" />
@@ -195,7 +195,7 @@ const Promociones = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <Card className="border-2 border-primary/10 hover:border-primary/30 transition-colors">
                       <CardHeader>
-                        <CardTitle className="text-accent">Hasta 40% OFF</CardTitle>
+                        <CardTitle className="text-primary">Hasta 40% OFF</CardTitle>
                         <CardDescription>
                           En tarifas de crucero para los dos primeros pasajeros de cada cabina
                         </CardDescription>
@@ -204,7 +204,7 @@ const Promociones = () => {
 
                     <Card className="border-2 border-primary/10 hover:border-primary/30 transition-colors">
                       <CardHeader>
-                        <CardTitle className="text-accent">Hasta USD $200</CardTitle>
+                        <CardTitle className="text-primary">Hasta USD $200</CardTitle>
                         <CardDescription>
                           De ahorro instantáneo según la duración del crucero y categoría de cabina
                         </CardDescription>
@@ -213,7 +213,7 @@ const Promociones = () => {
 
                     <Card className="border-2 border-primary/10 hover:border-primary/30 transition-colors">
                       <CardHeader>
-                        <CardTitle className="text-accent">Hasta 50% OFF</CardTitle>
+                        <CardTitle className="text-primary">Hasta 50% OFF</CardTitle>
                         <CardDescription>
                           En tarifas para 3º y 4º pasajero en salidas seleccionadas
                         </CardDescription>
@@ -222,7 +222,7 @@ const Promociones = () => {
 
                     <Card className="border-2 border-primary/10 hover:border-primary/30 transition-colors">
                       <CardHeader>
-                        <CardTitle className="text-accent">Depósito $0</CardTitle>
+                        <CardTitle className="text-primary">Depósito $0</CardTitle>
                         <CardDescription>
                           En salidas seleccionadas de 2026 y 2027 para 3º y 4º pasajero
                         </CardDescription>
@@ -250,21 +250,21 @@ const Promociones = () => {
                       <tbody>
                         <tr className="border-b border-primary/10 hover:bg-secondary/50 transition-colors">
                           <td className="py-4 px-6 font-medium">Interior / Exterior</td>
-                          <td className="py-4 px-6 text-center text-accent font-bold">USD $25</td>
-                          <td className="py-4 px-6 text-center text-accent font-bold">USD $25</td>
-                          <td className="py-4 px-6 text-center text-accent font-bold">USD $50</td>
+                          <td className="py-4 px-6 text-center text-primary font-bold">USD $25</td>
+                          <td className="py-4 px-6 text-center text-primary font-bold">USD $25</td>
+                          <td className="py-4 px-6 text-center text-primary font-bold">USD $50</td>
                         </tr>
                         <tr className="border-b border-primary/10 hover:bg-secondary/50 transition-colors">
                           <td className="py-4 px-6 font-medium">Balcón</td>
-                          <td className="py-4 px-6 text-center text-accent font-bold">USD $50</td>
-                          <td className="py-4 px-6 text-center text-accent font-bold">USD $50</td>
-                          <td className="py-4 px-6 text-center text-accent font-bold">USD $75</td>
+                          <td className="py-4 px-6 text-center text-primary font-bold">USD $50</td>
+                          <td className="py-4 px-6 text-center text-primary font-bold">USD $50</td>
+                          <td className="py-4 px-6 text-center text-primary font-bold">USD $75</td>
                         </tr>
                         <tr className="hover:bg-secondary/50 transition-colors">
                           <td className="py-4 px-6 font-medium">Mini-Suite / Suite</td>
-                          <td className="py-4 px-6 text-center text-accent font-bold">USD $50</td>
-                          <td className="py-4 px-6 text-center text-accent font-bold">USD $75</td>
-                          <td className="py-4 px-6 text-center text-accent font-bold">USD $100</td>
+                          <td className="py-4 px-6 text-center text-primary font-bold">USD $50</td>
+                          <td className="py-4 px-6 text-center text-primary font-bold">USD $75</td>
+                          <td className="py-4 px-6 text-center text-primary font-bold">USD $100</td>
                         </tr>
                       </tbody>
                     </table>

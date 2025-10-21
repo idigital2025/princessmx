@@ -32,7 +32,7 @@ const FavoriteDestinations = () => {
                   alt={destination.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <h3 className="absolute bottom-4 left-4 text-2xl font-display font-bold text-white">
                   {destination.name}
                 </h3>
