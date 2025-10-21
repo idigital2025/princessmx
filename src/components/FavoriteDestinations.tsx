@@ -4,9 +4,27 @@ import mediterraneanImg from "@/assets/destination-mediterranean.jpg";
 import hawaiiImg from "@/assets/destination-hawaii.jpg";
 import japanImg from "@/assets/destination-japan.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const FavoriteDestinations = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 280;
+      const newScrollPosition = direction === 'left' 
+        ? scrollRef.current.scrollLeft - scrollAmount
+        : scrollRef.current.scrollLeft + scrollAmount;
+      
+      scrollRef.current.scrollTo({
+        left: newScrollPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
   
   const destinations = [
     { name: "Alaska", image: alaskaImg },
@@ -48,30 +66,57 @@ const FavoriteDestinations = () => {
           ))}
         </div>
 
-        {/* Mobile: Horizontal Carousel */}
-        <div className="md:hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-          <div className="flex gap-4 pb-4">
-            {destinations.map((destination) => (
-              <div
-                key={destination.name}
-                className="asymmetric-card overflow-hidden shadow-card flex-shrink-0 w-64 snap-center"
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={destination.image}
-                    alt={destination.name}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute bottom-4 left-4">
-                    <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg">
-                      <h3 className="text-sm font-display font-bold text-primary">
-                        {destination.name}
-                      </h3>
+        {/* Mobile: Horizontal Carousel with Controls */}
+        <div className="md:hidden relative">
+          <div 
+            ref={scrollRef}
+            className="overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            <div className="flex gap-4 pb-4">
+              {destinations.map((destination) => (
+                <div
+                  key={destination.name}
+                  className="asymmetric-card overflow-hidden shadow-card flex-shrink-0 w-64 snap-center"
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={destination.image}
+                      alt={destination.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg">
+                        <h3 className="text-sm font-display font-bold text-primary">
+                          {destination.name}
+                        </h3>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          
+          {/* Mobile Navigation Buttons */}
+          <div className="flex justify-center gap-4 mt-4">
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-white hover:bg-white/90 shadow-lg"
+              onClick={() => scroll('left')}
+            >
+              <ChevronLeft className="w-6 h-6 text-primary" />
+            </Button>
+            
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-white hover:bg-white/90 shadow-lg"
+              onClick={() => scroll('right')}
+            >
+              <ChevronRight className="w-6 h-6 text-primary" />
+            </Button>
           </div>
         </div>
       </div>
