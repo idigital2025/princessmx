@@ -97,8 +97,20 @@ export default {
           }
         },
         "badge-scroll": {
-          "0%": {
-            transform: "translateX(0)"
+          "0%, 28.5%": {
+            transform: "translateX(0%)"
+          },
+          "33.33%": {
+            transform: "translateX(-100%)"
+          },
+          "33.33%, 61.83%": {
+            transform: "translateX(-100%)"
+          },
+          "66.66%": {
+            transform: "translateX(-200%)"
+          },
+          "66.66%, 95.16%": {
+            transform: "translateX(-200%)"
           },
           "100%": {
             transform: "translateX(-300%)"
@@ -109,7 +121,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out forwards",
-        "badge-scroll": "badge-scroll 6s linear infinite",
+        "badge-scroll": "badge-scroll 10.5s ease-in-out infinite",
       },
     },
   },
