@@ -35,7 +35,7 @@ const IncludedBenefitsSection = () => {
   };
 
   return (
-    <section ref={ref} className={`py-16 px-4 bg-primary transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <section ref={ref} className={`py-16 px-4 bg-primary transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} mt-0 md:mt-16`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
@@ -47,25 +47,6 @@ const IncludedBenefitsSection = () => {
         </div>
         
         <div className="relative">
-          {/* Navigation Buttons - Hidden on mobile */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
-            onClick={() => scroll('left')}
-          >
-            <ChevronLeft className="w-6 h-6 text-primary" />
-          </Button>
-          
-          <Button
-            variant="outline"
-            size="icon"
-            className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
-            onClick={() => scroll('right')}
-          >
-            <ChevronRight className="w-6 h-6 text-primary" />
-          </Button>
-
           <div 
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide px-2 md:px-12"
@@ -88,6 +69,46 @@ const IncludedBenefitsSection = () => {
               );
             })}
           </div>
+          
+          {/* Mobile Navigation Buttons - Below carousel */}
+          <div className="flex md:hidden justify-center gap-4 mt-6">
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-white hover:bg-white/90 shadow-lg"
+              onClick={() => scroll('left')}
+            >
+              <ChevronLeft className="w-6 h-6 text-primary" />
+            </Button>
+            
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-white hover:bg-white/90 shadow-lg"
+              onClick={() => scroll('right')}
+            >
+              <ChevronRight className="w-6 h-6 text-primary" />
+            </Button>
+          </div>
+
+          {/* Desktop Navigation Buttons - Side position */}
+          <Button
+            variant="outline"
+            size="icon"
+            className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
+            onClick={() => scroll('left')}
+          >
+            <ChevronLeft className="w-6 h-6 text-primary" />
+          </Button>
+          
+          <Button
+            variant="outline"
+            size="icon"
+            className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-white/90 shadow-lg"
+            onClick={() => scroll('right')}
+          >
+            <ChevronRight className="w-6 h-6 text-primary" />
+          </Button>
         </div>
       </div>
     </section>

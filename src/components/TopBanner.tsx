@@ -10,7 +10,7 @@ const TopBanner = () => {
   return (
     <div className="bg-primary text-primary-foreground py-2 px-4 text-xs">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-        <p className="text-[10px] md:text-xs text-center md:text-left whitespace-nowrap">
+        <p className="text-[8px] md:text-xs text-center md:text-left whitespace-nowrap">
           Operated by Discover Cruises. Princess Cruises trusted partner since 2004.
         </p>
         

@@ -16,12 +16,22 @@ const BadgesSection = () => {
           <img src={badge3} alt="Recommend Magazine Award" className="h-24 md:h-32 object-contain" />
         </div>
         
-        {/* Mobile: Horizontal Carousel */}
-        <div className="md:hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-          <div className="flex gap-8 pb-4 justify-center min-w-max px-4">
-            <img src={badge1} alt="Travel Weekly Award" className="h-24 object-contain snap-center" />
-            <img src={badge2} alt="Wine Spectator Award" className="h-24 object-contain snap-center" />
-            <img src={badge3} alt="Recommend Magazine Award" className="h-24 object-contain snap-center" />
+        {/* Mobile: Animated Carousel - One per screen */}
+        <div className="md:hidden relative overflow-hidden">
+          <div className="flex animate-[scroll_15s_linear_infinite]">
+            <div className="flex-shrink-0 w-full flex justify-center px-4">
+              <img src={badge1} alt="Travel Weekly Award" className="h-24 object-contain" />
+            </div>
+            <div className="flex-shrink-0 w-full flex justify-center px-4">
+              <img src={badge2} alt="Wine Spectator Award" className="h-24 object-contain" />
+            </div>
+            <div className="flex-shrink-0 w-full flex justify-center px-4">
+              <img src={badge3} alt="Recommend Magazine Award" className="h-24 object-contain" />
+            </div>
+            {/* Duplicate for seamless loop */}
+            <div className="flex-shrink-0 w-full flex justify-center px-4">
+              <img src={badge1} alt="Travel Weekly Award" className="h-24 object-contain" />
+            </div>
           </div>
         </div>
       </div>
