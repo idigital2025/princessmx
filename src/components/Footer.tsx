@@ -22,10 +22,9 @@ const Footer = () => {
             <h4 className="font-bold text-base md:text-lg mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2 text-sm md:text-base">
               <li><a href="/" className="text-primary-foreground/80 hover:text-accent transition-colors">Home</a></li>
-              <li><a href="#destinos" className="text-primary-foreground/80 hover:text-accent transition-colors">Destinos</a></li>
+              <li><a href="/destinos/alaska" className="text-primary-foreground/80 hover:text-accent transition-colors">Destinos - Alaska</a></li>
               <li><a href="/promociones" className="text-primary-foreground/80 hover:text-accent transition-colors">Promociones</a></li>
               <li><a href="/novedades" className="text-primary-foreground/80 hover:text-accent transition-colors">Novedades</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Sobre Nosotros</a></li>
               <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Términos y Condiciones</a></li>
             </ul>
           </div>
@@ -56,7 +55,7 @@ const Footer = () => {
                 <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-3 h-3 text-primary" />
                 </div>
-                <a href="mailto:citas@discovercruises.mx" className="hover:text-accent transition-colors">Programar una cita</a>
+                <a href="mailto:contacto@princesscruises.mx" className="hover:text-accent transition-colors">Programar una cita</a>
               </li>
             </ul>
           </div>
@@ -65,10 +64,10 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-base md:text-lg mb-4">Síguenos</h4>
             <div className="flex gap-4">
-              <a href="https://facebook.com/discovercruisesmx" target="_blank" rel="noopener noreferrer" className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform">
+              <a href="https://www.facebook.com/CruceroPrincess" target="_blank" rel="noopener noreferrer" className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform">
                 <Facebook className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               </a>
-              <a href="https://instagram.com/discovercruisesmx" target="_blank" rel="noopener noreferrer" className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform">
+              <a href="https://www.instagram.com/cruceros.princess/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform">
                 <Instagram className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               </a>
               <a href="https://youtube.com/@discovercruisesmx" target="_blank" rel="noopener noreferrer" className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform">

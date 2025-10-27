@@ -5,7 +5,7 @@ const DiscoverPrincessSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section ref={ref} className={`py-16 px-4 bg-primary text-primary-foreground transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} mb-0 md:mb-16`}>
+    <section ref={ref} className={`py-16 px-4 bg-primary text-primary-foreground transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} mb-0`}>
       <div className="container mx-auto">
         <h2 className="text-4xl md:text-5xl font-display font-bold mb-12 text-center">
           Descubre Princess Cruises

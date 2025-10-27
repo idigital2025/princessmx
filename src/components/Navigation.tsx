@@ -2,6 +2,12 @@ import { UserRound, Menu, PhoneCall, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logoPrincess from "@/assets/logo-princess.svg";
+import argentinaFlag from "@/assets/argentina-flag.svg";
+import brasilFlag from "@/assets/brasil-flag.svg";
+import chileFlag from "@/assets/chile-flag.svg";
+import colombiaFlag from "@/assets/colombia-flag.svg";
+import mexicoFlag from "@/assets/mexico-flag.svg";
+import uruguayFlag from "@/assets/uruguay-flag.svg";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,10 +43,10 @@ const Navigation = () => {
       <div className="container mx-auto flex items-stretch justify-between py-0 relative">
         <div className="flex items-center relative h-full">
           <div className="bg-primary px-8 rounded-br-[3rem] absolute left-0 top-0 bottom-0 -ml-[100vw] pl-[100vw] flex items-center">
-            <img src={logoPrincess} alt="Princess Cruises" className="h-8 md:h-10 w-auto" />
+            <img src={logoPrincess} alt="Princess Cruises" className="h-8 md:h-10 w-auto md:scale-100 scale-[1.15]" />
           </div>
           <div className="flex items-center gap-3 relative z-10 py-3">
-            <img src={logoPrincess} alt="Princess Cruises" className="h-8 md:h-10 w-auto opacity-0" />
+            <img src={logoPrincess} alt="Princess Cruises" className="h-8 md:h-10 w-auto opacity-0 md:scale-100 scale-[1.15]" />
           </div>
         </div>
         
@@ -53,7 +59,10 @@ const Navigation = () => {
               Destinos <ChevronDown className="w-4 h-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-white z-50">
-              {destinos.map((destino) => (
+              <DropdownMenuItem className="cursor-pointer">
+                <Link to="/destinos/alaska" className="w-full">Alaska</Link>
+              </DropdownMenuItem>
+              {destinos.slice(1).map((destino) => (
                 <DropdownMenuItem key={destino} className="cursor-pointer">
                   {destino}
                 </DropdownMenuItem>
@@ -66,9 +75,9 @@ const Navigation = () => {
         </div>
         
         <div className="hidden md:flex items-center gap-3">
-          <button className="flex items-center justify-center gap-2 px-4 h-10 text-sm font-semibold text-primary hover:text-accent transition-colors border-2 border-accent hover:border-primary rounded-full">
+          <button className="flex items-center justify-center gap-2 px-4 h-10 text-sm font-semibold text-foreground hover:text-accent transition-colors border-2 border-accent hover:border-primary rounded-full">
             <UserRound className="w-4 h-4" />
-            <span>Sesión Agencias</span>
+            <span className="uppercase">Sesión Agencias</span>
           </button>
           <DropdownMenu>
             <DropdownMenuTrigger className="cta-button-accent px-4 py-2 text-sm font-semibold flex items-center gap-2">
@@ -79,7 +88,7 @@ const Navigation = () => {
             <DropdownMenuContent className="w-64 bg-white shadow-lg z-50">
               <DropdownMenuItem>
                 <a href="tel:+525585263163" className="flex items-center gap-3 w-full py-2">
-                  <span className="text-xl">🇲🇽</span>
+                  <img src={mexicoFlag} alt="México" className="w-5 h-5 object-contain flex-shrink-0" />
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">México</span>
                     <span className="text-xs text-muted-foreground">+52 55 8526 3163</span>
@@ -88,7 +97,7 @@ const Navigation = () => {
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <a href="tel:+5411527416000" className="flex items-center gap-3 w-full py-2">
-                  <span className="text-xl">🇦🇷</span>
+                  <img src={argentinaFlag} alt="Argentina" className="w-5 h-5 object-contain flex-shrink-0" />
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Argentina</span>
                     <span className="text-xs text-muted-foreground">+ 54 11 5274 1600</span>
@@ -97,7 +106,7 @@ const Navigation = () => {
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <a href="tel:+56225830338" className="flex items-center gap-3 w-full py-2">
-                  <span className="text-xl">🇨🇱</span>
+                  <img src={chileFlag} alt="Chile" className="w-5 h-5 object-contain flex-shrink-0" />
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Chile</span>
                     <span className="text-xs text-muted-foreground">+ 56 2 2583 0338</span>
@@ -106,7 +115,7 @@ const Navigation = () => {
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <a href="tel:+5760191846000" className="flex items-center gap-3 w-full py-2">
-                  <span className="text-xl">🇨🇴</span>
+                  <img src={colombiaFlag} alt="Colombia" className="w-5 h-5 object-contain flex-shrink-0" />
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Colombia</span>
                     <span className="text-xs text-muted-foreground">+57 601 9184 600</span>
@@ -115,7 +124,7 @@ const Navigation = () => {
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <a href="tel:+1140630881" className="flex items-center gap-3 w-full py-2">
-                  <span className="text-xl">🇧🇷</span>
+                  <img src={brasilFlag} alt="Brasil" className="w-5 h-5 object-contain flex-shrink-0" />
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Brasil</span>
                     <span className="text-xs text-muted-foreground">+11 4063 0881</span>
@@ -124,7 +133,7 @@ const Navigation = () => {
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <a href="tel:+59894401928" className="flex items-center gap-3 w-full py-2">
-                  <span className="text-xl">🇺🇾</span>
+                  <img src={uruguayFlag} alt="Uruguay" className="w-5 h-5 object-contain flex-shrink-0" />
                   <div className="flex flex-col">
                     <span className="font-semibold text-primary">Uruguay</span>
                     <span className="text-xs text-muted-foreground">+598 9440 1928</span>
@@ -151,7 +160,7 @@ const Navigation = () => {
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-primary">
-                <Menu className="w-6 h-6" />
+                <Menu className="w-8 h-8" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px]">
@@ -170,7 +179,14 @@ const Navigation = () => {
                 <div className="flex flex-col gap-2">
                   <span className="font-semibold text-primary">Destinos</span>
                   <div className="flex flex-col gap-2 ml-4">
-                    {destinos.map((destino) => (
+                    <Link 
+                      to="/destinos/alaska" 
+                      className="text-base hover:text-accent transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Alaska
+                    </Link>
+                    {destinos.slice(1).map((destino) => (
                       <a 
                         key={destino} 
                         href="#" 

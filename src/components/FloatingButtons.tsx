@@ -21,7 +21,7 @@ const FloatingButtons = () => {
     <>
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/525585263163"
+        href="https://web.whatsapp.com/send?phone=5491164229372&text=Hola%20Princess%20Cruises!%20Estoy%20interesado%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n.%20He%20visitado%20https%3A%2F%2Fwww.princesscruises.mx%2Fpreguntas-frecuentes%2F%20en%20su%20sitio%20web"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-24 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-elegant hover:scale-110 transition-transform duration-300"
