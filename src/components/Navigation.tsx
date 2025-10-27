@@ -160,7 +160,7 @@ const Navigation = () => {
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-primary">
-                <Menu className="w-8 h-8" />
+                <Menu className="w-[42px] h-[42px]" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px]">
