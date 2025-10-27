@@ -159,8 +159,8 @@ const Navigation = () => {
         <div className="flex md:hidden items-center py-3 px-4">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-primary">
-                <Menu className="w-[42px] h-[42px]" />
+              <Button variant="ghost" size="icon" className="text-primary p-2">
+                <Menu className="w-[55px] h-[55px]" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px]">
