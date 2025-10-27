@@ -35,7 +35,7 @@ const IncludedBenefitsSection = () => {
   };
 
   return (
-    <section ref={ref} className={`py-8 md:py-16 px-4 bg-primary transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} mt-0 md:mt-16`}>
+    <section ref={ref} className={`pt-[22px] pb-8 md:pt-[54px] md:pb-16 px-4 bg-primary transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
