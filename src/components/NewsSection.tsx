@@ -60,7 +60,7 @@ const NewsSection = () => {
                       <Calendar className="w-3 h-3 md:w-4 md:h-4 text-primary" />
                       <span>{article.date}</span>
                     </div>
-                    <h3 className="text-lg md:text-xl lg:text-2xl font-display font-bold text-foreground">
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-display font-bold text-primary">
                       {article.title}
                     </h3>
                     <p className="text-sm md:text-base text-muted-foreground">{article.excerpt}</p>
