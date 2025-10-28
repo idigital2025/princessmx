@@ -4,34 +4,26 @@ import mediterraneanImg from "@/assets/destination-mediterranean.jpg";
 import hawaiiImg from "@/assets/destination-hawaii.jpg";
 import japanImg from "@/assets/destination-japan.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const FavoriteDestinations = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const scrollRef = useRef<HTMLDivElement>(null);
-  
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = 280;
-      const newScrollPosition = direction === 'left' 
-        ? scrollRef.current.scrollLeft - scrollAmount
-        : scrollRef.current.scrollLeft + scrollAmount;
-      
-      scrollRef.current.scrollTo({
-        left: newScrollPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
   
   const destinations = [
     { name: "Alaska", image: alaskaImg },
+    { name: "Asia / Japón", image: japanImg },
     { name: "Caribe", image: caribbeanImg },
     { name: "Mediterráneo", image: mediterraneanImg },
-    { name: "Hawai", image: hawaiiImg },
-    { name: "Japón", image: japanImg }
+    { name: "Norte de Europa", image: mediterraneanImg }, // Placeholder image
+    { name: "Sudamérica", image: caribbeanImg }, // Placeholder image
+    { name: "Canadá y N. Inglaterra", image: alaskaImg }, // Placeholder image
+    { name: "Australia y Pacífico", image: hawaiiImg }, // Placeholder image
   ];
 
   return (
@@ -41,84 +33,32 @@ const FavoriteDestinations = () => {
           Destinos
         </h2>
         
-        {/* Desktop: Grid | Mobile: Horizontal Scroll */}
-        <div className="hidden md:grid grid-cols-3 lg:grid-cols-5 gap-6">
-          {destinations.map((destination) => (
-            <div
-              key={destination.name}
-              className="asymmetric-card overflow-hidden shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 cursor-pointer group"
-            >
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={destination.image}
-                  alt={destination.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute bottom-4 left-4">
-                  <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg">
-                    <h3 className="text-sm md:text-base font-display font-bold text-primary">
-                      {destination.name}
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Mobile: Horizontal Carousel with Controls */}
-        <div className="md:hidden relative">
-          <div 
-            ref={scrollRef}
-            className="overflow-x-auto scrollbar-hide snap-x snap-mandatory"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            <div className="flex gap-4 pb-4">
-              {destinations.map((destination) => (
-                <div
-                  key={destination.name}
-                  className="asymmetric-card overflow-hidden shadow-card flex-shrink-0 w-64 snap-center"
-                >
-                  <div className="relative h-64 overflow-hidden">
+        <Carousel className="w-full max-w-6xl mx-auto">
+          <CarouselContent>
+            {destinations.map((destination) => (
+              <CarouselItem key={destination.name} className="md:basis-1/2 lg:basis-1/4">
+                <div className="asymmetric-card overflow-hidden shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 cursor-pointer group h-64">
+                  <div className="relative h-full overflow-hidden">
                     <img
                       src={destination.image}
                       alt={destination.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute bottom-4 left-4">
                       <div className="bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg">
-                        <h3 className="text-sm font-display font-bold text-primary">
+                        <h3 className="text-sm md:text-base font-display font-bold text-primary">
                           {destination.name}
                         </h3>
                       </div>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Mobile Navigation Buttons */}
-          <div className="flex justify-center gap-4 mt-4">
-            <Button
-              variant="outline"
-              size="icon"
-              className="bg-white hover:bg-white/90 shadow-lg"
-              onClick={() => scroll('left')}
-            >
-              <ChevronLeft className="w-6 h-6 text-primary" />
-            </Button>
-            
-            <Button
-              variant="outline"
-              size="icon"
-              className="bg-white hover:bg-white/90 shadow-lg"
-              onClick={() => scroll('right')}
-            >
-              <ChevronRight className="w-6 h-6 text-primary" />
-            </Button>
-          </div>
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
