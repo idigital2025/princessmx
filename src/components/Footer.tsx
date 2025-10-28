@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer id="contacto" className="bg-primary text-primary-foreground py-12 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="mb-4">
@@ -21,11 +21,24 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-base md:text-lg mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2 text-sm md:text-base">
-              <li><a href="/" className="text-primary-foreground/80 hover:text-accent transition-colors">Home</a></li>
-              <li><a href="/destinos/alaska" className="text-primary-foreground/80 hover:text-accent transition-colors">Destinos - Alaska</a></li>
               <li><a href="/promociones" className="text-primary-foreground/80 hover:text-accent transition-colors">Promociones</a></li>
               <li><a href="/novedades" className="text-primary-foreground/80 hover:text-accent transition-colors">Novedades</a></li>
               <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+          
+          {/* Destinos */}
+          <div>
+            <h4 className="font-bold text-base md:text-lg mb-4">Destinos</h4>
+            <ul className="space-y-2 text-sm md:text-base">
+              <li><a href="/destinos/alaska" className="text-primary-foreground/80 hover:text-accent transition-colors">Alaska</a></li>
+              <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Asia / Japón</a></li>
+              <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Caribe</a></li>
+              <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Mediterráneo</a></li>
+              <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Norte de Europa</a></li>
+              <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Sudamérica</a></li>
+              <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Canadá y N. Inglaterra</a></li>
+              <li><a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">Australia y Pacífico</a></li>
             </ul>
           </div>
           
@@ -69,9 +82,6 @@ const Footer = () => {
               </a>
               <a href="https://www.instagram.com/cruceros.princess/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform">
                 <Instagram className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-              </a>
-              <a href="https://youtube.com/@discovercruisesmx" target="_blank" rel="noopener noreferrer" className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform">
-                <Youtube className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               </a>
             </div>
           </div>

@@ -41,19 +41,17 @@ const Navigation = () => {
   return (
     <nav className="bg-white relative overflow-hidden">
       <div className="container mx-auto flex items-stretch justify-between py-0 relative">
-        <div className="flex items-center relative h-full">
+        <Link to="/" className="flex items-center relative h-full">
           <div className="bg-primary px-8 rounded-br-[3rem] absolute left-0 top-0 bottom-0 -ml-[100vw] pl-[100vw] flex items-center">
             <img src={logoPrincess} alt="Princess Cruises" className="h-8 md:h-10 w-auto md:scale-100 scale-[1.15]" />
           </div>
           <div className="flex items-center gap-3 relative z-10 py-3">
             <img src={logoPrincess} alt="Princess Cruises" className="h-8 md:h-10 w-auto opacity-0 md:scale-100 scale-[1.15]" />
           </div>
-        </div>
+        </Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6 text-lg md:text-xl text-primary py-3 px-4 md:px-8 font-serif h-full">
-          <Link to="/" className="hover:text-primary transition-colors font-semibold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Home</Link>
-          
+        <div className="hidden md:flex items-center gap-6 text-xl md:text-2xl text-primary py-3 px-0 md:px-2 font-serif h-full">
           <DropdownMenu open={isDestinosOpen} onOpenChange={setIsDestinosOpen}>
             <DropdownMenuTrigger className="flex items-center gap-1 hover:text-primary transition-colors outline-none font-semibold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-accent after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               Destinos <ChevronDown className="w-4 h-4" />
@@ -75,12 +73,17 @@ const Navigation = () => {
         </div>
         
         <div className="hidden md:flex items-center gap-3">
-          <button className="flex items-center justify-center gap-2 px-4 h-10 text-sm font-semibold text-foreground hover:text-accent transition-colors border-2 border-accent hover:border-primary rounded-full">
+          <a 
+            href="https://agencias.princesscruises.mx/auth/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 px-4 h-10 text-sm font-semibold text-foreground hover:text-accent transition-colors border-2 border-accent hover:border-primary rounded-full"
+          >
             <UserRound className="w-4 h-4" />
             <span className="uppercase">Sesión Agencias</span>
-          </button>
+          </a>
           <DropdownMenu>
-            <DropdownMenuTrigger className="cta-button-accent px-4 py-2 text-sm font-semibold flex items-center gap-2">
+            <DropdownMenuTrigger className="cta-button-accent px-4 py-2 text-sm font-semibold flex items-center gap-2 focus:outline-none focus:ring-0">
               <PhoneCall className="w-4 h-4" />
               Ventas
               <ChevronDown className="w-4 h-4" />
@@ -159,8 +162,8 @@ const Navigation = () => {
         <div className="flex md:hidden items-center py-3 px-4">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-primary p-2">
-                <Menu className="w-[55px] h-[55px]" />
+              <Button variant="ghost" size="icon" className="text-primary p-1">
+                <Menu className="w-[70px] h-[70px]" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px]">
@@ -168,14 +171,6 @@ const Navigation = () => {
                 <SheetTitle className="text-primary font-display">Menú</SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-6 mt-8 text-lg text-primary font-serif">
-                <Link 
-                  to="/" 
-                  className="hover:text-accent transition-colors font-semibold"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Home
-                </Link>
-                
                 <div className="flex flex-col gap-2">
                   <span className="font-semibold text-primary">Destinos</span>
                   <div className="flex flex-col gap-2 ml-4">
@@ -214,6 +209,17 @@ const Navigation = () => {
                 >
                   Novedades
                 </Link>
+                
+                <a 
+                  href="https://agencias.princesscruises.mx/auth/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors font-semibold flex items-center gap-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <UserRound className="w-4 h-4" />
+                  Sesión Agencias
+                </a>
               </div>
             </SheetContent>
           </Sheet>

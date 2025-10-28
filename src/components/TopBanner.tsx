@@ -11,7 +11,7 @@ const TopBanner = () => {
     <div className="bg-white text-foreground py-2 px-4 text-xs">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
         <p className="text-[8px] md:text-[10px] text-center md:text-left whitespace-nowrap text-muted-foreground">
-          <span className="hidden md:inline">Operated by Discover Cruises. </span>Princess Cruises trusted partner since 2004.
+          <span className="hidden md:inline italic">Operated by Discover Cruises. </span><span className="italic">Princess Cruises trusted partner since 2004.</span>
         </p>
         
         <div className="hidden md:flex items-center gap-4 flex-wrap justify-center md:justify-end">

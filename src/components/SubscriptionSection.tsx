@@ -34,7 +34,7 @@ const SubscriptionSection = () => {
         </div>
         
         <div className="border-t border-white/30 pt-6 md:pt-8 mt-6 md:mt-8">
-          <p className="text-sm md:text-lg mb-2">¿Eres agente de viajes? <a href="#" className="underline hover:text-accent">Regístrate aquí!</a></p>
+          <p className="text-sm md:text-lg mb-2">¿Eres agente de viajes? <a href="https://agencias.princesscruises.mx/auth/login" target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">Regístrate aquí!</a></p>
           <p className="text-xs md:text-sm opacity-90">Boletín exclusivo para profesionales</p>
         </div>
       </div>
