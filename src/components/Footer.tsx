@@ -3,8 +3,8 @@ import logoDiscoverCruises from "@/assets/logo-discover-cruises.svg";
 
 const Footer = () => {
   return (
-    <footer id="contacto" className="bg-primary text-primary-foreground py-12 px-4">
-      <div className="container mx-auto">
+    <footer id="contacto" className="bg-primary text-primary-foreground py-12 px-0 md:px-2">
+      <div className="container mx-auto px-4 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div>
@@ -74,9 +74,9 @@ const Footer = () => {
           </div>
           
           {/* Social */}
-          <div>
+          <div className="md:ml-auto md:pl-8">
             <h4 className="font-bold text-base md:text-lg mb-4">Síguenos</h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 md:justify-end">
               <a href="https://www.facebook.com/CruceroPrincess" target="_blank" rel="noopener noreferrer" className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform">
                 <Facebook className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               </a>
