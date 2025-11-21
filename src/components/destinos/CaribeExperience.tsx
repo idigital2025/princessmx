@@ -85,9 +85,9 @@ const CaribeExperience = () => {
               ))}
             </div>
 
-            <Button size="lg" className="cta-button-accent">
+            <button className="cta-button-accent">
               Ver cruceros disponibles
-            </Button>
+            </button>
           </div>
 
           {/* Right Image */}

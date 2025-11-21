@@ -51,7 +51,7 @@ const WhyCruiseCaribe = () => {
             <Card key={index} className="asymmetric-card hover-scale">
               <CardContent className="p-6 text-center">
                 <reason.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-display font-bold text-foreground mb-3">
+                <h3 className="text-xl font-display font-bold mb-3" style={{ color: '#003595' }}>
                   {reason.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -71,7 +71,7 @@ const WhyCruiseCaribe = () => {
                   <Card className="asymmetric-card">
                     <CardContent className="p-6 text-center">
                       <reason.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                      <h3 className="text-xl font-display font-bold text-foreground mb-3">
+                      <h3 className="text-xl font-display font-bold mb-3" style={{ color: '#003595' }}>
                         {reason.title}
                       </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">

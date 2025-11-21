@@ -56,12 +56,13 @@ const ExploreDestinations = () => {
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {destinations.map((destination, index) => (
-            <Card key={index} className="asymmetric-card overflow-hidden hover-scale">
-              <div className="aspect-[3/4] relative overflow-hidden">
+            <Card key={index} className="overflow-hidden hover-scale border-0 shadow-lg" style={{ borderRadius: '0 0 3rem 0' }}>
+              <div className="aspect-[3/4] relative overflow-hidden" style={{ borderRadius: '0 0 3rem 0' }}>
                 <img 
                   src={destination.image} 
                   alt={destination.alt}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  style={{ borderRadius: '0 0 3rem 0' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                   <CardContent className="p-6 w-full">
@@ -88,12 +89,13 @@ const ExploreDestinations = () => {
             <CarouselContent>
               {destinations.map((destination, index) => (
                 <CarouselItem key={index}>
-                  <Card className="asymmetric-card overflow-hidden">
-                    <div className="aspect-[3/4] relative overflow-hidden">
+                  <Card className="overflow-hidden border-0 shadow-lg" style={{ borderRadius: '0 0 3rem 0' }}>
+                    <div className="aspect-[3/4] relative overflow-hidden" style={{ borderRadius: '0 0 3rem 0' }}>
                       <img 
                         src={destination.image} 
                         alt={destination.alt}
                         className="w-full h-full object-cover"
+                        style={{ borderRadius: '0 0 3rem 0' }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                         <CardContent className="p-6 w-full">

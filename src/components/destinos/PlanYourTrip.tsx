@@ -58,10 +58,10 @@ const PlanYourTrip = () => {
           Planifica tu viaje al Caribe
         </h3>
 
-        <h4 className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-4xl mx-auto">
+        <p className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-4xl mx-auto font-sans">
           Viajar al Caribe es emocionante, y una buena preparación puede hacer tu experiencia aún más cómoda y relajada. 
           Aquí encontrarás consejos prácticos para que tu aventura en crucero comience sin estrés.
-        </h4>
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {sections.map((section, index) => (

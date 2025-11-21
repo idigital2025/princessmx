@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Moon } from "lucide-react";
-import cruiseCaribbean from "@/assets/cruise-caribbean.jpg";
+import caribbeanNightlife from "@/assets/caribbean-nightlife-restaurant.jpg";
 
 const MoreAshore = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -15,7 +15,7 @@ const MoreAshore = () => {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${cruiseCaribbean})` }}
+        style={{ backgroundImage: `url(${caribbeanNightlife})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90"></div>
       </div>
