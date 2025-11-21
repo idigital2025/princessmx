@@ -17,7 +17,7 @@ const MoreAshore = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${caribbeanNightlife})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001f4d]/40 via-[#001f4d]/30 to-[#001f4d]/40"></div>
       </div>
 
       {/* Content */}

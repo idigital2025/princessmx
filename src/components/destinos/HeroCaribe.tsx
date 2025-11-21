@@ -1,16 +1,11 @@
 const HeroCaribe = () => {
   return (
     <section className="relative h-[60vh] md:h-[70vh] lg:h-[80vh] flex items-center overflow-hidden">
-      {/* Video Background */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="https://player.vimeo.com/external/432045066.hd.mp4?s=5b0f9f5f3f0a3c3c9c0c0c0c0c0c0c0c0c0c0c0c" type="video/mp4" />
-      </video>
+      {/* Caribbean Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070')" }}
+      />
       <div className="absolute inset-0 bg-primary/20"></div>
       
       <div className="relative z-10 container mx-auto px-4 text-white">
