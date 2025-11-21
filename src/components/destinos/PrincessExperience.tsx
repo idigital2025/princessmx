@@ -46,9 +46,9 @@ const PrincessExperience = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+          <button className="cta-button-accent">
             Ver cruceros disponibles
-          </Button>
+          </button>
         </div>
       </div>
     </section>
