@@ -2,7 +2,12 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Ship } from "lucide-react";
+import cruiseCaribbean from "@/assets/cruise-caribbean.jpg";
 import destinationCaribbean from "@/assets/destination-caribbean.jpg";
+import destinationHawaii from "@/assets/destination-hawaii.jpg";
+import destinationMediterranean from "@/assets/destination-mediterranean.jpg";
+import destinationAlaska from "@/assets/destination-alaska.jpg";
+import destinationJapan from "@/assets/destination-japan.jpg";
 
 const EmblematicPorts = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -10,39 +15,39 @@ const EmblematicPorts = () => {
   const ports = [
     {
       name: "Bahamas",
-      description: "Playas perfectas y arrecifes para snorkel.",
-      image: destinationCaribbean,
-      alt: "playas del Caribe con aguas turquesas"
+      description: "Islas de arena blanca, aguas cristalinas y vibrante cultura local.",
+      image: cruiseCaribbean,
+      alt: "Playas paradisíacas de las Bahamas con aguas turquesa"
     },
     {
       name: "Jamaica",
-      description: "Cataratas, ritmo y cultura vibrante.",
+      description: "Reggae, playas espectaculares y aventuras en cascadas tropicales.",
       image: destinationCaribbean,
-      alt: "isla tropical del Caribe vista desde el mar"
+      alt: "Costas tropicales de Jamaica con vegetación exuberante"
     },
     {
       name: "San Juan (Puerto Rico)",
-      description: "Historia colonial y gastronomía local.",
-      image: destinationCaribbean,
-      alt: "puerto colorido del Caribe"
+      description: "Historia colonial, fortalezas antiguas y cultura vibrante del Caribe.",
+      image: destinationHawaii,
+      alt: "Puerto de San Juan con arquitectura colonial histórica"
     },
     {
       name: "Aruba",
-      description: "Aguas turquesas y paisajes áridos únicos.",
-      image: destinationCaribbean,
-      alt: "playas del Caribe con aguas turquesas"
+      description: "Sol constante, playas de ensueño y aguas perfectas para snorkel.",
+      image: destinationAlaska,
+      alt: "Playas de Aruba con aguas cristalinas y arena blanca"
     },
     {
       name: "Cozumel",
-      description: "Arrecifes, snorkel y ruinas mayas.",
-      image: destinationCaribbean,
-      alt: "vida marina en arrecife del Caribe"
+      description: "Arrecifes de coral, cultura maya y la mejor gastronomía mexicana.",
+      image: destinationMediterranean,
+      alt: "Costa de Cozumel con arrecifes de coral y aguas turquesa"
     },
     {
       name: "Saint Lucia",
-      description: "Montañas Pitons y selva tropical.",
-      image: destinationCaribbean,
-      alt: "isla tropical del Caribe vista desde el mar"
+      description: "Montañas volcánicas, playas románticas y naturaleza impresionante.",
+      image: destinationJapan,
+      alt: "Montañas Pitons de Saint Lucia con vegetación tropical"
     }
   ];
 

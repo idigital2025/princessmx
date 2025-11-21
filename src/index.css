@@ -121,7 +121,7 @@ All colors MUST be HSL.
   
   .cta-button-outline {
     @apply rounded-full uppercase px-8 py-3 font-semibold tracking-wider;
-    @apply border-2 border-accent bg-white text-foreground;
+    @apply border-2 border-accent bg-white text-black;
     @apply transition-all duration-300 ease-in-out;
     @apply hover:bg-accent hover:text-accent-foreground hover:scale-105;
     font-family: 'Montserrat', sans-serif;
@@ -132,7 +132,7 @@ All colors MUST be HSL.
   }
   
   .asymmetric-card {
-    border-radius: 1rem 1rem 3rem 1rem;
+    border-radius: 0 0 3rem 0;
   }
   
   .hover-scale {
