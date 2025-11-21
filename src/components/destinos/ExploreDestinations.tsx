@@ -56,7 +56,7 @@ const ExploreDestinations = () => {
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {destinations.map((destination, index) => (
-            <Card key={index} className="overflow-hidden hover-scale">
+            <Card key={index} className="asymmetric-card overflow-hidden hover-scale">
               <div className="aspect-[3/4] relative overflow-hidden">
                 <img 
                   src={destination.image} 
@@ -88,7 +88,7 @@ const ExploreDestinations = () => {
             <CarouselContent>
               {destinations.map((destination, index) => (
                 <CarouselItem key={index}>
-                  <Card className="overflow-hidden">
+                  <Card className="asymmetric-card overflow-hidden">
                     <div className="aspect-[3/4] relative overflow-hidden">
                       <img 
                         src={destination.image} 

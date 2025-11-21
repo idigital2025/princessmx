@@ -48,7 +48,7 @@ const WhyCruiseCaribe = () => {
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {reasons.map((reason, index) => (
-            <Card key={index} className="hover-scale">
+            <Card key={index} className="asymmetric-card hover-scale">
               <CardContent className="p-6 text-center">
                 <reason.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-xl font-display font-bold text-foreground mb-3">
@@ -68,7 +68,7 @@ const WhyCruiseCaribe = () => {
             <CarouselContent>
               {reasons.map((reason, index) => (
                 <CarouselItem key={index}>
-                  <Card>
+                  <Card className="asymmetric-card">
                     <CardContent className="p-6 text-center">
                       <reason.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
                       <h3 className="text-xl font-display font-bold text-foreground mb-3">
