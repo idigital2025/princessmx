@@ -19,10 +19,10 @@ const DestinationOffers = () => {
           Explora todas las salidas al Caribe
         </h3>
         
-        <h4 className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
+        <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
           Filtra tu viaje al Caribe con todas las opciones disponibles: itinerarios cortos y largos, fechas flexibles, 
           distintos barcos y puertos de embarque. Encuentra la experiencia ideal para disfrutar del Caribe a tu ritmo.
-        </h4>
+        </p>
 
         <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
           En cada salida descubrirás actividades únicas, opciones familiares, escapadas románticas y aventuras 

@@ -132,7 +132,7 @@ All colors MUST be HSL.
   }
   
   .asymmetric-card {
-    border-radius: 1rem 1rem 1rem 3rem;
+    border-radius: 1rem 1rem 3rem 1rem;
   }
   
   .hover-scale {
