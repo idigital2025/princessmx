@@ -1,29 +1,48 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Plane, Hotel, Bus } from "lucide-react";
+import { Plane, Sun, Luggage, Ship } from "lucide-react";
 
 const PlanYourTrip = () => {
   const { ref, isVisible } = useScrollAnimation();
 
-  const services = [
+  const sections = [
     {
       icon: Plane,
-      title: "Vuelos EZAir®",
-      description: "Encuentra las mejores opciones de vuelo para conectar con tu crucero.",
-      alt: "servicio de vuelos para cruceros"
+      title: "Traslados y llegada",
+      tips: [
+        "Elige vuelos con llegada 1 día antes de tu crucero para evitar imprevistos.",
+        "Prefiere taxis oficiales, transporte autorizado del aeropuerto o servicios de rideshare con buena reputación.",
+        "Lleva a mano tu documentación de embarque, pasaporte y comprobantes."
+      ]
     },
     {
-      icon: Hotel,
-      title: "Crucero + Hotel",
-      description: "Combina tu crucero con estadías pre o post viaje.",
-      alt: "paquetes de hotel y crucero"
+      icon: Sun,
+      title: "Clima y mejores meses",
+      tips: [
+        "El Caribe mantiene temperaturas cálidas todo el año: 24°C a 30°C.",
+        "Temporada más estable: diciembre a abril.",
+        "Temporada húmeda: junio a noviembre (revisa pronóstico y clima del puerto de salida)."
+      ]
     },
     {
-      icon: Bus,
-      title: "Traslado aeropuerto–barco",
-      description: "Viaja cómodamente desde el aeropuerto hasta el puerto de embarque.",
-      alt: "traslados para cruceros"
+      icon: Luggage,
+      title: "Equipaje recomendado",
+      tips: [
+        "Ropa ligera, traje de baño, sandalias, bloqueador solar, lentes de sol.",
+        "Un abrigo liviano para interiores con aire acondicionado.",
+        "Tenida semi-formal para cenas especiales.",
+        "Mochila pequeña para excursiones en tierra.",
+        "Medicinas personales y cargadores portátiles."
+      ]
+    },
+    {
+      icon: Ship,
+      title: "Consejos para embarcar sin estrés",
+      tips: [
+        "Llega al muelle con anticipación y sigue las indicaciones del personal.",
+        "Identifica tu equipaje con etiquetas claras.",
+        "Mantén objetos de valor, documentos y artículos esenciales en tu equipaje de mano."
+      ]
     }
   ];
 
@@ -34,55 +53,39 @@ const PlanYourTrip = () => {
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-center mb-8 md:mb-12">
-          ¿Cómo planificar tu viaje?
-        </h2>
+      <div className="container mx-auto max-w-6xl">
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-center mb-6">
+          Planifica tu viaje al Caribe
+        </h3>
 
-        <p className="text-base md:text-lg text-center text-muted-foreground mb-12 md:mb-16 max-w-3xl mx-auto">
-          Aunque Princess México no vende vuelos ni traslados, orientamos al viajero:
-        </p>
+        <h4 className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-4xl mx-auto">
+          Viajar al Caribe es emocionante, y una buena preparación puede hacer tu experiencia aún más cómoda y relajada. 
+          Aquí encontrarás consejos prácticos para que tu aventura en crucero comience sin estrés.
+        </h4>
 
-        {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="hover-scale">
-              <CardContent className="p-6 text-center">
-                <service.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-xl font-display font-bold text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {sections.map((section, index) => (
+            <Card key={index} className="asymmetric-card hover-scale">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                    <section.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-display font-bold text-primary">
+                    {section.title}
+                  </h4>
+                </div>
+                <ul className="space-y-3">
+                  {section.tips.map((tip, tipIndex) => (
+                    <li key={tipIndex} className="text-sm md:text-base text-foreground/90 flex items-start gap-2">
+                      <span className="text-primary mt-1.5">•</span>
+                      <span>{tip}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Mobile Carousel */}
-        <div className="md:hidden">
-          <Carousel className="w-full max-w-sm mx-auto">
-            <CarouselContent>
-              {services.map((service, index) => (
-                <CarouselItem key={index}>
-                  <Card>
-                    <CardContent className="p-6 text-center">
-                      <service.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                      <h3 className="text-xl font-display font-bold text-foreground mb-3">
-                        {service.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {service.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
         </div>
       </div>
     </section>

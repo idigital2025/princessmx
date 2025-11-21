@@ -57,11 +57,11 @@ const DestinosCaribe = () => {
         <HeroCaribe />
         <CaribeExperience />
         <WhyCruiseCaribe />
+        <ShoreExcursions />
+        <MoreAshore />
         <EmblematicPorts />
         <PrincessExperience />
         <SeaInspiration />
-        <ShoreExcursions />
-        <MoreAshore />
         <PlanYourTrip />
         <DestinationOffers />
         <ExploreDestinations />
