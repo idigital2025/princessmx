@@ -1,15 +1,46 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState, useRef } from "react";
+import destinationCaribbean from "@/assets/destination-caribbean.jpg";
 
 const CaribeExperience = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [counts, setCounts] = useState([0, 0, 0, 0]);
+  const hasAnimated = useRef(false);
 
   const stats = [
-    { number: "23", label: "islas por temporada" },
-    { number: "11", label: "barcos navegando el Caribe" },
-    { number: "5", label: "puertos de embarque clave" },
-    { number: "100+", label: "itinerarios para explorar" },
+    { target: 23, label: "Islas por temporada" },
+    { target: 11, label: "Barcos navegando el Caribe" },
+    { target: 5, label: "Puertos de embarque clave" },
+    { target: 100, label: "Itinerarios para explorar", suffix: "+" },
   ];
+
+  useEffect(() => {
+    if (isVisible && !hasAnimated.current) {
+      hasAnimated.current = true;
+      stats.forEach((stat, index) => {
+        let current = 0;
+        const increment = stat.target / 50;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= stat.target) {
+            setCounts(prev => {
+              const newCounts = [...prev];
+              newCounts[index] = stat.target;
+              return newCounts;
+            });
+            clearInterval(timer);
+          } else {
+            setCounts(prev => {
+              const newCounts = [...prev];
+              newCounts[index] = Math.floor(current);
+              return newCounts;
+            });
+          }
+        }, 30);
+      });
+    }
+  }, [isVisible]);
 
   return (
     <section 
@@ -18,43 +49,55 @@ const CaribeExperience = () => {
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-center mb-8 md:mb-12">
-          La experiencia caribeña perfecta
-        </h2>
-        
-        <p className="text-base md:text-lg lg:text-xl text-foreground/90 text-center mb-12 md:mb-16 leading-relaxed">
-          El Caribe es un universo de colores, sabores y sensaciones que envuelve desde el primer instante. 
-          Aguas turquesas que parecen no terminar, playas de arena suave como polvo dorado, pueblos vibrantes 
-          llenos de música y un ambiente cálido que solo este rincón del mundo sabe entregar.
-        </p>
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary">
+              La experiencia caribeña perfecta
+            </h2>
+            
+            <p className="text-base md:text-lg lg:text-xl text-foreground/90 leading-relaxed">
+              El Caribe es un universo de colores, sabores y sensaciones que envuelve desde el primer instante. 
+              Aguas turquesas que parecen no terminar, playas de arena suave como polvo dorado, pueblos vibrantes 
+              llenos de música y un ambiente cálido que solo este rincón del mundo sabe entregar.
+            </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
-          {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className="text-center p-4 bg-gradient-ocean rounded-lg shadow-elegant"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-2">
-                {stat.number}
-              </div>
-              <div className="text-sm md:text-base text-white/90">
-                {stat.label}
-              </div>
+            <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
+              Cada mañana despertarás frente a un paisaje distinto; cada tarde se transformará en una postal 
+              inolvidable. Un crucero por el Caribe no es solo un destino: es vivir varias vacaciones en una sola.
+            </p>
+
+            <div className="grid grid-cols-2 gap-6 md:gap-8">
+              {stats.map((stat, index) => (
+                <div 
+                  key={index} 
+                  className="text-left animate-count-up"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <div className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary mb-2">
+                    {counts[index]}{stat.suffix || ''}
+                  </div>
+                  <div className="text-sm md:text-base text-foreground/80 uppercase tracking-wide">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <p className="text-base md:text-lg text-foreground/90 text-center mb-8 leading-relaxed">
-          Cada mañana despertarás frente a un paisaje distinto; cada tarde se transformará en una postal 
-          inolvidable. Un crucero por el Caribe no es solo un destino: es vivir varias vacaciones en una sola.
-        </p>
+            <Button size="lg" className="cta-button-accent">
+              Ver cruceros disponibles
+            </Button>
+          </div>
 
-        <div className="text-center">
-          <Button size="lg" className="cta-button-accent">
-            Ver cruceros disponibles
-          </Button>
+          {/* Right Image */}
+          <div className="asymmetric-card overflow-hidden shadow-elegant">
+            <img 
+              src={destinationCaribbean} 
+              alt="playas del Caribe con aguas turquesas"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
       </div>
     </section>

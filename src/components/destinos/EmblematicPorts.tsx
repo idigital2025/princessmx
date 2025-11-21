@@ -1,6 +1,7 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Ship } from "lucide-react";
 import destinationCaribbean from "@/assets/destination-caribbean.jpg";
 
 const EmblematicPorts = () => {
@@ -11,13 +12,13 @@ const EmblematicPorts = () => {
       name: "Bahamas",
       description: "Playas perfectas y arrecifes para snorkel.",
       image: destinationCaribbean,
-      alt: "isla tropical del Caribe vista desde el mar"
+      alt: "playas del Caribe con aguas turquesas"
     },
     {
       name: "Jamaica",
       description: "Cataratas, ritmo y cultura vibrante.",
       image: destinationCaribbean,
-      alt: "playas del Caribe con aguas turquesas"
+      alt: "isla tropical del Caribe vista desde el mar"
     },
     {
       name: "San Juan (Puerto Rico)",
@@ -60,7 +61,7 @@ const EmblematicPorts = () => {
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {ports.map((port, index) => (
-            <Card key={index} className="overflow-hidden hover-scale">
+            <Card key={index} className="overflow-hidden hover-scale asymmetric-card">
               <div className="aspect-video relative overflow-hidden">
                 <img 
                   src={port.image} 
@@ -69,7 +70,8 @@ const EmblematicPorts = () => {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                <h3 className="text-xl font-display font-bold text-primary mb-2 flex items-center gap-2">
+                  <Ship className="w-5 h-5 text-primary" />
                   {port.name}
                 </h3>
                 <p className="text-sm text-muted-foreground">
@@ -86,7 +88,7 @@ const EmblematicPorts = () => {
             <CarouselContent>
               {ports.map((port, index) => (
                 <CarouselItem key={index}>
-                  <Card className="overflow-hidden">
+                  <Card className="overflow-hidden asymmetric-card">
                     <div className="aspect-video relative overflow-hidden">
                       <img 
                         src={port.image} 
@@ -95,7 +97,8 @@ const EmblematicPorts = () => {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                      <h3 className="text-xl font-display font-bold text-primary mb-2 flex items-center gap-2">
+                        <Ship className="w-5 h-5 text-primary" />
                         {port.name}
                       </h3>
                       <p className="text-sm text-muted-foreground">

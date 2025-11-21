@@ -1,6 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Waves, Landmark, Fish, Sailboat } from "lucide-react";
 
 const ShoreExcursions = () => {
@@ -40,7 +39,7 @@ const ShoreExcursions = () => {
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-center mb-8 md:mb-12">
           Excursiones y experiencias en tierra
         </h2>
@@ -49,46 +48,27 @@ const ShoreExcursions = () => {
           Explora el auténtico Caribe:
         </p>
 
-        {/* Desktop Grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {excursions.map((excursion, index) => (
-            <Card key={index} className="hover-scale">
-              <CardContent className="p-6 text-center">
-                <excursion.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h3 className="text-lg font-display font-bold text-foreground mb-2">
-                  {excursion.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {excursion.location}
-                </p>
+            <Card 
+              key={index} 
+              className="asymmetric-card hover-scale group overflow-hidden"
+            >
+              <CardContent className="p-8 flex items-start gap-6">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <excursion.icon className="w-8 h-8 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-primary mb-2">
+                    {excursion.title}
+                  </h3>
+                  <p className="text-base text-muted-foreground">
+                    {excursion.location}
+                  </p>
+                </div>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Mobile Carousel */}
-        <div className="md:hidden">
-          <Carousel className="w-full max-w-sm mx-auto">
-            <CarouselContent>
-              {excursions.map((excursion, index) => (
-                <CarouselItem key={index}>
-                  <Card>
-                    <CardContent className="p-6 text-center">
-                      <excursion.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                      <h3 className="text-lg font-display font-bold text-foreground mb-2">
-                        {excursion.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {excursion.location}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
         </div>
       </div>
     </section>
