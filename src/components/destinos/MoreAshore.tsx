@@ -1,6 +1,5 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Moon } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import caribbeanNightlife from "@/assets/caribbean-nightlife-restaurant.jpg";
 
 const MoreAshore = () => {

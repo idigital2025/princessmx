@@ -1,7 +1,6 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Ship } from "lucide-react";
 import portFortLauderdale from "@/assets/port-fort-lauderdale.jpg";
 import portCanaveral from "@/assets/port-canaveral.jpg";
