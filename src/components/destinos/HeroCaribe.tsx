@@ -17,12 +17,12 @@ const HeroCaribe = () => {
         </h1>
         
         <div className="flex flex-col sm:flex-row gap-4 items-start animate-fade-in">
-          <Button size="lg" className="cta-button-accent">
+          <button className="cta-button-accent">
             Descubre Caribe
-          </Button>
-          <Button size="lg" className="cta-button-outline">
+          </button>
+          <button className="cta-button-outline">
             Ver cruceros disponibles
-          </Button>
+          </button>
         </div>
       </div>
     </section>
