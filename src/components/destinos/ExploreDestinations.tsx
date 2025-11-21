@@ -5,7 +5,10 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import destinationAlaska from "@/assets/destination-alaska.jpg";
 import destinationMediterranean from "@/assets/destination-mediterranean.jpg";
 import destinationJapan from "@/assets/destination-japan.jpg";
-import destinationHawaii from "@/assets/destination-hawaii.jpg";
+import destinationNorthernEurope from "@/assets/destination-northern-europe.jpg";
+import destinationSouthAmerica from "@/assets/destination-south-america.jpg";
+import destinationCanadaNewEngland from "@/assets/destination-canada-new-england.jpg";
+import destinationAustraliaPacific from "@/assets/destination-australia-pacific.jpg";
 
 const ExploreDestinations = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -30,10 +33,28 @@ const ExploreDestinations = () => {
       alt: "cultura y paisajes de Japón"
     },
     {
-      name: "Hawái",
-      image: destinationHawaii,
-      link: "/destinos/hawaii",
-      alt: "playas y volcanes de Hawái"
+      name: "Norte de Europa",
+      image: destinationNorthernEurope,
+      link: "/destinos/norte-europa",
+      alt: "fiordos y arquitectura del Norte de Europa"
+    },
+    {
+      name: "Sudamérica",
+      image: destinationSouthAmerica,
+      link: "/destinos/sudamerica",
+      alt: "paisajes y cultura de Sudamérica"
+    },
+    {
+      name: "Canadá y Nueva Inglaterra",
+      image: destinationCanadaNewEngland,
+      link: "/destinos/canada-nueva-inglaterra",
+      alt: "otoño en Canadá y Nueva Inglaterra"
+    },
+    {
+      name: "Australia y Pacífico",
+      image: destinationAustraliaPacific,
+      link: "/destinos/australia-pacifico",
+      alt: "Gran Barrera de Coral y Pacífico"
     }
   ];
 
@@ -56,30 +77,28 @@ const ExploreDestinations = () => {
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {destinations.map((destination, index) => (
-            <Card key={index} className="overflow-hidden hover-scale border-0 shadow-lg" style={{ borderRadius: '0 0 3rem 0' }}>
+            <div 
+              key={index} 
+              className="relative overflow-hidden hover-scale cursor-pointer transition-transform duration-300"
+              style={{ borderRadius: '0 0 3rem 0' }}
+              onClick={() => window.location.href = destination.link}
+            >
               <div className="aspect-[3/4] relative overflow-hidden" style={{ borderRadius: '0 0 3rem 0' }}>
                 <img 
                   src={destination.image} 
                   alt={destination.alt}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-full object-cover"
                   style={{ borderRadius: '0 0 3rem 0' }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <CardContent className="p-6 w-full">
-                    <h3 className="text-2xl font-display font-bold text-white mb-4">
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white px-6 py-3 rounded-full shadow-lg">
+                    <h3 className="text-lg font-display font-bold text-primary text-center">
                       {destination.name}
                     </h3>
-                    <Button 
-                      variant="secondary" 
-                      className="w-full"
-                      onClick={() => window.location.href = destination.link}
-                    >
-                      Explorar
-                    </Button>
-                  </CardContent>
+                  </div>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
@@ -89,7 +108,11 @@ const ExploreDestinations = () => {
             <CarouselContent>
               {destinations.map((destination, index) => (
                 <CarouselItem key={index}>
-                  <Card className="overflow-hidden border-0 shadow-lg" style={{ borderRadius: '0 0 3rem 0' }}>
+                  <div 
+                    className="relative overflow-hidden cursor-pointer"
+                    style={{ borderRadius: '0 0 3rem 0' }}
+                    onClick={() => window.location.href = destination.link}
+                  >
                     <div className="aspect-[3/4] relative overflow-hidden" style={{ borderRadius: '0 0 3rem 0' }}>
                       <img 
                         src={destination.image} 
@@ -97,22 +120,15 @@ const ExploreDestinations = () => {
                         className="w-full h-full object-cover"
                         style={{ borderRadius: '0 0 3rem 0' }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                        <CardContent className="p-6 w-full">
-                          <h3 className="text-2xl font-display font-bold text-white mb-4">
+                      <div className="absolute bottom-6 left-6 right-6">
+                        <div className="bg-white px-6 py-3 rounded-full shadow-lg">
+                          <h3 className="text-lg font-display font-bold text-primary text-center">
                             {destination.name}
                           </h3>
-                          <Button 
-                            variant="secondary" 
-                            className="w-full"
-                            onClick={() => window.location.href = destination.link}
-                          >
-                            Explorar
-                          </Button>
-                        </CardContent>
+                        </div>
                       </div>
                     </div>
-                  </Card>
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
