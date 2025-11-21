@@ -4,7 +4,7 @@ const HeroCaribe = () => {
       {/* Caribbean Background Image */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070')" }}
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070')" }}
       />
       <div className="absolute inset-0 bg-primary/20"></div>
       
