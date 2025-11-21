@@ -70,6 +70,13 @@ const ShoreExcursions = () => {
             </Card>
           ))}
         </div>
+
+        {/* CTA Button */}
+        <div className="text-center mt-12">
+          <button className="cta-button-accent">
+            Ver cruceros disponibles
+          </button>
+        </div>
       </div>
     </section>
   );

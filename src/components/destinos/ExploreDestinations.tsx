@@ -91,7 +91,7 @@ const ExploreDestinations = () => {
                   style={{ borderRadius: '0 0 3rem 0' }}
                 />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-white px-6 py-3 rounded-full shadow-lg">
+                  <div className="bg-white px-4 py-2 rounded-full shadow-lg">
                     <h3 className="text-lg font-display font-bold text-primary text-center">
                       {destination.name}
                     </h3>
@@ -121,7 +121,7 @@ const ExploreDestinations = () => {
                         style={{ borderRadius: '0 0 3rem 0' }}
                       />
                       <div className="absolute bottom-6 left-6 right-6">
-                        <div className="bg-white px-6 py-3 rounded-full shadow-lg">
+                        <div className="bg-white px-4 py-2 rounded-full shadow-lg">
                           <h3 className="text-lg font-display font-bold text-primary text-center">
                             {destination.name}
                           </h3>
