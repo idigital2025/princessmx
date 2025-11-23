@@ -12,6 +12,7 @@ import MoreAshore from "@/components/destinos/MoreAshore";
 import PlanYourTrip from "@/components/destinos/PlanYourTrip";
 import DestinationOffers from "@/components/destinos/DestinationOffers";
 import ExploreDestinations from "@/components/destinos/ExploreDestinations";
+import FloatingButtons from "@/components/FloatingButtons";
 
 const DestinosCaribe = () => {
   useEffect(() => {
@@ -67,6 +68,7 @@ const DestinosCaribe = () => {
         <ExploreDestinations />
       </main>
       <Footer />
+      <FloatingButtons />
     </div>
   );
 };
