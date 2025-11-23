@@ -19,12 +19,23 @@ const HeroCaribe = () => {
         </h1>
         
         <div className="flex flex-col sm:flex-row gap-4 items-start animate-fade-in">
-          <button className="cta-button-accent">
+          <button 
+            className="cta-button-accent"
+            onClick={() => {
+              const section = document.getElementById('caribe-experience');
+              section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
+          >
             Descubre Caribe
           </button>
-          <button className="cta-button-outline">
+          <a 
+            href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button-outline"
+          >
             Ver cruceros disponibles
-          </button>
+          </a>
         </div>
       </div>
     </section>
