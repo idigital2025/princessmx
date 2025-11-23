@@ -90,9 +90,9 @@ const ExploreDestinations = () => {
                   className="w-full h-full object-cover"
                   style={{ borderRadius: '0 0 3rem 0' }}
                 />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-white px-4 py-2 rounded-full shadow-lg">
-                    <h3 className="text-lg font-display font-bold text-primary text-center">
+                <div className="absolute bottom-6 left-6">
+                  <div className="bg-white px-2.5 py-2 rounded-full shadow-lg">
+                    <h3 className="text-lg font-display font-bold text-primary">
                       {destination.name}
                     </h3>
                   </div>
@@ -120,9 +120,9 @@ const ExploreDestinations = () => {
                         className="w-full h-full object-cover"
                         style={{ borderRadius: '0 0 3rem 0' }}
                       />
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <div className="bg-white px-4 py-2 rounded-full shadow-lg">
-                          <h3 className="text-lg font-display font-bold text-primary text-center">
+                      <div className="absolute bottom-6 left-6">
+                        <div className="bg-white px-2.5 py-2 rounded-full shadow-lg">
+                          <h3 className="text-lg font-display font-bold text-primary">
                             {destination.name}
                           </h3>
                         </div>
