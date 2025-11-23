@@ -44,6 +44,7 @@ const CaribeExperience = () => {
 
   return (
     <section 
+      id="caribe-experience"
       ref={ref} 
       className={`py-16 md:py-24 px-4 bg-background transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -85,9 +86,14 @@ const CaribeExperience = () => {
               ))}
             </div>
 
-            <button className="cta-button-accent">
+            <a 
+              href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button-accent"
+            >
               Ver cruceros disponibles
-            </button>
+            </a>
           </div>
 
           {/* Right Image */}

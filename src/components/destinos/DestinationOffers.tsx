@@ -29,9 +29,14 @@ const DestinationOffers = () => {
           pensadas para todos los tipos de viajero.
         </p>
 
-        <button className="cta-button-accent">
+        <a 
+          href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-button-accent"
+        >
           Ver cruceros disponibles
-        </button>
+        </a>
       </div>
     </section>
   );
