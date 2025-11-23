@@ -79,11 +79,11 @@ const ExploreDestinations = () => {
           {destinations.map((destination, index) => (
             <div 
               key={index} 
-              className="relative overflow-hidden hover-scale cursor-pointer transition-transform duration-300"
+              className="relative overflow-hidden hover-scale cursor-pointer transition-transform duration-300 bg-background"
               style={{ borderRadius: '0 0 3rem 0' }}
               onClick={() => window.location.href = destination.link}
             >
-              <div className="aspect-[3/4] relative overflow-hidden" style={{ borderRadius: '0 0 3rem 0' }}>
+              <div className="aspect-[3/4] relative overflow-hidden bg-background" style={{ borderRadius: '0 0 3rem 0' }}>
                 <img 
                   src={destination.image} 
                   alt={destination.alt}
@@ -109,11 +109,11 @@ const ExploreDestinations = () => {
               {destinations.map((destination, index) => (
                 <CarouselItem key={index}>
                   <div 
-                    className="relative overflow-hidden cursor-pointer"
+                    className="relative overflow-hidden cursor-pointer bg-background"
                     style={{ borderRadius: '0 0 3rem 0' }}
                     onClick={() => window.location.href = destination.link}
                   >
-                    <div className="aspect-[3/4] relative overflow-hidden" style={{ borderRadius: '0 0 3rem 0' }}>
+                    <div className="aspect-[3/4] relative overflow-hidden bg-background" style={{ borderRadius: '0 0 3rem 0' }}>
                       <img 
                         src={destination.image} 
                         alt={destination.alt}
