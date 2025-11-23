@@ -38,11 +38,12 @@ const SeaInspiration = () => {
             <CarouselContent>
               {images.map((image, index) => (
                 <CarouselItem key={index}>
-                  <div className="asymmetric-card overflow-hidden shadow-elegant aspect-[16/10]">
+                  <div className="asymmetric-card overflow-hidden shadow-elegant aspect-[16/10] bg-background">
                     <img 
                       src={image.src} 
                       alt={image.alt}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      style={{ borderRadius: '0 0 3rem 0' }}
                     />
                   </div>
                 </CarouselItem>
