@@ -53,7 +53,9 @@ const WhyCruiseCaribe = () => {
             {reasons.map((reason, index) => (
               <Card key={index} className="asymmetric-card hover-scale bg-white">
                 <CardContent className="p-6 text-center">
-                  <reason.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <reason.icon className="w-8 h-8 text-primary" />
+                  </div>
                   <h3 className="text-xl font-display font-bold mb-3 text-primary">
                     {reason.title}
                   </h3>
@@ -70,11 +72,13 @@ const WhyCruiseCaribe = () => {
             <Carousel className="w-full max-w-sm mx-auto">
               <CarouselContent>
                 {reasons.map((reason, index) => (
-                  <CarouselItem key={index}>
-                    <Card className="asymmetric-card bg-white">
-                      <CardContent className="p-6 text-center">
-                        <reason.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                        <h3 className="text-xl font-display font-bold mb-3 text-primary">
+                <CarouselItem key={index}>
+                  <Card className="asymmetric-card bg-white">
+                    <CardContent className="p-6 text-center">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <reason.icon className="w-8 h-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-display font-bold mb-3 text-primary">
                           {reason.title}
                         </h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
