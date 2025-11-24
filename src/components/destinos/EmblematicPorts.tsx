@@ -60,7 +60,7 @@ const EmblematicPorts = () => {
   return (
     <section 
       ref={ref} 
-      className={`py-16 md:py-24 px-4 transition-all duration-1000 ${
+      className={`py-16 md:py-24 px-6 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
@@ -104,7 +104,7 @@ const EmblematicPorts = () => {
 
         {/* Departure Ports - Mobile Carousel */}
         <div className="md:hidden mb-16">
-          <Carousel className="w-full max-w-[calc(100vw-3rem)] mx-auto">
+          <Carousel className="w-full max-w-[calc(100vw-4rem)] mx-auto">
             <CarouselContent>
               {departurePorts.map((port, index) => (
                 <CarouselItem key={index}>
@@ -172,7 +172,7 @@ const EmblematicPorts = () => {
 
         {/* Visit Ports - Mobile Carousel */}
         <div className="md:hidden">
-          <Carousel className="w-full max-w-[calc(100vw-3rem)] mx-auto">
+          <Carousel className="w-full max-w-[calc(100vw-4rem)] mx-auto">
             <CarouselContent>
               {visitPorts.map((port, index) => (
                 <CarouselItem key={index}>
