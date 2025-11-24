@@ -1,6 +1,13 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Waves, Landmark, Fish, Sailboat } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const ShoreExcursions = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -48,7 +55,8 @@ const ShoreExcursions = () => {
           Explora el auténtico Caribe:
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {excursions.map((excursion, index) => (
             <Card 
               key={index} 
@@ -69,6 +77,35 @@ const ShoreExcursions = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <Carousel className="w-full max-w-sm mx-auto">
+            <CarouselContent>
+              {excursions.map((excursion, index) => (
+                <CarouselItem key={index}>
+                  <Card className="asymmetric-card group overflow-hidden">
+                    <CardContent className="p-8 flex items-start gap-6">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                        <excursion.icon className="w-8 h-8 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-display font-bold text-primary mb-2">
+                          {excursion.title}
+                        </h3>
+                        <p className="text-base text-muted-foreground">
+                          {excursion.location}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         {/* CTA Button */}
