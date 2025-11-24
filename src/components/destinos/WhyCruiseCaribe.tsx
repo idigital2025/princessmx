@@ -67,14 +67,16 @@ const WhyCruiseCaribe = () => {
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <CardContent className="p-6 text-center">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <reason.icon className="w-8 h-8 text-primary" />
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <reason.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-display font-bold text-primary flex-1">
+                      {reason.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-display font-bold mb-3 text-primary">
-                    {reason.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed text-left">
                     {reason.description}
                   </p>
                 </CardContent>
@@ -88,7 +90,7 @@ const WhyCruiseCaribe = () => {
             <CarouselContent>
                 {reasons.map((reason, index) => (
                 <CarouselItem key={index}>
-                  <Card className="asymmetric-card bg-white overflow-hidden h-[480px]">
+                  <Card className="asymmetric-card bg-white overflow-hidden">
                     <div className="aspect-[4/3] overflow-hidden">
                       <img 
                         src={reason.image} 
@@ -96,19 +98,21 @@ const WhyCruiseCaribe = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <CardContent className="p-6 text-center">
-                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                        <reason.icon className="w-8 h-8 text-primary" />
-                      </div>
-                      <h3 className="text-xl font-display font-bold mb-3 text-primary text-left">
+                    <CardContent className="p-4">
+                      <div className="flex items-start gap-3 mb-3">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <reason.icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <h3 className="text-lg font-display font-bold text-primary flex-1">
                           {reason.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                          {reason.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed text-left">
+                        {reason.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
                 ))}
               </CarouselContent>
               <CarouselPrevious />
