@@ -24,7 +24,7 @@ const SeaInspiration = () => {
   return (
     <section 
       ref={ref} 
-      className={`py-16 md:py-24 px-6 bg-muted/30 transition-all duration-1000 ${
+      className={`py-16 md:py-24 px-4 bg-muted/30 transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >

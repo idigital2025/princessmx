@@ -8,7 +8,7 @@ const MoreAshore = () => {
   return (
     <section 
       ref={ref} 
-      className={`relative py-24 md:py-32 px-6 text-white overflow-hidden transition-all duration-1000 ${
+      className={`relative py-24 md:py-32 px-4 text-white overflow-hidden transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
