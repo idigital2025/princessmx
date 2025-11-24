@@ -65,11 +65,11 @@ const EmblematicPorts = () => {
       }`}
     >
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-center mb-6 md:mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-left md:text-center mb-6 md:mb-8">
           Puertos de salida populares
         </h2>
 
-        <p className="text-base md:text-lg text-center text-muted-foreground mb-12 md:mb-16 max-w-4xl mx-auto font-sans">
+        <p className="text-base md:text-lg text-left md:text-center text-muted-foreground mb-12 md:mb-16 max-w-4xl mx-auto font-sans">
           Princess Cruises navega el Caribe desde algunos de los puertos de salida más importantes y accesibles del mundo. Estos puntos de partida te permiten conectar fácilmente desde México hacia itinerarios que recorren las islas más hermosas de la región.
         </p>
 
@@ -104,7 +104,7 @@ const EmblematicPorts = () => {
 
         {/* Departure Ports - Mobile Carousel */}
         <div className="md:hidden mb-16">
-          <Carousel className="w-full max-w-sm mx-auto">
+          <Carousel className="w-full max-w-[calc(100vw-3rem)] mx-auto">
             <CarouselContent>
               {departurePorts.map((port, index) => (
                 <CarouselItem key={index}>
@@ -116,7 +116,7 @@ const EmblematicPorts = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <CardContent className="p-6">
+                    <CardContent className="p-6 text-left">
                       <div className="flex items-start gap-2 mb-3">
                         <Ship className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                         <h3 className="text-lg font-display font-bold" style={{ color: '#003595' }}>
@@ -140,7 +140,7 @@ const EmblematicPorts = () => {
         </div>
 
         {/* Visit Ports Section */}
-        <h3 className="text-2xl md:text-3xl font-display font-bold text-primary text-center mb-8 md:mb-12">
+        <h3 className="text-2xl md:text-3xl font-display font-bold text-primary text-left md:text-center mb-8 md:mb-12">
           Puertos de visita destacados en el Caribe
         </h3>
 
@@ -172,7 +172,7 @@ const EmblematicPorts = () => {
 
         {/* Visit Ports - Mobile Carousel */}
         <div className="md:hidden">
-          <Carousel className="w-full max-w-sm mx-auto">
+          <Carousel className="w-full max-w-[calc(100vw-3rem)] mx-auto">
             <CarouselContent>
               {visitPorts.map((port, index) => (
                 <CarouselItem key={index}>
@@ -184,7 +184,7 @@ const EmblematicPorts = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <CardContent className="p-6">
+                    <CardContent className="p-6 text-left">
                       <div className="flex items-start gap-2 mb-3">
                         <Ship className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                         <h3 className="text-lg font-display font-bold" style={{ color: '#003595' }}>

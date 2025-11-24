@@ -81,16 +81,16 @@ const ShoreExcursions = () => {
 
         {/* Mobile Carousel */}
         <div className="md:hidden">
-          <Carousel className="w-full max-w-sm mx-auto">
+          <Carousel className="w-full max-w-[calc(100vw-3rem)] mx-auto">
             <CarouselContent>
               {excursions.map((excursion, index) => (
                 <CarouselItem key={index}>
-                  <Card className="asymmetric-card group overflow-hidden">
-                    <CardContent className="p-8 flex items-start gap-6">
-                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Card className="asymmetric-card">
+                    <CardContent className="p-4 text-center">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <excursion.icon className="w-8 h-8 text-primary" />
                       </div>
-                      <div className="flex-1">
+                      <div className="text-left">
                         <h3 className="text-xl font-display font-bold text-primary mb-2">
                           {excursion.title}
                         </h3>

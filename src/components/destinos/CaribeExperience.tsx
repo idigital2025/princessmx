@@ -86,7 +86,7 @@ const CaribeExperience = () => {
               ))}
             </div>
 
-            <div className="mt-12 md:mt-12">
+            <div className="mt-20 md:mt-12">
               <a 
                 href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
                 target="_blank"

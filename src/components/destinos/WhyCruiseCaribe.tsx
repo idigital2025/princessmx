@@ -44,7 +44,7 @@ const WhyCruiseCaribe = () => {
       <WaveTransition />
       <div className="py-16 md:py-24 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white text-left md:text-center mb-12 md:mb-16">
             ¿Por qué hacer un crucero por el Caribe?
           </h2>
 
@@ -69,7 +69,7 @@ const WhyCruiseCaribe = () => {
 
           {/* Mobile Carousel */}
           <div className="md:hidden">
-            <Carousel className="w-full max-w-sm mx-auto">
+            <Carousel className="w-full max-w-[calc(100vw-3rem)] mx-auto">
               <CarouselContent>
                 {reasons.map((reason, index) => (
                 <CarouselItem key={index}>
@@ -78,10 +78,10 @@ const WhyCruiseCaribe = () => {
                       <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <reason.icon className="w-8 h-8 text-primary" />
                       </div>
-                      <h3 className="text-xl font-display font-bold mb-3 text-primary">
+                      <h3 className="text-xl font-display font-bold mb-3 text-primary text-left">
                           {reason.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed text-left">
                           {reason.description}
                         </p>
                       </CardContent>
