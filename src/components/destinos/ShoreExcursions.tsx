@@ -17,24 +17,32 @@ const ShoreExcursions = () => {
       icon: Waves,
       title: "Nado con rayas",
       location: "Gran Caimán",
+      description: "Sumérgete en aguas cristalinas y nada junto a mantarrayas en su hábitat natural. Una experiencia única e inolvidable.",
+      image: "/src/assets/caribbean-snorkeling.jpg",
       alt: "vida marina en arrecife del Caribe"
     },
     {
       icon: Landmark,
       title: "Ruinas mayas",
       location: "Cozumel",
+      description: "Descubre la fascinante historia de la civilización maya explorando antiguas ruinas y templos milenarios.",
+      image: "/src/assets/caribbean-culture.jpg",
       alt: "ruinas mayas en México"
     },
     {
       icon: Fish,
       title: "Segunda barrera de coral del mundo",
       location: "Belice",
+      description: "Explora uno de los arrecifes de coral más impresionantes del planeta, hogar de vida marina espectacular.",
+      image: "/src/assets/caribbean-snorkeling.jpg",
       alt: "vida marina en arrecife del Caribe"
     },
     {
       icon: Sailboat,
       title: "Catamarán al atardecer",
       location: "Antigua",
+      description: "Navega por aguas turquesas mientras disfrutas de un atardecer caribeño desde la cubierta de un catamarán.",
+      image: "/src/assets/caribbean-dream-beach.jpg",
       alt: "puesta de sol caribeña desde un barco"
     }
   ];
@@ -55,58 +63,49 @@ const ShoreExcursions = () => {
           Explora el auténtico Caribe:
         </p>
 
-        {/* Desktop Grid */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {excursions.map((excursion, index) => (
-            <Card 
-              key={index} 
-              className="asymmetric-card hover-scale group overflow-hidden"
-            >
-              <CardContent className="p-8 flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <excursion.icon className="w-8 h-8 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-display font-bold text-primary mb-2">
-                    {excursion.title}
-                  </h3>
-                  <p className="text-base text-muted-foreground">
-                    {excursion.location}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Mobile Carousel */}
-        <div className="md:hidden">
-          <Carousel className="w-full max-w-[calc(100vw-2rem)] mx-auto">
-            <CarouselContent>
-              {excursions.map((excursion, index) => (
-                <CarouselItem key={index}>
-                  <Card className="asymmetric-card h-[180px]">
-                    <CardContent className="p-4 text-center h-full flex flex-col justify-center">
-                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                        <excursion.icon className="w-8 h-8 text-primary" />
+        {/* Carousel para Desktop y Mobile */}
+        <Carousel className="w-full max-w-6xl mx-auto">
+          <CarouselContent>
+            {excursions.map((excursion, index) => (
+              <CarouselItem key={index}>
+                <Card className="asymmetric-card overflow-hidden">
+                  <div className="grid md:grid-cols-2 gap-0">
+                    {/* Contenido a la izquierda */}
+                    <CardContent className="p-6 md:p-8 flex flex-col justify-center order-2 md:order-1">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                          <excursion.icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl md:text-2xl font-display font-bold text-primary mb-1">
+                            {excursion.title}
+                          </h3>
+                          <p className="text-sm md:text-base text-primary/70 font-medium">
+                            {excursion.location}
+                          </p>
+                        </div>
                       </div>
-                      <div className="text-left">
-                        <h3 className="text-xl font-display font-bold text-primary mb-2">
-                          {excursion.title}
-                        </h3>
-                        <p className="text-base text-muted-foreground">
-                          {excursion.location}
-                        </p>
-                      </div>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                        {excursion.description}
+                      </p>
                     </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
+
+                    {/* Imagen a la derecha */}
+                    <div className="aspect-[4/3] md:aspect-auto overflow-hidden order-1 md:order-2">
+                      <img 
+                        src={excursion.image}
+                        alt={excursion.alt}
+                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                  </div>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-2 md:left-4" />
+          <CarouselNext className="right-2 md:right-4" />
+        </Carousel>
 
         {/* CTA Button */}
         <div className="text-center mt-12">
