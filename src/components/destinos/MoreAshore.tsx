@@ -21,8 +21,8 @@ const MoreAshore = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto max-w-4xl text-center">
-        <Moon className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-6" />
+      <div className="relative z-10 container mx-auto max-w-4xl text-left md:text-center">
+        <Moon className="w-12 h-12 md:w-16 md:h-16 mx-auto md:mx-auto mb-6" />
         
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-8">
           More Ashore: La vida nocturna caribeña

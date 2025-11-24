@@ -61,11 +61,11 @@ const PlanYourTrip = () => {
       }`}
     >
       <div className="container mx-auto max-w-6xl">
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-center mb-6">
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-left md:text-center mb-6">
           Planifica tu viaje al Caribe
         </h3>
 
-        <p className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-4xl mx-auto font-sans">
+        <p className="text-lg md:text-xl text-left md:text-center text-muted-foreground mb-12 md:mb-16 max-w-4xl mx-auto font-sans">
           Viajar al Caribe es emocionante, y una buena preparación puede hacer tu experiencia aún más cómoda y relajada. 
           Aquí encontrarás consejos prácticos para que tu aventura en crucero comience sin estrés.
         </p>
@@ -98,28 +98,28 @@ const PlanYourTrip = () => {
 
         {/* Mobile Carousel */}
         <div className="md:hidden">
-          <Carousel className="w-full max-w-sm mx-auto">
+          <Carousel className="w-full max-w-[calc(100vw-3rem)] mx-auto">
             <CarouselContent>
               {sections.map((section, index) => (
                 <CarouselItem key={index}>
                   <Card className="asymmetric-card">
-                    <CardContent className="p-8">
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                          <section.icon className="w-7 h-7 text-primary" />
-                        </div>
-                        <h4 className="text-xl font-display font-bold text-primary">
+                    <CardContent className="p-4 text-center">
+                      <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <section.icon className="w-7 h-7 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <h4 className="text-xl font-display font-bold text-primary mb-4">
                           {section.title}
                         </h4>
+                        <ul className="space-y-3">
+                          {section.tips.map((tip, tipIndex) => (
+                            <li key={tipIndex} className="text-sm text-foreground/90 flex items-start gap-2">
+                              <span className="text-primary mt-1.5">•</span>
+                              <span>{tip}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-3">
-                        {section.tips.map((tip, tipIndex) => (
-                          <li key={tipIndex} className="text-sm text-foreground/90 flex items-start gap-2">
-                            <span className="text-primary mt-1.5">•</span>
-                            <span>{tip}</span>
-                          </li>
-                        ))}
-                      </ul>
                     </CardContent>
                   </Card>
                 </CarouselItem>
