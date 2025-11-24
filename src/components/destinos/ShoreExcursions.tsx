@@ -18,32 +18,32 @@ const ShoreExcursions = () => {
       title: "Nado con rayas",
       location: "Gran Caimán",
       description: "Sumérgete en aguas cristalinas y nada junto a mantarrayas en su hábitat natural. Una experiencia única e inolvidable.",
-      image: "/src/assets/caribbean-snorkeling.jpg",
-      alt: "vida marina en arrecife del Caribe"
+      image: "/src/assets/excursion-stingray-cayman.jpg",
+      alt: "nadando con mantarrayas en aguas cristalinas de Gran Caimán"
     },
     {
       icon: Landmark,
       title: "Ruinas mayas",
       location: "Cozumel",
       description: "Descubre la fascinante historia de la civilización maya explorando antiguas ruinas y templos milenarios.",
-      image: "/src/assets/caribbean-culture.jpg",
-      alt: "ruinas mayas en México"
+      image: "/src/assets/excursion-mayan-ruins.jpg",
+      alt: "antiguas ruinas mayas rodeadas de selva en Cozumel"
     },
     {
       icon: Fish,
       title: "Segunda barrera de coral del mundo",
       location: "Belice",
       description: "Explora uno de los arrecifes de coral más impresionantes del planeta, hogar de vida marina espectacular.",
-      image: "/src/assets/caribbean-snorkeling.jpg",
-      alt: "vida marina en arrecife del Caribe"
+      image: "/src/assets/excursion-belize-reef.jpg",
+      alt: "arrecife de coral colorido con peces tropicales en Belice"
     },
     {
       icon: Sailboat,
       title: "Catamarán al atardecer",
       location: "Antigua",
       description: "Navega por aguas turquesas mientras disfrutas de un atardecer caribeño desde la cubierta de un catamarán.",
-      image: "/src/assets/caribbean-dream-beach.jpg",
-      alt: "puesta de sol caribeña desde un barco"
+      image: "/src/assets/excursion-catamaran-sunset.jpg",
+      alt: "catamarán navegando al atardecer en aguas caribeñas de Antigua"
     }
   ];
 
