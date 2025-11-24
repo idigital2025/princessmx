@@ -51,31 +51,52 @@ const CaribeExperience = () => {
       }`}
     >
       <div className="container mx-auto max-w-7xl">
-        {/* Mobile & Desktop Content */}
-        <div className="space-y-8 mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-left md:text-center">
+        {/* Desktop: Two columns layout */}
+        <div className="hidden md:grid md:grid-cols-2 md:gap-12 md:items-center mb-12">
+          {/* Left: Content */}
+          <div className="space-y-6">
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-display font-bold text-primary text-left">
+              La experiencia caribeña perfecta
+            </h2>
+            
+            <p className="text-base lg:text-lg xl:text-xl text-foreground/90 leading-relaxed text-left">
+              El Caribe es un universo de colores, sabores y sensaciones que envuelve desde el primer instante. 
+              Aguas turquesas que parecen no terminar, playas de arena suave como polvo dorado, pueblos vibrantes 
+              llenos de música y un ambiente cálido que solo este rincón del mundo sabe entregar.
+            </p>
+
+            <p className="text-base lg:text-lg text-foreground/90 leading-relaxed text-left">
+              Cada mañana despertarás frente a un paisaje distinto; cada tarde se transformará en una postal 
+              inolvidable. Un crucero por el Caribe no es solo un destino: es vivir varias vacaciones en una sola.
+            </p>
+          </div>
+
+          {/* Right: Image */}
+          <div className="asymmetric-card overflow-hidden shadow-elegant">
+            <img 
+              src={destinationCaribbean} 
+              alt="playas del Caribe con aguas turquesas"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+
+        {/* Mobile: Stacked layout */}
+        <div className="md:hidden space-y-8 mb-12">
+          <h2 className="text-3xl font-display font-bold text-primary text-left">
             La experiencia caribeña perfecta
           </h2>
           
-          <p className="text-base md:text-lg lg:text-xl text-foreground/90 leading-relaxed text-left md:text-center max-w-5xl mx-auto">
+          <p className="text-base text-foreground/90 leading-relaxed text-left">
             El Caribe es un universo de colores, sabores y sensaciones que envuelve desde el primer instante. 
             Aguas turquesas que parecen no terminar, playas de arena suave como polvo dorado, pueblos vibrantes 
             llenos de música y un ambiente cálido que solo este rincón del mundo sabe entregar.
           </p>
 
-          <p className="text-base md:text-lg text-foreground/90 leading-relaxed text-left md:text-center max-w-5xl mx-auto">
+          <p className="text-base text-foreground/90 leading-relaxed text-left">
             Cada mañana despertarás frente a un paisaje distinto; cada tarde se transformará en una postal 
             inolvidable. Un crucero por el Caribe no es solo un destino: es vivir varias vacaciones en una sola.
           </p>
-        </div>
-
-        {/* Image - Desktop Only */}
-        <div className="hidden md:block asymmetric-card overflow-hidden shadow-elegant mb-12 max-w-5xl mx-auto">
-          <img 
-            src={destinationCaribbean} 
-            alt="playas del Caribe con aguas turquesas"
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-          />
         </div>
 
         {/* Stats - Mobile: 2 columns, Desktop: 4 columns in one row */}
