@@ -42,7 +42,7 @@ const ShoreExcursions = () => {
   return (
     <section 
       ref={ref} 
-      className={`py-16 md:py-24 px-6 bg-background transition-all duration-1000 ${
+      className={`py-16 md:py-24 px-4 bg-background transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
@@ -81,7 +81,7 @@ const ShoreExcursions = () => {
 
         {/* Mobile Carousel */}
         <div className="md:hidden">
-          <Carousel className="w-full max-w-[calc(100vw-4rem)] mx-auto">
+          <Carousel className="w-full max-w-[calc(100vw-2rem)] mx-auto">
             <CarouselContent>
               {excursions.map((excursion, index) => (
                 <CarouselItem key={index}>
