@@ -47,11 +47,11 @@ const ShoreExcursions = () => {
       }`}
     >
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-center mb-8 md:mb-12">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-left md:text-center mb-8 md:mb-12">
           Excursiones y experiencias en tierra
         </h2>
 
-        <p className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-left md:text-center text-muted-foreground mb-12 md:mb-16 max-w-3xl mx-auto">
           Explora el auténtico Caribe:
         </p>
 
@@ -114,7 +114,7 @@ const ShoreExcursions = () => {
             href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="cta-button-accent"
+            className="inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-elegant text-sm md:text-base"
           >
             Ver cruceros disponibles
           </a>
