@@ -54,17 +54,17 @@ const CaribeExperience = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center lg:items-start">
           {/* Left Content */}
           <div className="space-y-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary text-left">
               La experiencia caribeña perfecta
             </h2>
             
-            <p className="text-base md:text-lg lg:text-xl text-foreground/90 leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-foreground/90 leading-relaxed text-left">
               El Caribe es un universo de colores, sabores y sensaciones que envuelve desde el primer instante. 
               Aguas turquesas que parecen no terminar, playas de arena suave como polvo dorado, pueblos vibrantes 
               llenos de música y un ambiente cálido que solo este rincón del mundo sabe entregar.
             </p>
 
-            <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
+            <p className="text-base md:text-lg text-foreground/90 leading-relaxed text-left">
               Cada mañana despertarás frente a un paisaje distinto; cada tarde se transformará en una postal 
               inolvidable. Un crucero por el Caribe no es solo un destino: es vivir varias vacaciones en una sola.
             </p>

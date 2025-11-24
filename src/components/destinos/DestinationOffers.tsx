@@ -15,7 +15,7 @@ const DestinationOffers = () => {
       <div className="container mx-auto max-w-5xl text-center">
         <Ship className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-6 text-primary" />
         
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-6">
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary mb-6 text-left md:text-center">
           Explora todas las salidas al Caribe
         </h3>
         
@@ -33,7 +33,7 @@ const DestinationOffers = () => {
           href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
           target="_blank"
           rel="noopener noreferrer"
-          className="cta-button-accent"
+          className="inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-elegant text-sm md:text-base"
         >
           Ver cruceros disponibles
         </a>

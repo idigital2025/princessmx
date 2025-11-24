@@ -22,11 +22,11 @@ const PrincessExperience = () => {
       }`}
     >
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-center mb-8 md:mb-12">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-left md:text-center mb-8 md:mb-12">
           Vive la experiencia Princess
         </h2>
         
-        <p className="text-base md:text-lg lg:text-xl text-center mb-12 md:mb-16 leading-relaxed">
+        <p className="text-base md:text-lg lg:text-xl text-left md:text-center mb-12 md:mb-16 leading-relaxed">
           Viajar por el Caribe con Princess es hacerlo acompañado de una tripulación experta, servicios de 
           primer nivel y un estándar de excelencia que transforma cada día del viaje.
         </p>
@@ -50,7 +50,7 @@ const PrincessExperience = () => {
             href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="cta-button-accent"
+            className="inline-block px-6 py-3 md:px-8 md:py-4 bg-accent text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-elegant text-sm md:text-base"
           >
             Ver cruceros disponibles
           </a>
