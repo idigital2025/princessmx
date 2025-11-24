@@ -1,6 +1,13 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Plane, Sun, Luggage, Ship } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const PlanYourTrip = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -63,7 +70,8 @@ const PlanYourTrip = () => {
           Aquí encontrarás consejos prácticos para que tu aventura en crucero comience sin estrés.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8">
           {sections.map((section, index) => (
             <Card key={index} className="asymmetric-card hover-scale">
               <CardContent className="p-8">
@@ -86,6 +94,40 @@ const PlanYourTrip = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <Carousel className="w-full max-w-sm mx-auto">
+            <CarouselContent>
+              {sections.map((section, index) => (
+                <CarouselItem key={index}>
+                  <Card className="asymmetric-card">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                          <section.icon className="w-7 h-7 text-primary" />
+                        </div>
+                        <h4 className="text-xl font-display font-bold text-primary">
+                          {section.title}
+                        </h4>
+                      </div>
+                      <ul className="space-y-3">
+                        {section.tips.map((tip, tipIndex) => (
+                          <li key={tipIndex} className="text-sm text-foreground/90 flex items-start gap-2">
+                            <span className="text-primary mt-1.5">•</span>
+                            <span>{tip}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
     </section>
