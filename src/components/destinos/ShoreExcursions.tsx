@@ -64,48 +64,50 @@ const ShoreExcursions = () => {
         </p>
 
         {/* Carousel para Desktop y Mobile */}
-        <Carousel className="w-full max-w-6xl mx-auto">
-          <CarouselContent>
-            {excursions.map((excursion, index) => (
-              <CarouselItem key={index}>
-                <Card className="asymmetric-card overflow-hidden">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    {/* Contenido a la izquierda */}
-                    <CardContent className="p-6 md:p-8 flex flex-col justify-center order-2 md:order-1">
-                      <div className="flex items-start gap-4 mb-4">
-                        <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 flex items-center justify-center">
-                          <excursion.icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
+        <div className="relative">
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              {excursions.map((excursion, index) => (
+                <CarouselItem key={index}>
+                  <Card className="asymmetric-card overflow-hidden bg-primary border-primary">
+                    <div className="grid md:grid-cols-2 gap-0">
+                      {/* Contenido a la izquierda */}
+                      <CardContent className="p-6 md:p-8 flex flex-col justify-center order-2 md:order-1">
+                        <div className="flex items-start gap-4 mb-4">
+                          <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 flex items-center justify-center">
+                            <excursion.icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-1">
+                              {excursion.title}
+                            </h3>
+                            <p className="text-sm md:text-base text-white/80 font-medium">
+                              {excursion.location}
+                            </p>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <h3 className="text-xl md:text-2xl font-display font-bold text-primary mb-1">
-                            {excursion.title}
-                          </h3>
-                          <p className="text-sm md:text-base text-primary/70 font-medium">
-                            {excursion.location}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                        {excursion.description}
-                      </p>
-                    </CardContent>
+                        <p className="text-sm md:text-base text-white/90 leading-relaxed">
+                          {excursion.description}
+                        </p>
+                      </CardContent>
 
-                    {/* Imagen a la derecha */}
-                    <div className="aspect-[4/3] md:aspect-auto overflow-hidden order-1 md:order-2">
-                      <img 
-                        src={excursion.image}
-                        alt={excursion.alt}
-                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                      />
+                      {/* Imagen a la derecha */}
+                      <div className="aspect-[4/3] md:aspect-auto overflow-hidden order-1 md:order-2">
+                        <img 
+                          src={excursion.image}
+                          alt={excursion.alt}
+                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
                     </div>
-                  </div>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-2 md:left-4" />
-          <CarouselNext className="right-2 md:right-4" />
-        </Carousel>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 md:-left-16" />
+            <CarouselNext className="-right-4 md:-right-16" />
+          </Carousel>
+        </div>
 
         {/* CTA Button */}
         <div className="text-center mt-12">
