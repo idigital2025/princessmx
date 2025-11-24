@@ -9,10 +9,10 @@ const CaribeExperience = () => {
   const hasAnimated = useRef(false);
 
   const stats = [
-    { target: 23, label: "Islas por temporada" },
-    { target: 11, label: "Barcos navegando el Caribe" },
-    { target: 5, label: "Puertos de embarque clave" },
-    { target: 100, label: "Itinerarios para explorar", suffix: "+" },
+    { target: 23, label: "Islas\npor temporada" },
+    { target: 11, label: "Barcos navegando\nel Caribe" },
+    { target: 5, label: "Puertos\nde embarque clave" },
+    { target: 100, label: "Itinerarios\npara explorar", suffix: "+" },
   ];
 
   useEffect(() => {
@@ -79,14 +79,14 @@ const CaribeExperience = () => {
                   <div className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary mb-2">
                     {counts[index]}{stat.suffix || ''}
                   </div>
-                  <div className="text-sm md:text-base text-foreground/80 uppercase tracking-wide">
+                  <div className="text-sm md:text-base text-foreground/80 tracking-wide whitespace-pre-line capitalize">
                     {stat.label}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8">
+            <div className="mt-12">
               <a 
                 href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
                 target="_blank"
