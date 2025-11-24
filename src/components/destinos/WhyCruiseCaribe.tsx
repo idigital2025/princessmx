@@ -3,6 +3,10 @@ import { Waves, Palmtree, Music, UtensilsCrossed } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import WaveTransition from "@/components/WaveTransition";
+import caribbeanBeach from "@/assets/caribbean-dream-beach.jpg";
+import caribbeanSnorkeling from "@/assets/caribbean-snorkeling.jpg";
+import caribbeanCulture from "@/assets/caribbean-culture.jpg";
+import caribbeanFood from "@/assets/caribbean-food.jpg";
 
 const WhyCruiseCaribe = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -12,25 +16,29 @@ const WhyCruiseCaribe = () => {
       icon: Waves,
       title: "Playas de ensueño",
       description: "El Caribe es sinónimo de arena blanca, aguas cálidas y un sol eterno. Las playas de Bahamas, Jamaica o Aruba están consideradas entre las más hermosas del mundo.",
-      alt: "playas del Caribe con aguas turquesas"
+      alt: "playas del Caribe con aguas turquesas",
+      image: caribbeanBeach
     },
     {
       icon: Palmtree,
       title: "Aventura natural",
       description: "Haz snorkel en arrecifes llenos de vida, explora manglares, navega hacia barcos hundidos o adéntrate en la selva tropical.",
-      alt: "vida marina en arrecife del Caribe"
+      alt: "vida marina en arrecife del Caribe",
+      image: caribbeanSnorkeling
     },
     {
       icon: Music,
       title: "Cultura vibrante",
       description: "Ritmos afrocaribeños, mercados locales, artesanías y festivales.",
-      alt: "puerto colorido del Caribe"
+      alt: "puerto colorido del Caribe",
+      image: caribbeanCulture
     },
     {
       icon: UtensilsCrossed,
       title: "Gastronomía memorable",
       description: "Jerk jamaiquino, pescados frescos, coco, plátano y especias tradicionales.",
-      alt: "gastronomía caribeña típica"
+      alt: "gastronomía caribeña típica",
+      image: caribbeanFood
     }
   ];
 
@@ -51,7 +59,14 @@ const WhyCruiseCaribe = () => {
           {/* Desktop Grid */}
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {reasons.map((reason, index) => (
-              <Card key={index} className="asymmetric-card hover-scale bg-white">
+              <Card key={index} className="asymmetric-card hover-scale bg-white overflow-hidden">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src={reason.image} 
+                    alt={reason.alt}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
                 <CardContent className="p-6 text-center">
                   <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <reason.icon className="w-8 h-8 text-primary" />
@@ -73,7 +88,14 @@ const WhyCruiseCaribe = () => {
             <CarouselContent>
                 {reasons.map((reason, index) => (
                 <CarouselItem key={index}>
-                  <Card className="asymmetric-card bg-white">
+                  <Card className="asymmetric-card bg-white overflow-hidden h-[480px]">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img 
+                        src={reason.image} 
+                        alt={reason.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <CardContent className="p-6 text-center">
                       <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <reason.icon className="w-8 h-8 text-primary" />

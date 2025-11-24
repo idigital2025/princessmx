@@ -85,8 +85,8 @@ const ShoreExcursions = () => {
             <CarouselContent>
               {excursions.map((excursion, index) => (
                 <CarouselItem key={index}>
-                  <Card className="asymmetric-card">
-                    <CardContent className="p-4 text-center">
+                  <Card className="asymmetric-card h-[180px]">
+                    <CardContent className="p-4 text-center h-full flex flex-col justify-center">
                       <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                         <excursion.icon className="w-8 h-8 text-primary" />
                       </div>

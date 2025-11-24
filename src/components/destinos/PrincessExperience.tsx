@@ -1,6 +1,8 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 import { Ship, Globe, Calendar, Award, Smartphone, Sunset } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const PrincessExperience = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -31,14 +33,37 @@ const PrincessExperience = () => {
           primer nivel y un estándar de excelencia que transforma cada día del viaje.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-12">
+        {/* Desktop: Carousel with arrows */}
+        <div className="hidden md:block mb-12">
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              {features.map((feature, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <Card className="bg-primary-foreground/10 border-primary-foreground/20">
+                    <CardContent className="flex flex-col items-center text-center p-6">
+                      <feature.icon className="w-12 h-12 mb-4" />
+                      <p className="text-base font-medium">
+                        {feature.text}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="bg-primary-foreground text-primary" />
+            <CarouselNext className="bg-primary-foreground text-primary" />
+          </Carousel>
+        </div>
+
+        {/* Mobile: Grid */}
+        <div className="md:hidden grid grid-cols-2 gap-6 mb-12">
           {features.map((feature, index) => (
             <div 
               key={index} 
               className="flex flex-col items-center text-center p-4"
             >
-              <feature.icon className="w-10 h-10 md:w-12 md:h-12 mb-3" />
-              <p className="text-sm md:text-base font-medium">
+              <feature.icon className="w-10 h-10 mb-3" />
+              <p className="text-sm font-medium">
                 {feature.text}
               </p>
             </div>
