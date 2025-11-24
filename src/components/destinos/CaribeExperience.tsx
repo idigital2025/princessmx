@@ -51,7 +51,7 @@ const CaribeExperience = () => {
       }`}
     >
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center lg:items-start">
           {/* Left Content */}
           <div className="space-y-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary">
@@ -86,14 +86,16 @@ const CaribeExperience = () => {
               ))}
             </div>
 
-            <a 
-              href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-button-accent"
-            >
-              Ver cruceros disponibles
-            </a>
+            <div className="mt-8">
+              <a 
+                href="https://reservas.princesscruises.mx/search?destinations=7&sortBy=Recommended_WithTax&priceByCabin=false&taxAndFeesIncluded=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-button-accent"
+              >
+                Ver cruceros disponibles
+              </a>
+            </div>
           </div>
 
           {/* Right Image */}
