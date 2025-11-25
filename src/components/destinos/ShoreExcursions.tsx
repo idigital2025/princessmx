@@ -72,7 +72,7 @@ const ShoreExcursions = () => {
           <Carousel className="w-full max-w-5xl mx-auto">
             <CarouselContent>
               {excursions.map((excursion, index) => (
-                <CarouselItem key={index}>
+                <CarouselItem key={index} className="basis-full">
                   <Card className="asymmetric-card overflow-hidden bg-primary border-primary">
                     <div className="grid md:grid-cols-2 gap-0">
                       {/* Contenido a la izquierda */}
