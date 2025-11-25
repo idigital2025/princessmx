@@ -8,6 +8,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import excursionStingray from "@/assets/excursion-stingray-cayman.jpg";
+import excursionMayan from "@/assets/excursion-mayan-ruins.jpg";
+import excursionBelize from "@/assets/excursion-belize-reef.jpg";
+import excursionCatamaran from "@/assets/excursion-catamaran-sunset.jpg";
 
 const ShoreExcursions = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -18,7 +22,7 @@ const ShoreExcursions = () => {
       title: "Nado con rayas",
       location: "Gran Caimán",
       description: "Sumérgete en aguas cristalinas y nada junto a mantarrayas en su hábitat natural. Una experiencia única e inolvidable.",
-      image: "/src/assets/excursion-stingray-cayman.jpg",
+      image: excursionStingray,
       alt: "nadando con mantarrayas en aguas cristalinas de Gran Caimán"
     },
     {
@@ -26,7 +30,7 @@ const ShoreExcursions = () => {
       title: "Ruinas mayas",
       location: "Cozumel",
       description: "Descubre la fascinante historia de la civilización maya explorando antiguas ruinas y templos milenarios.",
-      image: "/src/assets/excursion-mayan-ruins.jpg",
+      image: excursionMayan,
       alt: "antiguas ruinas mayas rodeadas de selva en Cozumel"
     },
     {
@@ -34,7 +38,7 @@ const ShoreExcursions = () => {
       title: "Segunda barrera de coral del mundo",
       location: "Belice",
       description: "Explora uno de los arrecifes de coral más impresionantes del planeta, hogar de vida marina espectacular.",
-      image: "/src/assets/excursion-belize-reef.jpg",
+      image: excursionBelize,
       alt: "arrecife de coral colorido con peces tropicales en Belice"
     },
     {
@@ -42,7 +46,7 @@ const ShoreExcursions = () => {
       title: "Catamarán al atardecer",
       location: "Antigua",
       description: "Navega por aguas turquesas mientras disfrutas de un atardecer caribeño desde la cubierta de un catamarán.",
-      image: "/src/assets/excursion-catamaran-sunset.jpg",
+      image: excursionCatamaran,
       alt: "catamarán navegando al atardecer en aguas caribeñas de Antigua"
     }
   ];

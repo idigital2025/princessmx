@@ -24,7 +24,7 @@ const SeaInspiration = () => {
   return (
     <section 
       ref={ref} 
-      className={`py-16 md:py-24 px-4 bg-muted/30 transition-all duration-1000 ${
+      className={`py-16 md:py-24 px-4 bg-muted/30 transition-all duration-1000 overflow-x-hidden ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
@@ -33,7 +33,7 @@ const SeaInspiration = () => {
           Inspiración desde el mar
         </h2>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="relative max-w-4xl mx-auto">
           <Carousel className="w-full">
             <CarouselContent>
               {images.map((image, index) => (
@@ -43,14 +43,13 @@ const SeaInspiration = () => {
                       src={image.src} 
                       alt={image.alt}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                      style={{ borderRadius: '0 0 3rem 0' }}
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4" />
-            <CarouselNext className="right-4" />
+            <CarouselPrevious className="-left-4 md:-left-16" />
+            <CarouselNext className="-right-4 md:-right-16" />
           </Carousel>
         </div>
       </div>
