@@ -108,8 +108,8 @@ const ShoreExcursions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 md:-left-16" />
-            <CarouselNext className="-right-4 md:-right-16" />
+            <CarouselPrevious className="hidden md:flex md:-left-12" />
+            <CarouselNext className="hidden md:flex md:-right-12" />
           </Carousel>
         </div>
 
